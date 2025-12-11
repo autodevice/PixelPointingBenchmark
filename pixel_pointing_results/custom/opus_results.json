@@ -1,0 +1,193 @@
+{
+  "model": "opus",
+  "model_id": "anthropic/claude-opus-4-5-20251101",
+  "metrics": {
+    "total_tests": 8,
+    "successful_extractions": 8,
+    "extraction_rate": 100.0,
+    "mean_distance": 68.74606009594577,
+    "median_distance": 69.50747586877516,
+    "max_distance": 147.46185947559457,
+    "min_distance": 11.0,
+    "accuracy_within_10px": 0.0,
+    "accuracy_within_5_percent": 62.5
+  },
+  "results": [
+    {
+      "test_name": "simple_circle",
+      "prompt": "Point to the center of the purple circle",
+      "expected_coords": [
+        409,
+        728
+      ],
+      "response": "(409, 637)",
+      "predicted_coords": [
+        409,
+        637
+      ],
+      "distance": 91.0,
+      "error": null,
+      "image_metadata": {
+        "size": [
+          819,
+          1456
+        ],
+        "estimated_tokens": 1589
+      }
+    },
+    {
+      "test_name": "top_right_square",
+      "prompt": "Point to the top right corner of the red square",
+      "expected_coords": [
+        695,
+        283
+      ],
+      "response": "(559, 340)",
+      "predicted_coords": [
+        559,
+        340
+      ],
+      "distance": 147.46185947559457,
+      "error": null,
+      "image_metadata": {
+        "size": [
+          819,
+          1456
+        ],
+        "estimated_tokens": 1589
+      }
+    },
+    {
+      "test_name": "middle_x",
+      "prompt": "Point to the middle of the X in the top right",
+      "expected_coords": [
+        614,
+        364
+      ],
+      "response": "(615, 330)",
+      "predicted_coords": [
+        615,
+        330
+      ],
+      "distance": 34.0147027033899,
+      "error": null,
+      "image_metadata": {
+        "size": [
+          819,
+          1456
+        ],
+        "estimated_tokens": 1589
+      }
+    },
+    {
+      "test_name": "transparent_button",
+      "prompt": "Point to the center of the transparent button",
+      "expected_coords": [
+        409,
+        728
+      ],
+      "response": "(390, 740)",
+      "predicted_coords": [
+        390,
+        740
+      ],
+      "distance": 22.47220505424423,
+      "error": null,
+      "image_metadata": {
+        "size": [
+          819,
+          1456
+        ],
+        "estimated_tokens": 1589
+      }
+    },
+    {
+      "test_name": "small_circle",
+      "prompt": "Point to the center of the small green circle",
+      "expected_coords": [
+        409,
+        728
+      ],
+      "response": "(408, 672)",
+      "predicted_coords": [
+        408,
+        672
+      ],
+      "distance": 56.00892785976178,
+      "error": null,
+      "image_metadata": {
+        "size": [
+          819,
+          1456
+        ],
+        "estimated_tokens": 1589
+      }
+    },
+    {
+      "test_name": "bottom_left_triangle",
+      "prompt": "Point to the center of the yellow triangle in the bottom left",
+      "expected_coords": [
+        204,
+        1092
+      ],
+      "response": "(205, 987)",
+      "predicted_coords": [
+        205,
+        987
+      ],
+      "distance": 105.00476179678711,
+      "error": null,
+      "image_metadata": {
+        "size": [
+          819,
+          1456
+        ],
+        "estimated_tokens": 1589
+      }
+    },
+    {
+      "test_name": "overlapping_shapes",
+      "prompt": "Point to the center of the orange circle that is behind the blue square",
+      "expected_coords": [
+        369,
+        688
+      ],
+      "response": "(370, 605)",
+      "predicted_coords": [
+        370,
+        605
+      ],
+      "distance": 83.00602387778854,
+      "error": null,
+      "image_metadata": {
+        "size": [
+          819,
+          1456
+        ],
+        "estimated_tokens": 1589
+      }
+    },
+    {
+      "test_name": "low_contrast_button",
+      "prompt": "Point to the center of the gray button on gray background",
+      "expected_coords": [
+        409,
+        728
+      ],
+      "response": "(420, 728)",
+      "predicted_coords": [
+        420,
+        728
+      ],
+      "distance": 11.0,
+      "error": null,
+      "image_metadata": {
+        "size": [
+          819,
+          1456
+        ],
+        "estimated_tokens": 1589
+      }
+    }
+  ]
+}

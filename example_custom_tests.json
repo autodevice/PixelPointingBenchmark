@@ -1,0 +1,28 @@
+[
+  {
+    "name": "custom_circle",
+    "prompt": "Point to the center of the purple circle",
+    "shape": "circle",
+    "color": "purple",
+    "position": "center",
+    "expected_coords": [540, 1200]
+  },
+  {
+    "name": "custom_button",
+    "prompt": "Point to the center of the red button",
+    "shape": "button",
+    "color": "red",
+    "position": "center",
+    "size": "large",
+    "expected_coords": [540, 1200]
+  },
+  {
+    "name": "custom_edge_case",
+    "prompt": "Point to the top left corner of the green square",
+    "shape": "square",
+    "color": "green",
+    "position": "top_left",
+    "expected_coords": [270, 600]
+  }
+]
+

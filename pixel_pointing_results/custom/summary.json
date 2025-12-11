@@ -1,0 +1,142 @@
+{
+  "screen_size": {
+    "name": "custom",
+    "width": 819,
+    "height": 1456
+  },
+  "models": {
+    "sonnet": "anthropic/claude-sonnet-4-20250514",
+    "opus": "anthropic/claude-opus-4-5-20251101",
+    "gemini3": "gemini/gemini-3-pro-preview",
+    "chatgpt": "openai/gpt-5.1",
+    "haiku": "anthropic/claude-haiku-4-5-20251001"
+  },
+  "test_configs": [
+    {
+      "name": "simple_circle",
+      "prompt": "Point to the center of the purple circle",
+      "shape": "circle",
+      "color": "purple",
+      "position": "center"
+    },
+    {
+      "name": "top_right_square",
+      "prompt": "Point to the top right corner of the red square",
+      "shape": "square",
+      "color": "red",
+      "position": "top_right"
+    },
+    {
+      "name": "middle_x",
+      "prompt": "Point to the middle of the X in the top right",
+      "shape": "x",
+      "color": "blue",
+      "position": "top_right"
+    },
+    {
+      "name": "transparent_button",
+      "prompt": "Point to the center of the transparent button",
+      "shape": "button",
+      "color": "transparent",
+      "position": "center"
+    },
+    {
+      "name": "small_circle",
+      "prompt": "Point to the center of the small green circle",
+      "shape": "circle",
+      "color": "green",
+      "position": "center",
+      "size": "small"
+    },
+    {
+      "name": "bottom_left_triangle",
+      "prompt": "Point to the center of the yellow triangle in the bottom left",
+      "shape": "triangle",
+      "color": "yellow",
+      "position": "bottom_left"
+    },
+    {
+      "name": "overlapping_shapes",
+      "prompt": "Point to the center of the orange circle that is behind the blue square",
+      "shape": "circle",
+      "color": "orange",
+      "position": "center",
+      "overlap": true
+    },
+    {
+      "name": "low_contrast_button",
+      "prompt": "Point to the center of the gray button on gray background",
+      "shape": "button",
+      "color": "lightgray",
+      "position": "center",
+      "background": "gray"
+    }
+  ],
+  "results": {
+    "sonnet": {
+      "metrics": {
+        "total_tests": 8,
+        "successful_extractions": 8,
+        "extraction_rate": 100.0,
+        "mean_distance": 1.176776695296637,
+        "median_distance": 1.0,
+        "max_distance": 3.0,
+        "min_distance": 0.0,
+        "accuracy_within_10px": 100.0,
+        "accuracy_within_5_percent": 100.0
+      }
+    },
+    "opus": {
+      "metrics": {
+        "total_tests": 8,
+        "successful_extractions": 8,
+        "extraction_rate": 100.0,
+        "mean_distance": 68.74606009594577,
+        "median_distance": 69.50747586877516,
+        "max_distance": 147.46185947559457,
+        "min_distance": 11.0,
+        "accuracy_within_10px": 0.0,
+        "accuracy_within_5_percent": 62.5
+      }
+    },
+    "gemini3": {
+      "metrics": {
+        "total_tests": 8,
+        "successful_extractions": 0,
+        "extraction_rate": 0.0,
+        "mean_distance": null,
+        "median_distance": null,
+        "max_distance": null,
+        "min_distance": null,
+        "accuracy_within_10px": 0.0,
+        "accuracy_within_5_percent": 0.0
+      }
+    },
+    "chatgpt": {
+      "metrics": {
+        "total_tests": 8,
+        "successful_extractions": 8,
+        "extraction_rate": 100.0,
+        "mean_distance": 163.1753062135731,
+        "median_distance": 179.5820274692573,
+        "max_distance": 217.44194627532195,
+        "min_distance": 76.23647421018367,
+        "accuracy_within_10px": 0.0,
+        "accuracy_within_5_percent": 25.0
+      }
+    },
+    "haiku": {
+      "metrics": {
+        "total_tests": 8,
+        "successful_extractions": 8,
+        "extraction_rate": 100.0,
+        "mean_distance": 1.6116152783740212,
+        "median_distance": 1.0,
+        "max_distance": 4.242640687119285,
+        "min_distance": 1.0,
+        "accuracy_within_10px": 100.0,
+        "accuracy_within_5_percent": 100.0
+      }
+    }
+  }
+}

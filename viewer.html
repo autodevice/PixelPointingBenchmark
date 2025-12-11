@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Pointing Benchmark Results</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            opacity: 0.9;
+            font-size: 1.1em;
+        }
+
+        .controls {
+            padding: 20px 30px;
+            background: #f8f9fa;
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .controls label {
+            font-weight: 600;
+            color: #333;
+        }
+
+        .controls select {
+            padding: 8px 12px;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            font-size: 14px;
+            background: white;
+            cursor: pointer;
+        }
+
+        .controls select:hover {
+            border-color: #667eea;
+        }
+
+        .legend {
+            padding: 20px 30px;
+            background: #f8f9fa;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .legend h3 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .legend-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color:#000
+        }
+
+        .legend-dot {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 2px solid rgba(0, 0, 0, 0.2);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .legend-item.ground-truth .legend-dot {
+            width: 16px;
+            height: 16px;
+            border: 3px solid #000;
+            background: white;
+        }
+
+        .content {
+            padding: 30px;
+        }
+
+        .test-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 30px;
+        }
+
+        .test-card {
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .test-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .test-header {
+            padding: 15px 20px;
+            background: #f8f9fa;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .test-header h3 {
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .test-header p {
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        .image-container {
+            position: relative;
+            background: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 300px;
+        }
+
+        .test-image {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+        }
+
+        .dot {
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            border: 3px solid rgba(0, 0, 0, 0.3);
+            transform: translate(-50%, -50%);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+            transition: transform 0.2s;
+        }
+
+        .dot:hover {
+            transform: translate(-50%, -50%) scale(1.3);
+            z-index: 10;
+        }
+
+        .dot.ground-truth {
+            width: 20px;
+            height: 20px;
+            border: 4px solid #000;
+            background: rgba(255, 255, 255, 0.8);
+        }
+
+        .test-stats {
+            padding: 15px 20px;
+            background: #f8f9fa;
+            border-top: 1px solid #e0e0e0;
+            font-size: 0.9em;
+        }
+
+        .stat-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+
+        .stat-row:last-child {
+            margin-bottom: 0;
+        }
+
+        .stat-label {
+            color: #666;
+        }
+
+        .stat-value {
+            font-weight: 600;
+            color: #333;
+        }
+
+        .error-message {
+            color: #dc3545;
+            font-weight: 600;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 60px;
+            color: #666;
+        }
+
+        .loading::after {
+            content: '...';
+            animation: dots 1.5s steps(4, end) infinite;
+        }
+
+        @keyframes dots {
+            0%, 20% { content: '.'; }
+            40% { content: '..'; }
+            60%, 100% { content: '...'; }
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 60px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎯 Pixel Pointing Benchmark</h1>
+            <p>Visualization of VLM Pixel Pointing Accuracy Results</p>
+        </div>
+
+        <div class="controls">
+            <label for="resultsDir">Results Directory:</label>
+            <input type="text" id="resultsDir" value="pixel_pointing_results" placeholder="Enter results directory path">
+            <button onclick="loadResults()" style="padding: 8px 20px; background: #667eea; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 600;">Load Results</button>
+            <div style="font-size: 0.85em; color: #666; margin-top: 10px;">
+                <strong>Note:</strong> If you see CORS errors, use <code>python serve_viewer.py</code> to start a local server.
+            </div>
+        </div>
+
+        <div class="legend" id="legend" style="display: none;">
+            <h3>Legend</h3>
+            <div class="legend-items" id="legendItems"></div>
+        </div>
+
+        <div class="content" id="content">
+            <div class="loading">Loading results</div>
+        </div>
+    </div>
+
+    <script>
+        const MODEL_COLORS = {
+            'sonnet': '#FF6B6B',
+            'opus': '#FFA500',
+            'gemini3': '#4ECDC4',
+            'chatgpt': '#95E1D3',
+            'haiku': '#F38181',
+        };
+
+        let currentData = null;
+        let currentScreenSize = null;
+
+        function getModelColor(modelName) {
+            return MODEL_COLORS[modelName.toLowerCase()] || '#999999';
+        }
+
+        function loadResults() {
+            const dir = document.getElementById('resultsDir').value.trim();
+            if (!dir) {
+                alert('Please enter a results directory path');
+                return;
+            }
+
+            const content = document.getElementById('content');
+            content.innerHTML = '<div class="loading">Loading results</div>';
+
+            fetch(`${dir}/overall_summary.json`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`Failed to load overall_summary.json from ${dir}`);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    currentData = data;
+                    populateScreenSizeSelector(data);
+                    if (data.screen_sizes_tested.length > 0) {
+                        loadScreenSize(data.screen_sizes_tested[0].name, dir);
+                    }
+                })
+                .catch(error => {
+                    content.innerHTML = `<div class="no-results">Error: ${error.message}<br><br>Make sure the results directory path is correct and contains the evaluation results.</div>`;
+                    console.error('Error loading results:', error);
+                });
+        }
+
+        function populateScreenSizeSelector(data) {
+            const controls = document.querySelector('.controls');
+            const existingSelect = document.getElementById('screenSizeSelect');
+            
+            if (data.screen_sizes_tested.length > 1) {
+                if (!existingSelect) {
+                    const label = document.createElement('label');
+                    label.setAttribute('for', 'screenSizeSelect');
+                    label.textContent = 'Screen Size:';
+                    
+                    const select = document.createElement('select');
+                    select.id = 'screenSizeSelect';
+                    select.onchange = () => {
+                        const dir = document.getElementById('resultsDir').value.trim();
+                        loadScreenSize(select.value, dir);
+                    };
+                    
+                    controls.appendChild(label);
+                    controls.appendChild(select);
+                }
+                
+                const select = document.getElementById('screenSizeSelect');
+                select.innerHTML = '';
+                data.screen_sizes_tested.forEach(size => {
+                    const option = document.createElement('option');
+                    option.value = size.name;
+                    option.textContent = `${size.name} (${size.width}x${size.height})`;
+                    select.appendChild(option);
+                });
+            } else if (existingSelect) {
+                existingSelect.remove();
+                existingSelect.previousElementSibling.remove();
+            }
+        }
+
+        function loadScreenSize(screenSizeName, baseDir) {
+            currentScreenSize = screenSizeName;
+            const content = document.getElementById('content');
+            content.innerHTML = '<div class="loading">Loading results</div>';
+
+            fetch(`${baseDir}/${screenSizeName}/consolidated_results.json`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`Failed to load consolidated_results.json for ${screenSizeName}`);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    displayResults(data, baseDir);
+                    updateLegend(data.models);
+                })
+                .catch(error => {
+                    content.innerHTML = `<div class="no-results">Error: ${error.message}</div>`;
+                    console.error('Error loading screen size results:', error);
+                });
+        }
+
+        function updateLegend(models) {
+            const legend = document.getElementById('legend');
+            const legendItems = document.getElementById('legendItems');
+            legendItems.innerHTML = '';
+
+            const groundTruthItem = document.createElement('div');
+            groundTruthItem.className = 'legend-item ground-truth';
+            groundTruthItem.innerHTML = `
+                <div class="legend-dot"></div>
+                <span>Ground Truth</span>
+            `;
+            legendItems.appendChild(groundTruthItem);
+
+            Object.keys(models).forEach(modelName => {
+                const item = document.createElement('div');
+                item.className = 'legend-item';
+                const color = getModelColor(modelName);
+                item.innerHTML = `
+                    <div class="legend-dot" style="background-color: ${color};"></div>
+                    <span>${modelName}</span>
+                `;
+                legendItems.appendChild(item);
+            });
+
+            legend.style.display = 'block';
+        }
+
+        function displayResults(data, baseDir) {
+            const content = document.getElementById('content');
+            
+            if (!data.tests || data.tests.length === 0) {
+                content.innerHTML = '<div class="no-results">No test results found</div>';
+                return;
+            }
+
+            const grid = document.createElement('div');
+            grid.className = 'test-grid';
+
+            data.tests.forEach(test => {
+                const card = createTestCard(test, baseDir, data.screen_size);
+                grid.appendChild(card);
+            });
+
+            content.innerHTML = '';
+            content.appendChild(grid);
+        }
+
+        function createTestCard(test, baseDir, screenSize) {
+            const card = document.createElement('div');
+            card.className = 'test-card';
+
+            const header = document.createElement('div');
+            header.className = 'test-header';
+            header.innerHTML = `
+                <h3>${test.test_name}</h3>
+                <p>${test.prompt}</p>
+            `;
+
+            const imageContainer = document.createElement('div');
+            imageContainer.className = 'image-container';
+            
+            const img = document.createElement('img');
+            img.className = 'test-image';
+            img.src = `${baseDir}/${currentScreenSize}/${test.image_file}`;
+            img.alt = test.test_name;
+            img.onload = function() {
+                drawOverlay(imageContainer, test, screenSize, img);
+            };
+
+            const overlay = document.createElement('div');
+            overlay.className = 'overlay';
+            overlay.id = `overlay-${test.test_name}`;
+            
+            imageContainer.appendChild(img);
+            imageContainer.appendChild(overlay);
+
+            const stats = document.createElement('div');
+            stats.className = 'test-stats';
+            
+            const statsHTML = [];
+            Object.keys(test.models).forEach(modelName => {
+                const modelResult = test.models[modelName];
+                if (modelResult.error) {
+                    statsHTML.push(`
+                        <div class="stat-row">
+                            <span class="stat-label">${modelName}:</span>
+                            <span class="stat-value error-message">Error</span>
+                        </div>
+                    `);
+                } else if (modelResult.predicted_coords) {
+                    statsHTML.push(`
+                        <div class="stat-row">
+                            <span class="stat-label">${modelName}:</span>
+                            <span class="stat-value">${modelResult.distance !== null ? modelResult.distance.toFixed(2) + 'px' : 'N/A'}</span>
+                        </div>
+                    `);
+                } else {
+                    statsHTML.push(`
+                        <div class="stat-row">
+                            <span class="stat-label">${modelName}:</span>
+                            <span class="stat-value">No prediction</span>
+                        </div>
+                    `);
+                }
+            });
+            stats.innerHTML = statsHTML.join('');
+
+            card.appendChild(header);
+            card.appendChild(imageContainer);
+            card.appendChild(stats);
+
+            return card;
+        }
+
+        function drawOverlay(container, test, screenSize, img) {
+            const overlay = container.querySelector('.overlay');
+            
+            const displayWidth = img.offsetWidth;
+            const displayHeight = img.offsetHeight;
+            
+            overlay.style.width = `${displayWidth}px`;
+            overlay.style.height = `${displayHeight}px`;
+
+            const scaleX = displayWidth / screenSize.width;
+            const scaleY = displayHeight / screenSize.height;
+
+            overlay.innerHTML = '';
+
+            const [gtX, gtY] = test.expected_coords;
+            const gtDot = document.createElement('div');
+            gtDot.className = 'dot ground-truth';
+            gtDot.style.left = `${gtX * scaleX}px`;
+            gtDot.style.top = `${gtY * scaleY}px`;
+            gtDot.title = `Ground Truth: (${gtX}, ${gtY})`;
+            overlay.appendChild(gtDot);
+
+            Object.keys(test.models).forEach(modelName => {
+                const modelResult = test.models[modelName];
+                if (modelResult.predicted_coords && !modelResult.error) {
+                    const [predX, predY] = modelResult.predicted_coords;
+                    const dot = document.createElement('div');
+                    dot.className = 'dot';
+                    const color = getModelColor(modelName);
+                    dot.style.backgroundColor = color;
+                    dot.style.left = `${predX * scaleX}px`;
+                    dot.style.top = `${predY * scaleY}px`;
+                    const distance = modelResult.distance !== null ? modelResult.distance.toFixed(2) : 'N/A';
+                    dot.title = `${modelName}: (${predX}, ${predY}) - Distance: ${distance}px`;
+                    overlay.appendChild(dot);
+                }
+            });
+        }
+
+        window.onload = function() {
+            const dir = document.getElementById('resultsDir').value.trim();
+            if (dir) {
+                loadResults();
+            }
+        };
+    </script>
+</body>
+</html>
+
