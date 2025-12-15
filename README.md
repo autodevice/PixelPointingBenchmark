@@ -132,9 +132,9 @@ This will:
 python -m http.server 8000
 ```
 
-Then open `http://localhost:8000/viewer_v2.html` in your browser (or `viewer.html` for the legacy viewer).
+Then open `http://localhost:8000/index.html` in your browser.
 
-**Using the Enhanced Viewer (viewer_v2.html):**
+**Using the Enhanced Viewer (index.html):**
 
 1. Select the results directory (default: `results`)
 2. Select a test suite from the dropdown
@@ -231,7 +231,7 @@ The benchmark calculates several accuracy metrics:
 
 ## Model Colors in Viewer
 
-The enhanced viewer (viewer_v2.html) uses the following color scheme:
+The enhanced viewer (index.html) uses the following color scheme:
 - **Sonnet**: rgb(168, 2, 15) (Red)
 - **Opus**: rgb(255, 132, 0) (Orange)
 - **Gemini3**: rgb(0, 255, 76) (Green)
