@@ -2,6 +2,8 @@
 
 A comprehensive evaluation framework for testing Vision Language Model (VLM) accuracy in pixel-level pointing tasks. This tool generates synthetic test images, evaluates multiple VLMs, and provides a visual web interface to compare model performance.
 
+> For codebase structure and module organization, see [STRUCTURE.md](STRUCTURE.md).
+
 ## Overview
 
 This benchmark evaluates how accurately different VLMs can identify and point to specific locations in images when given natural language prompts. It's particularly useful for:
@@ -13,6 +15,7 @@ This benchmark evaluates how accurately different VLMs can identify and point to
 
 ## Features
 
+- **Test Suite System**: Modular test suite architecture supporting both synthetic and screenshot-based tests
 - **Synthetic Test Image Generation**: Creates test images with various shapes (circles, squares, triangles, buttons, X marks) in different positions and colors
 - **Multi-Model Evaluation**: Supports multiple VLMs including:
   - Claude Sonnet 4
@@ -20,10 +23,17 @@ This benchmark evaluates how accurately different VLMs can identify and point to
   - Gemini 3 Pro
   - GPT-5.1
   - Claude Haiku 4
+- **Multiple Passes**: Run evaluations multiple times to calculate statistics and standard deviation
+- **Non-Overwriting Results**: Results are stored with timestamps, allowing multiple runs without overwriting
 - **Multiple Screen Sizes**: Test models across different screen dimensions and aspect ratios
-- **Comprehensive Metrics**: Calculates distance errors, extraction rates, and accuracy thresholds
-- **Visual Web Viewer**: Interactive HTML interface showing where each model clicked with colored dots
-- **Custom Test Cases**: Define your own test scenarios via JSON configuration
+- **Comprehensive Metrics**: Calculates distance errors, extraction rates, accuracy thresholds, and standard deviation across passes
+- **Enhanced Visual Web Viewer**: Interactive HTML interface with:
+  - Test suite selection
+  - Model and pass filtering
+  - Multiple pass visualization
+  - Improved color scheme
+  - Statistical summaries (mean, std dev, min/max)
+- **Custom Test Cases**: Define your own test scenarios via JSON configuration or create custom test suites
 
 ## Installation
 
@@ -50,51 +60,56 @@ pip install -r requirements.txt
 
 ## Usage
 
-### Basic Evaluation
+### New Structure (Recommended)
 
-Run evaluation with default settings:
+The codebase has been refactored with a modular architecture. Use the new `evaluate.py`:
+
 ```bash
-python evaluate_pixel_pointing.py
-```
+# List available test suites
+python evaluate.py --list-suites
 
-This will:
-- Test all default models (sonnet, opus, gemini3, chatgpt)
-- Use default screen size (819x1456 pixels)
-- Generate test images and save results to `pixel_pointing_results/`
+# Run a specific test suite with specific models
+python evaluate.py --test-suite basic_shapes --models sonnet opus gemini3
+
+# Run with multiple passes for statistics
+python evaluate.py --test-suite basic_shapes --models sonnet --num-passes 3
+
+# Custom screen size
+python evaluate.py --test-suite basic_shapes --width 1080 --height 2400
+```
 
 ### Custom Options
 
 **Select specific models:**
 ```bash
-python evaluate_pixel_pointing.py --models sonnet opus gemini3
+python evaluate.py --test-suite basic_shapes --models sonnet opus gemini3
 ```
 
 **Custom screen size:**
 ```bash
-python evaluate_pixel_pointing.py --width 1080 --height 2400
+python evaluate.py --test-suite basic_shapes --width 1080 --height 2400
 ```
 
-**Test multiple screen sizes:**
+**Run multiple passes for statistics:**
 ```bash
-python evaluate_pixel_pointing.py --test-multiple-sizes
-```
-
-This tests 6 different optimal screen sizes:
-- 9:16 aspect (819x1456)
-- 1:2 aspect (784x1568)
-- 2:3 aspect (896x1344)
-- 3:4 aspect (951x1268)
-- 1:1 aspect (1092x1092)
-- 16:9 aspect (1456x819)
-
-**Use custom test cases:**
-```bash
-python evaluate_pixel_pointing.py --custom-tests example_custom_tests.json
+python evaluate.py --test-suite basic_shapes --models sonnet --num-passes 3
 ```
 
 **Don't save images (faster, smaller output):**
 ```bash
-python evaluate_pixel_pointing.py --no-save-images
+python evaluate.py --test-suite basic_shapes --no-save-images
+```
+
+### Utility Commands
+
+**Fix consolidated results (if models list is missing):**
+```bash
+python -m evaluation.utils fix --test-suite basic_shapes --screen-size custom
+```
+
+**Update test suites index:**
+```bash
+python -m evaluation.utils index
 ```
 
 ### Viewing Results
@@ -117,39 +132,40 @@ This will:
 python -m http.server 8000
 ```
 
-Then open `http://localhost:8000/viewer.html` in your browser.
+Then open `http://localhost:8000/viewer_v2.html` in your browser (or `viewer.html` for the legacy viewer).
 
-**Option 3: Direct file access (may not work due to CORS)**
+**Using the Enhanced Viewer (viewer_v2.html):**
 
-If you open `viewer.html` directly in a browser, you may encounter CORS errors. Use one of the server options above instead.
-
-**Using the Viewer:**
-
-1. Once the viewer loads, enter the path to your results directory (default: `pixel_pointing_results`)
-2. Click "Load Results"
-3. Browse through test images with visual overlays showing:
+1. Select the results directory (default: `results`)
+2. Select a test suite from the dropdown
+3. Click "Load Results"
+4. Use the filters to:
+   - Show/hide specific models
+   - Show/hide specific passes (for multi-pass runs)
+5. Browse through test images with visual overlays showing:
    - **Black circle with white center**: Ground truth location
-   - **Colored dots**: Each model's prediction
-   - **Legend**: Model-to-color mapping
-   - **Statistics**: Distance errors for each model
+   - **Colored dots**: Each model's prediction (multiple passes shown with reduced opacity)
+   - **Legend**: Click legend items to toggle model visibility
+   - **Statistics**: Mean distance, standard deviation, and min/max across passes
 
 ## Output Structure
 
 Results are organized in the output directory as follows:
 
 ```
-pixel_pointing_results/
-├── overall_summary.json          # Summary across all screen sizes
-├── optimal_9_16/                 # Results for specific screen size
-│   ├── images/                   # Test images (one per test case)
-│   │   ├── simple_circle.png
-│   │   ├── top_right_square.png
-│   │   └── ...
-│   ├── consolidated_results.json # All models' predictions per test
-│   ├── summary.json              # Metrics summary
-│   ├── sonnet_results.json       # Individual model results
-│   ├── opus_results.json
-│   └── ...
+results/
+├── test_suites.json              # Index of all test suites
+├── basic_shapes/                 # Test suite name
+│   └── custom/                   # Screen size name
+│       ├── images/               # Test images (one per test case)
+│       │   ├── simple_circle.png
+│       │   ├── top_right_square.png
+│       │   └── ...
+│       ├── consolidated_results.json  # All models' predictions per test
+│       ├── runs_index.json       # Index of all runs
+│       ├── sonnet_pass1_*.json   # Individual run results
+│       ├── opus_pass1_*.json
+│       └── ...
 └── ...
 ```
 
@@ -215,13 +231,15 @@ The benchmark calculates several accuracy metrics:
 
 ## Model Colors in Viewer
 
-The web viewer uses the following color scheme:
-- **Sonnet**: Red (#FF6B6B)
-- **Opus**: Orange (#FFA500)
-- **Gemini3**: Teal (#4ECDC4)
-- **ChatGPT**: Light Green (#95E1D3)
-- **Haiku**: Pink (#F38181)
+The enhanced viewer (viewer_v2.html) uses the following color scheme:
+- **Sonnet**: rgb(168, 2, 15) (Red)
+- **Opus**: rgb(255, 132, 0) (Orange)
+- **Gemini3**: rgb(0, 255, 76) (Green)
+- **ChatGPT**: rgb(17, 160, 207) (Blue)
+- **Haiku**: rgb(164, 11, 224) (Purple)
 - **Ground Truth**: Black circle with white center
+
+Colors are displayed as dots next to model names in the statistics section.
 
 ## Requirements
 

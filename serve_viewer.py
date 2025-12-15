@@ -20,11 +20,14 @@ class Handler(http.server.SimpleHTTPRequestHandler):
 def main():
     os.chdir(Path(__file__).parent)
     
+    socketserver.TCPServer.allow_reuse_address = True
+    
     with socketserver.TCPServer(("", PORT), Handler) as httpd:
-        url = f"http://localhost:{PORT}/viewer.html"
+        url = f"http://localhost:{PORT}/viewer_v2.html"
         print(f"Starting server at http://localhost:{PORT}")
         print(f"Opening viewer at {url}")
         print("Press Ctrl+C to stop the server")
+        print(f"\nYou can also access the legacy viewer at: http://localhost:{PORT}/viewer.html")
         webbrowser.open(url)
         try:
             httpd.serve_forever()
