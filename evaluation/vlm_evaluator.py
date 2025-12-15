@@ -61,6 +61,18 @@ class VLMEvaluator:
             return content, None, metadata
 
         except Exception as e:
+            error_msg = str(e)
+            
+            if "gemini" in self.model.lower():
+                if "API key" in error_msg or "INVALID_ARGUMENT" in error_msg:
+                    return None, Exception(f"Gemini API Error: Invalid or missing API key. Please check your GEMINI_API_KEY environment variable."), metadata
+                elif "QUOTA_EXCEEDED" in error_msg or "quota" in error_msg.lower():
+                    return None, Exception(f"Gemini API Error: Quota exceeded. Please check your API usage limits."), metadata
+                elif "SAFETY" in error_msg or "safety" in error_msg.lower():
+                    return None, Exception(f"Gemini API Error: Content was blocked by safety filters."), metadata
+                else:
+                    return None, Exception(f"Gemini API Error: {error_msg}"), metadata
+            
             return None, e, metadata
 
     def _encode_image(self, image: Image.Image) -> str:

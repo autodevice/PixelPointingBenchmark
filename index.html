@@ -212,8 +212,8 @@
 
         .test-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 20px;
         }
 
         .test-card {
@@ -253,13 +253,18 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 300px;
+            min-height: 205px;
+            max-height: 450px;
+            overflow: hidden;
         }
 
         .test-image {
             max-width: 100%;
+            max-height: 450px;
+            width: auto;
             height: auto;
             display: block;
+            object-fit: contain;
         }
 
         .overlay {
@@ -551,13 +556,6 @@
             const legendItems = document.getElementById('legendItems');
             legendItems.innerHTML = '';
 
-            const groundTruthItem = document.createElement('div');
-            groundTruthItem.className = 'legend-item ground-truth';
-            groundTruthItem.innerHTML = `
-                <div class="legend-dot"></div>
-                <span>Ground Truth</span>
-            `;
-            legendItems.appendChild(groundTruthItem);
 
             const modelsToShow = models ? Object.keys(models) : Array.from(visibleModels);
             
@@ -640,9 +638,17 @@
             
             const statsHTML = [];
             const hasVisibleModels = Array.from(Object.keys(test.models || {})).some(m => visibleModels.has(m));
+            const hasVisiblePasses = visiblePasses.size > 0;
+            const hasPassesInData = Array.from(Object.keys(test.models || {})).some(modelName => {
+                const modelResult = test.models[modelName];
+                const predictions = modelResult.predictions || [];
+                return predictions.some(p => p.pass_number);
+            });
             
             if (!hasVisibleModels) {
                 statsHTML.push('<div class="stat-row"><span class="stat-label" style="flex-direction: column; align-items: flex-start;"><span>No models selected. Use filters above to show models.</span></span></div>');
+            } else if (hasPassesInData && !hasVisiblePasses) {
+                statsHTML.push('<div class="stat-row"><span class="stat-label" style="flex-direction: column; align-items: flex-start;"><span>No passes selected. Use filters above to show passes.</span></span></div>');
             } else {
                 Object.keys(test.models || {}).forEach(modelName => {
                     if (!visibleModels.has(modelName)) return;
@@ -655,12 +661,6 @@
                     );
                     
                     if (visiblePredictions.length === 0) {
-                        statsHTML.push(`
-                            <div class="stat-row">
-                                <span class="stat-label">${modelName}:</span>
-                                <span class="stat-value">No visible passes</span>
-                            </div>
-                        `);
                         return;
                     }
                     
@@ -739,13 +739,35 @@
 
             overlay.innerHTML = '';
 
-            const [gtX, gtY] = test.expected_coords;
-            const gtDot = document.createElement('div');
-            gtDot.className = 'dot ground-truth';
-            gtDot.style.left = `${gtX * scaleX}px`;
-            gtDot.style.top = `${gtY * scaleY}px`;
-            gtDot.title = `Ground Truth: (${gtX}, ${gtY})`;
-            overlay.appendChild(gtDot);
+            const hasVisiblePasses = visiblePasses.size > 0;
+            const hasPassesInData = Array.from(Object.keys(test.models || {})).some(modelName => {
+                const modelResult = test.models[modelName];
+                const predictions = modelResult.predictions || [];
+                return predictions.some(p => p.pass_number);
+            });
+            
+            const hasAnyVisiblePredictions = Array.from(Object.keys(test.models || {})).some(modelName => {
+                if (!visibleModels.has(modelName)) return false;
+                const modelResult = test.models[modelName];
+                const predictions = modelResult.predictions || [];
+                return predictions.some(pred => {
+                    if (pred.predicted_coords && !pred.error) {
+                        if (pred.pass_number) {
+                            return visiblePasses.has(pred.pass_number);
+                        }
+                        return !hasPassesInData || hasVisiblePasses === false;
+                    }
+                    return false;
+                });
+            });
+
+            if (hasPassesInData && !hasVisiblePasses) {
+                return;
+            }
+
+            if (!hasAnyVisiblePredictions) {
+                return;
+            }
 
             Object.keys(test.models || {}).forEach(modelName => {
                 if (!visibleModels.has(modelName)) return;
@@ -756,6 +778,7 @@
                 predictions.forEach((pred, idx) => {
                     if (pred.predicted_coords && !pred.error) {
                         if (pred.pass_number && !visiblePasses.has(pred.pass_number)) return;
+                        if (!pred.pass_number && hasPassesInData && hasVisiblePasses) return;
                         
                         const [predX, predY] = pred.predicted_coords;
                         const dot = document.createElement('div');
