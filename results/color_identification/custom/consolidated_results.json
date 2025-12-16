@@ -1,0 +1,2115 @@
+{
+  "test_suite": "color_identification",
+  "screen_size": {
+    "name": "custom",
+    "width": 1024,
+    "height": 1024
+  },
+  "models": {
+    "chatgpt": "chatgpt",
+    "gemini-2.5-flash": "gemini-2.5-flash",
+    "gemini3": "gemini3",
+    "glm-4.6v": "glm-4.6v",
+    "haiku": "haiku",
+    "opus": "opus",
+    "qwen3-vl": "qwen3-vl",
+    "sonnet": "sonnet"
+  },
+  "tests": [
+    {
+      "test_name": "basic_blue",
+      "prompt": "Point to the center of the blue circle",
+      "expected_coords": [
+        512,
+        512
+      ],
+      "image_file": "images/basic_blue.png",
+      "models": {
+        "sonnet": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "color_identification_sonnet_custom_20251216_171202"
+            },
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "color_identification_sonnet_custom_20251216_171252"
+            },
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "color_identification_sonnet_custom_20251216_171338"
+            }
+          ],
+          "num_passes": 3
+        },
+        "opus": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                481,
+                502
+              ],
+              "distance": 32.57299494980466,
+              "response": "(481, 502)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "color_identification_opus_custom_20251216_171411"
+            },
+            {
+              "predicted_coords": [
+                462,
+                502
+              ],
+              "distance": 50.99019513592785,
+              "response": "(462, 502)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "color_identification_opus_custom_20251216_171437"
+            },
+            {
+              "predicted_coords": [
+                462,
+                502
+              ],
+              "distance": 50.99019513592785,
+              "response": "(462, 502)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "color_identification_opus_custom_20251216_171502"
+            }
+          ],
+          "num_passes": 3
+        },
+        "chatgpt": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "color_identification_chatgpt_custom_20251216_171700"
+            },
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "color_identification_chatgpt_custom_20251216_171714"
+            },
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "color_identification_chatgpt_custom_20251216_171734"
+            }
+          ],
+          "num_passes": 3
+        },
+        "haiku": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                512,
+                510
+              ],
+              "distance": 2.0,
+              "response": "(512, 510)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "color_identification_haiku_custom_20251216_171750"
+            },
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "color_identification_haiku_custom_20251216_171807"
+            },
+            {
+              "predicted_coords": [
+                512,
+                510
+              ],
+              "distance": 2.0,
+              "response": "(512, 510)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "color_identification_haiku_custom_20251216_171825"
+            }
+          ],
+          "num_passes": 3
+        },
+        "qwen3-vl": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "color_identification_qwen3-vl_custom_20251216_171842"
+            },
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "color_identification_qwen3-vl_custom_20251216_171909"
+            },
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "color_identification_qwen3-vl_custom_20251216_171923"
+            }
+          ],
+          "num_passes": 3
+        },
+        "glm-4.6v": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "color_identification_glm-4.6v_custom_20251216_172046"
+            }
+          ],
+          "num_passes": 1
+        },
+        "gemini-2.5-flash": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "color_identification_gemini-2.5-flash_custom_20251216_172126"
+            }
+          ],
+          "num_passes": 1
+        }
+      }
+    },
+    {
+      "test_name": "basic_green",
+      "prompt": "Point to the center of the green circle",
+      "expected_coords": [
+        512,
+        512
+      ],
+      "image_file": "images/basic_green.png",
+      "models": {
+        "sonnet": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "color_identification_sonnet_custom_20251216_171202"
+            },
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "color_identification_sonnet_custom_20251216_171252"
+            },
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "color_identification_sonnet_custom_20251216_171338"
+            }
+          ],
+          "num_passes": 3
+        },
+        "opus": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                480,
+                480
+              ],
+              "distance": 45.254833995939045,
+              "response": "(480, 480)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "color_identification_opus_custom_20251216_171411"
+            },
+            {
+              "predicted_coords": [
+                482,
+                483
+              ],
+              "distance": 41.72529209005013,
+              "response": "(482, 483)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "color_identification_opus_custom_20251216_171437"
+            },
+            {
+              "predicted_coords": [
+                480,
+                480
+              ],
+              "distance": 45.254833995939045,
+              "response": "(480, 480)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "color_identification_opus_custom_20251216_171502"
+            }
+          ],
+          "num_passes": 3
+        },
+        "chatgpt": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "color_identification_chatgpt_custom_20251216_171700"
+            },
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "color_identification_chatgpt_custom_20251216_171714"
+            },
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "color_identification_chatgpt_custom_20251216_171734"
+            }
+          ],
+          "num_passes": 3
+        },
+        "haiku": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                512,
+                510
+              ],
+              "distance": 2.0,
+              "response": "(512, 510)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "color_identification_haiku_custom_20251216_171750"
+            },
+            {
+              "predicted_coords": [
+                515,
+                510
+              ],
+              "distance": 3.605551275463989,
+              "response": "(515, 510)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "color_identification_haiku_custom_20251216_171807"
+            },
+            {
+              "predicted_coords": [
+                512,
+                510
+              ],
+              "distance": 2.0,
+              "response": "(512, 510)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "color_identification_haiku_custom_20251216_171825"
+            }
+          ],
+          "num_passes": 3
+        },
+        "qwen3-vl": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "color_identification_qwen3-vl_custom_20251216_171842"
+            },
+            {
+              "predicted_coords": [
+                500,
+                498
+              ],
+              "distance": 18.439088914585774,
+              "response": "(500, 498)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "color_identification_qwen3-vl_custom_20251216_171909"
+            },
+            {
+              "predicted_coords": [
+                500,
+                497
+              ],
+              "distance": 19.209372712298546,
+              "response": "(500, 497)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "color_identification_qwen3-vl_custom_20251216_171923"
+            }
+          ],
+          "num_passes": 3
+        },
+        "gemini-2.5-flash": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "color_identification_gemini-2.5-flash_custom_20251216_172126"
+            }
+          ],
+          "num_passes": 1
+        }
+      }
+    },
+    {
+      "test_name": "basic_red",
+      "prompt": "Point to the center of the red circle",
+      "expected_coords": [
+        512,
+        512
+      ],
+      "image_file": "images/basic_red.png",
+      "models": {
+        "sonnet": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "color_identification_sonnet_custom_20251216_171202"
+            },
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "color_identification_sonnet_custom_20251216_171252"
+            },
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "color_identification_sonnet_custom_20251216_171338"
+            }
+          ],
+          "num_passes": 3
+        },
+        "opus": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                462,
+                462
+              ],
+              "distance": 70.71067811865476,
+              "response": "(462, 462)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "color_identification_opus_custom_20251216_171411"
+            },
+            {
+              "predicted_coords": [
+                512,
+                477
+              ],
+              "distance": 35.0,
+              "response": "(512, 477)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "color_identification_opus_custom_20251216_171437"
+            },
+            {
+              "predicted_coords": [
+                476,
+                476
+              ],
+              "distance": 50.91168824543142,
+              "response": "(476, 476)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "color_identification_opus_custom_20251216_171502"
+            }
+          ],
+          "num_passes": 3
+        },
+        "chatgpt": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                511,
+                512
+              ],
+              "distance": 1.0,
+              "response": "(511, 512)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "color_identification_chatgpt_custom_20251216_171700"
+            },
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "color_identification_chatgpt_custom_20251216_171714"
+            },
+            {
+              "predicted_coords": [
+                511,
+                511
+              ],
+              "distance": 1.4142135623730951,
+              "response": "(511, 511)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "color_identification_chatgpt_custom_20251216_171734"
+            }
+          ],
+          "num_passes": 3
+        },
+        "haiku": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "color_identification_haiku_custom_20251216_171750"
+            },
+            {
+              "predicted_coords": [
+                512,
+                510
+              ],
+              "distance": 2.0,
+              "response": "(512, 510)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "color_identification_haiku_custom_20251216_171807"
+            },
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "color_identification_haiku_custom_20251216_171825"
+            }
+          ],
+          "num_passes": 3
+        },
+        "qwen3-vl": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "color_identification_qwen3-vl_custom_20251216_171842"
+            },
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "color_identification_qwen3-vl_custom_20251216_171909"
+            },
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "color_identification_qwen3-vl_custom_20251216_171923"
+            }
+          ],
+          "num_passes": 3
+        }
+      }
+    },
+    {
+      "test_name": "basic_yellow",
+      "prompt": "Point to the center of the yellow circle",
+      "expected_coords": [
+        512,
+        512
+      ],
+      "image_file": "images/basic_yellow.png",
+      "models": {
+        "sonnet": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "color_identification_sonnet_custom_20251216_171202"
+            },
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "color_identification_sonnet_custom_20251216_171252"
+            },
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "color_identification_sonnet_custom_20251216_171338"
+            }
+          ],
+          "num_passes": 3
+        },
+        "opus": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                462,
+                482
+              ],
+              "distance": 58.309518948453004,
+              "response": "(462, 482)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "color_identification_opus_custom_20251216_171411"
+            },
+            {
+              "predicted_coords": [
+                462,
+                482
+              ],
+              "distance": 58.309518948453004,
+              "response": "(462, 482)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "color_identification_opus_custom_20251216_171437"
+            },
+            {
+              "predicted_coords": [
+                462,
+                482
+              ],
+              "distance": 58.309518948453004,
+              "response": "(462, 482)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "color_identification_opus_custom_20251216_171502"
+            }
+          ],
+          "num_passes": 3
+        },
+        "gemini3": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                500,
+                500
+              ],
+              "distance": 16.97056274847714,
+              "response": "(500, 500)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "color_identification_gemini3_custom_20251216_171606"
+            }
+          ],
+          "num_passes": 1
+        },
+        "chatgpt": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                559,
+                429
+              ],
+              "distance": 95.38343671728336,
+              "response": "(559, 429)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "color_identification_chatgpt_custom_20251216_171700"
+            },
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "color_identification_chatgpt_custom_20251216_171714"
+            },
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "color_identification_chatgpt_custom_20251216_171734"
+            }
+          ],
+          "num_passes": 3
+        },
+        "haiku": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                512,
+                510
+              ],
+              "distance": 2.0,
+              "response": "(512, 510)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "color_identification_haiku_custom_20251216_171750"
+            },
+            {
+              "predicted_coords": [
+                512,
+                510
+              ],
+              "distance": 2.0,
+              "response": "(512, 510)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "color_identification_haiku_custom_20251216_171807"
+            },
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "color_identification_haiku_custom_20251216_171825"
+            }
+          ],
+          "num_passes": 3
+        },
+        "qwen3-vl": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "color_identification_qwen3-vl_custom_20251216_171842"
+            },
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "color_identification_qwen3-vl_custom_20251216_171909"
+            },
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "color_identification_qwen3-vl_custom_20251216_171923"
+            }
+          ],
+          "num_passes": 3
+        },
+        "glm-4.6v": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "color_identification_glm-4.6v_custom_20251216_172004"
+            }
+          ],
+          "num_passes": 1
+        }
+      }
+    },
+    {
+      "test_name": "hexcode_1",
+      "prompt": "Point to the center of the circle with hex color #FF6B9D",
+      "expected_coords": [
+        512,
+        512
+      ],
+      "image_file": "images/hexcode_1.png",
+      "models": {
+        "sonnet": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "color_identification_sonnet_custom_20251216_171202"
+            },
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "color_identification_sonnet_custom_20251216_171252"
+            },
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "color_identification_sonnet_custom_20251216_171338"
+            }
+          ],
+          "num_passes": 3
+        },
+        "opus": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                462,
+                482
+              ],
+              "distance": 58.309518948453004,
+              "response": "(462, 482)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "color_identification_opus_custom_20251216_171411"
+            },
+            {
+              "predicted_coords": [
+                462,
+                462
+              ],
+              "distance": 70.71067811865476,
+              "response": "(462, 462)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "color_identification_opus_custom_20251216_171437"
+            },
+            {
+              "predicted_coords": [
+                512,
+                462
+              ],
+              "distance": 50.0,
+              "response": "(512, 462)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "color_identification_opus_custom_20251216_171502"
+            }
+          ],
+          "num_passes": 3
+        },
+        "chatgpt": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                530,
+                650
+              ],
+              "distance": 139.16896205691842,
+              "response": "(530, 650)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "color_identification_chatgpt_custom_20251216_171700"
+            },
+            {
+              "predicted_coords": [
+                532,
+                538
+              ],
+              "distance": 32.802438933713454,
+              "response": "(532, 538)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "color_identification_chatgpt_custom_20251216_171714"
+            },
+            {
+              "predicted_coords": [
+                544,
+                552
+              ],
+              "distance": 51.22499389946279,
+              "response": "(544, 552)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "color_identification_chatgpt_custom_20251216_171734"
+            }
+          ],
+          "num_passes": 3
+        },
+        "haiku": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                512,
+                510
+              ],
+              "distance": 2.0,
+              "response": "(512, 510)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "color_identification_haiku_custom_20251216_171750"
+            },
+            {
+              "predicted_coords": [
+                512,
+                511
+              ],
+              "distance": 1.0,
+              "response": "(512, 511)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "color_identification_haiku_custom_20251216_171807"
+            },
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "color_identification_haiku_custom_20251216_171825"
+            }
+          ],
+          "num_passes": 3
+        },
+        "qwen3-vl": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                512,
+                493
+              ],
+              "distance": 19.0,
+              "response": "(512, 493)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "color_identification_qwen3-vl_custom_20251216_171842"
+            },
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "color_identification_qwen3-vl_custom_20251216_171909"
+            },
+            {
+              "predicted_coords": [
+                512,
+                499
+              ],
+              "distance": 13.0,
+              "response": "(512, 499)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "color_identification_qwen3-vl_custom_20251216_171923"
+            }
+          ],
+          "num_passes": 3
+        },
+        "glm-4.6v": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "color_identification_glm-4.6v_custom_20251216_172004"
+            }
+          ],
+          "num_passes": 1
+        }
+      }
+    },
+    {
+      "test_name": "hexcode_2",
+      "prompt": "Point to the center of the circle with hex color #4ECDC4",
+      "expected_coords": [
+        512,
+        512
+      ],
+      "image_file": "images/hexcode_2.png",
+      "models": {
+        "sonnet": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "color_identification_sonnet_custom_20251216_171202"
+            },
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "color_identification_sonnet_custom_20251216_171252"
+            },
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "color_identification_sonnet_custom_20251216_171338"
+            }
+          ],
+          "num_passes": 3
+        },
+        "opus": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                512,
+                456
+              ],
+              "distance": 56.0,
+              "response": "(512, 456)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "color_identification_opus_custom_20251216_171411"
+            },
+            {
+              "predicted_coords": [
+                512,
+                456
+              ],
+              "distance": 56.0,
+              "response": "(512, 456)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "color_identification_opus_custom_20251216_171437"
+            },
+            {
+              "predicted_coords": [
+                512,
+                456
+              ],
+              "distance": 56.0,
+              "response": "(512, 456)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "color_identification_opus_custom_20251216_171502"
+            }
+          ],
+          "num_passes": 3
+        },
+        "chatgpt": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                512,
+                640
+              ],
+              "distance": 128.0,
+              "response": "(512, 640)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "color_identification_chatgpt_custom_20251216_171700"
+            },
+            {
+              "predicted_coords": [
+                512,
+                640
+              ],
+              "distance": 128.0,
+              "response": "(512, 640)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "color_identification_chatgpt_custom_20251216_171714"
+            },
+            {
+              "predicted_coords": [
+                512,
+                640
+              ],
+              "distance": 128.0,
+              "response": "(512, 640)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "color_identification_chatgpt_custom_20251216_171734"
+            }
+          ],
+          "num_passes": 3
+        },
+        "haiku": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "color_identification_haiku_custom_20251216_171750"
+            },
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "color_identification_haiku_custom_20251216_171807"
+            },
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "color_identification_haiku_custom_20251216_171825"
+            }
+          ],
+          "num_passes": 3
+        },
+        "qwen3-vl": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "color_identification_qwen3-vl_custom_20251216_171842"
+            },
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "color_identification_qwen3-vl_custom_20251216_171909"
+            },
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "color_identification_qwen3-vl_custom_20251216_171923"
+            }
+          ],
+          "num_passes": 3
+        }
+      }
+    },
+    {
+      "test_name": "hexcode_3",
+      "prompt": "Point to the center of the circle with hex color #95E1D3",
+      "expected_coords": [
+        512,
+        512
+      ],
+      "image_file": "images/hexcode_3.png",
+      "models": {
+        "sonnet": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "color_identification_sonnet_custom_20251216_171202"
+            },
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "color_identification_sonnet_custom_20251216_171252"
+            },
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "color_identification_sonnet_custom_20251216_171338"
+            }
+          ],
+          "num_passes": 3
+        },
+        "opus": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                482,
+                492
+              ],
+              "distance": 36.05551275463989,
+              "response": "(482, 492)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "color_identification_opus_custom_20251216_171411"
+            },
+            {
+              "predicted_coords": [
+                480,
+                488
+              ],
+              "distance": 40.0,
+              "response": "(480, 488)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "color_identification_opus_custom_20251216_171437"
+            },
+            {
+              "predicted_coords": [
+                480,
+                490
+              ],
+              "distance": 38.8329756778952,
+              "response": "(480, 490)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "color_identification_opus_custom_20251216_171502"
+            }
+          ],
+          "num_passes": 3
+        },
+        "chatgpt": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                512,
+                640
+              ],
+              "distance": 128.0,
+              "response": "(512, 640)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "color_identification_chatgpt_custom_20251216_171700"
+            },
+            {
+              "predicted_coords": [
+                540,
+                640
+              ],
+              "distance": 131.0267148332736,
+              "response": "(540, 640)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "color_identification_chatgpt_custom_20251216_171714"
+            },
+            {
+              "predicted_coords": [
+                512,
+                640
+              ],
+              "distance": 128.0,
+              "response": "(512, 640)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "color_identification_chatgpt_custom_20251216_171734"
+            }
+          ],
+          "num_passes": 3
+        },
+        "haiku": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "color_identification_haiku_custom_20251216_171750"
+            },
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "color_identification_haiku_custom_20251216_171807"
+            },
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "color_identification_haiku_custom_20251216_171825"
+            }
+          ],
+          "num_passes": 3
+        },
+        "qwen3-vl": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "color_identification_qwen3-vl_custom_20251216_171842"
+            },
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "color_identification_qwen3-vl_custom_20251216_171909"
+            },
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "color_identification_qwen3-vl_custom_20251216_171923"
+            }
+          ],
+          "num_passes": 3
+        }
+      }
+    },
+    {
+      "test_name": "hexcode_similar",
+      "prompt": "Point to the center of the circle with hex color #FF6B9D (not #FF6B9E)",
+      "expected_coords": [
+        307,
+        512
+      ],
+      "image_file": "images/hexcode_similar.png",
+      "models": {
+        "sonnet": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                307,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(307, 512)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "color_identification_sonnet_custom_20251216_171202"
+            },
+            {
+              "predicted_coords": [
+                307,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(307, 512)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "color_identification_sonnet_custom_20251216_171252"
+            },
+            {
+              "predicted_coords": [
+                307,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(307, 512)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "color_identification_sonnet_custom_20251216_171338"
+            }
+          ],
+          "num_passes": 3
+        },
+        "opus": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                307,
+                447
+              ],
+              "distance": 65.0,
+              "response": "(307, 447)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "color_identification_opus_custom_20251216_171411"
+            },
+            {
+              "predicted_coords": [
+                304,
+                448
+              ],
+              "distance": 64.07027391856539,
+              "response": "(304, 448)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "color_identification_opus_custom_20251216_171437"
+            },
+            {
+              "predicted_coords": [
+                307,
+                456
+              ],
+              "distance": 56.0,
+              "response": "(307, 456)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "color_identification_opus_custom_20251216_171502"
+            }
+          ],
+          "num_passes": 3
+        },
+        "chatgpt": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                713,
+                542
+              ],
+              "distance": 407.1068655770865,
+              "response": "(713, 542)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "color_identification_chatgpt_custom_20251216_171700"
+            },
+            {
+              "predicted_coords": [
+                320,
+                640
+              ],
+              "distance": 128.65846260545786,
+              "response": "(320, 640)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "color_identification_chatgpt_custom_20251216_171714"
+            },
+            {
+              "predicted_coords": [
+                710,
+                518
+              ],
+              "distance": 403.0446625375406,
+              "response": "(710, 518)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "color_identification_chatgpt_custom_20251216_171734"
+            }
+          ],
+          "num_passes": 3
+        },
+        "haiku": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                308,
+                510
+              ],
+              "distance": 2.23606797749979,
+              "response": "I need to locate the circle with hex color #FF6B9D in the image.\n\nLooking at the image, I can see two pink circles. I need to identify which one has the exact color #FF6B9D.\n\nBoth circles appear to be the same shade of pink. Let me examine them carefully to determine which one matches #FF6B9D exactly.\n\nThe left circle appears to be centered at approximately (308, 510).\nThe right circle appears",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "color_identification_haiku_custom_20251216_171750"
+            },
+            {
+              "predicted_coords": [
+                308,
+                512
+              ],
+              "distance": 1.0,
+              "response": "I need to identify the circle with hex color #FF6B9D and find its center.\n\nLooking at the image, I can see two pink circles. Both appear to be the same color, which is #FF6B9D (a bright pink color). \n\nThe left circle appears to be centered at approximately (308, 512).\nThe right circle appears to be centered at approximately (716, 512).\n\nSince the question asks for \"the circle\" (singular",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "color_identification_haiku_custom_20251216_171807"
+            }
+          ],
+          "num_passes": 2
+        },
+        "qwen3-vl": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                716,
+                485
+              ],
+              "distance": 409.89022920777217,
+              "response": "(716, 485)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "color_identification_qwen3-vl_custom_20251216_171842"
+            },
+            {
+              "predicted_coords": [
+                696,
+                485
+              ],
+              "distance": 389.9358921669048,
+              "response": "(696, 485)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "color_identification_qwen3-vl_custom_20251216_171909"
+            },
+            {
+              "predicted_coords": [
+                297,
+                496
+              ],
+              "distance": 18.867962264113206,
+              "response": "(297, 496)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "color_identification_qwen3-vl_custom_20251216_171923"
+            }
+          ],
+          "num_passes": 3
+        }
+      }
+    },
+    {
+      "test_name": "subtle_blue_cyan",
+      "prompt": "Point to the center of the cyan circle (not the blue one)",
+      "expected_coords": [
+        307,
+        512
+      ],
+      "image_file": "images/subtle_blue_cyan.png",
+      "models": {
+        "sonnet": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                308,
+                512
+              ],
+              "distance": 1.0,
+              "response": "(308, 512)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "color_identification_sonnet_custom_20251216_171202"
+            },
+            {
+              "predicted_coords": [
+                308,
+                512
+              ],
+              "distance": 1.0,
+              "response": "(308, 512)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "color_identification_sonnet_custom_20251216_171252"
+            },
+            {
+              "predicted_coords": [
+                308,
+                512
+              ],
+              "distance": 1.0,
+              "response": "(308, 512)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "color_identification_sonnet_custom_20251216_171338"
+            }
+          ],
+          "num_passes": 3
+        },
+        "opus": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                314,
+                432
+              ],
+              "distance": 80.30566605165541,
+              "response": "(314, 432)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "color_identification_opus_custom_20251216_171411"
+            },
+            {
+              "predicted_coords": [
+                315,
+                430
+              ],
+              "distance": 82.38931969618392,
+              "response": "(315, 430)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "color_identification_opus_custom_20251216_171437"
+            },
+            {
+              "predicted_coords": [
+                314,
+                432
+              ],
+              "distance": 80.30566605165541,
+              "response": "(314, 432)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "color_identification_opus_custom_20251216_171502"
+            }
+          ],
+          "num_passes": 3
+        },
+        "chatgpt": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                290,
+                406
+              ],
+              "distance": 107.35455276791944,
+              "response": "(290, 406)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "color_identification_chatgpt_custom_20251216_171700"
+            },
+            {
+              "predicted_coords": [
+                286,
+                418
+              ],
+              "distance": 96.317184344228,
+              "response": "(286, 418)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "color_identification_chatgpt_custom_20251216_171714"
+            },
+            {
+              "predicted_coords": [
+                299,
+                407
+              ],
+              "distance": 105.30432089900205,
+              "response": "(299, 407)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "color_identification_chatgpt_custom_20251216_171734"
+            }
+          ],
+          "num_passes": 3
+        },
+        "haiku": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                307,
+                510
+              ],
+              "distance": 2.0,
+              "response": "(307, 510)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "color_identification_haiku_custom_20251216_171750"
+            },
+            {
+              "predicted_coords": [
+                308,
+                512
+              ],
+              "distance": 1.0,
+              "response": "(308, 512)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "color_identification_haiku_custom_20251216_171807"
+            },
+            {
+              "predicted_coords": [
+                308,
+                512
+              ],
+              "distance": 1.0,
+              "response": "(308, 512)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "color_identification_haiku_custom_20251216_171825"
+            }
+          ],
+          "num_passes": 3
+        },
+        "qwen3-vl": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                298,
+                496
+              ],
+              "distance": 18.35755975068582,
+              "response": "(298, 496)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "color_identification_qwen3-vl_custom_20251216_171842"
+            },
+            {
+              "predicted_coords": [
+                299,
+                496
+              ],
+              "distance": 17.88854381999832,
+              "response": "(299, 496)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "color_identification_qwen3-vl_custom_20251216_171909"
+            },
+            {
+              "predicted_coords": [
+                307,
+                503
+              ],
+              "distance": 9.0,
+              "response": "(307, 503)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "color_identification_qwen3-vl_custom_20251216_171923"
+            }
+          ],
+          "num_passes": 3
+        }
+      }
+    },
+    {
+      "test_name": "subtle_red_orange",
+      "prompt": "Point to the center of the red-orange circle (not the pure orange one)",
+      "expected_coords": [
+        307,
+        512
+      ],
+      "image_file": "images/subtle_red_orange.png",
+      "models": {
+        "sonnet": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                308,
+                512
+              ],
+              "distance": 1.0,
+              "response": "(308, 512)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "color_identification_sonnet_custom_20251216_171202"
+            },
+            {
+              "predicted_coords": [
+                307,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(307, 512)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "color_identification_sonnet_custom_20251216_171252"
+            },
+            {
+              "predicted_coords": [
+                307,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(307, 512)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "color_identification_sonnet_custom_20251216_171338"
+            }
+          ],
+          "num_passes": 3
+        },
+        "opus": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                314,
+                462
+              ],
+              "distance": 50.48762224545735,
+              "response": "(314, 462)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "color_identification_opus_custom_20251216_171411"
+            },
+            {
+              "predicted_coords": [
+                314,
+                472
+              ],
+              "distance": 40.607881008493905,
+              "response": "(314, 472)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "color_identification_opus_custom_20251216_171437"
+            },
+            {
+              "predicted_coords": [
+                310,
+                480
+              ],
+              "distance": 32.14031735997639,
+              "response": "(310, 480)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "color_identification_opus_custom_20251216_171502"
+            }
+          ],
+          "num_passes": 3
+        },
+        "chatgpt": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                297,
+                512
+              ],
+              "distance": 10.0,
+              "response": "(297, 512)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "color_identification_chatgpt_custom_20251216_171700"
+            },
+            {
+              "predicted_coords": [
+                298,
+                488
+              ],
+              "distance": 25.632011235952593,
+              "response": "(298, 488)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "color_identification_chatgpt_custom_20251216_171714"
+            },
+            {
+              "predicted_coords": [
+                299,
+                512
+              ],
+              "distance": 8.0,
+              "response": "(299, 512)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "color_identification_chatgpt_custom_20251216_171734"
+            }
+          ],
+          "num_passes": 3
+        },
+        "haiku": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                308,
+                513
+              ],
+              "distance": 1.4142135623730951,
+              "response": "(308, 513)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "color_identification_haiku_custom_20251216_171750"
+            },
+            {
+              "predicted_coords": [
+                308,
+                510
+              ],
+              "distance": 2.23606797749979,
+              "response": "(308, 510)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "color_identification_haiku_custom_20251216_171807"
+            },
+            {
+              "predicted_coords": [
+                308,
+                512
+              ],
+              "distance": 1.0,
+              "response": "(308, 512)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "color_identification_haiku_custom_20251216_171825"
+            }
+          ],
+          "num_passes": 3
+        },
+        "qwen3-vl": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                310,
+                507
+              ],
+              "distance": 5.830951894845301,
+              "response": "(310, 507)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "color_identification_qwen3-vl_custom_20251216_171842"
+            },
+            {
+              "predicted_coords": [
+                298,
+                499
+              ],
+              "distance": 15.811388300841896,
+              "response": "(298, 499)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "color_identification_qwen3-vl_custom_20251216_171909"
+            },
+            {
+              "predicted_coords": [
+                308,
+                499
+              ],
+              "distance": 13.038404810405298,
+              "response": "(308, 499)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "color_identification_qwen3-vl_custom_20251216_171923"
+            }
+          ],
+          "num_passes": 3
+        }
+      }
+    }
+  ]
+}

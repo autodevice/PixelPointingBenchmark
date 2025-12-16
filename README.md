@@ -23,6 +23,10 @@ This benchmark evaluates how accurately different VLMs can identify and point to
   - Gemini 3 Pro
   - GPT-5.1
   - Claude Haiku 4
+  - Grok 4.1 (via OpenRouter)
+  - Qwen3-VL (via OpenRouter)
+  - GLM-4.6V (via OpenRouter)
+  - Gemini 2.5 Flash (via OpenRouter)
 - **Multiple Passes**: Run evaluations multiple times to calculate statistics and standard deviation
 - **Non-Overwriting Results**: Results are stored with timestamps, allowing multiple runs without overwriting
 - **Multiple Screen Sizes**: Test models across different screen dimensions and aspect ratios
@@ -56,7 +60,10 @@ pip install -r requirements.txt
    ANTHROPIC_API_KEY=your_anthropic_key
    OPENAI_API_KEY=your_openai_key
    GEMINI_API_KEY=your_gemini_key
+   OPENROUTER_API_KEY=your_openrouter_key
    ```
+   
+   Note: For OpenRouter models (grok-4.1, qwen3-vl, glm-4.6v, gemini-2.5-flash), you need to set `OPENROUTER_API_KEY`.
 
 ## Usage
 
@@ -237,6 +244,10 @@ The enhanced viewer (index.html) uses the following color scheme:
 - **Gemini3**: rgb(0, 255, 76) (Green)
 - **ChatGPT**: rgb(17, 160, 207) (Blue)
 - **Haiku**: rgb(164, 11, 224) (Purple)
+- **Grok-4.1**: rgb(255, 20, 147) (Deep Pink)
+- **Qwen3-VL**: rgb(34, 139, 34) (Forest Green)
+- **GLM-4.6V**: rgb(25, 6, 133) (Orange)
+- **Gemini-2.5-Flash**: rgb(255, 0, 43) (Dodger Blue)
 - **Ground Truth**: Black circle with white center
 
 Colors are displayed as dots next to model names in the statistics section.

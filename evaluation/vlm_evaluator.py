@@ -36,11 +36,17 @@ class VLMEvaluator:
                 "estimated_tokens": int(pixels / 750),
             }
 
+            prompt = (
+                f"{prompt}\n\n"
+                f"Image dimensions: {width} pixels wide × {height} pixels tall.\n"
+                f"Respond with only the coordinates in the format: (x, y)."
+            )
+
             messages = [
                 {
                     "role": "user",
                     "content": [
-                        {"type": "text", "text": f"{prompt}\n\nRespond with only the coordinates in the format: (x, y)"},
+                        {"type": "text", "text": prompt},
                         {
                             "type": "image_url",
                             "image_url": {
@@ -51,10 +57,15 @@ class VLMEvaluator:
                 }
             ]
 
+            base_url = None
+            if "openrouter" in self.model.lower():
+                base_url = "https://openrouter.ai/api/v1"
+            
             response = litellm.completion(
                 model=self.model,
                 messages=messages,
                 max_tokens=100,
+                base_url=base_url,
             )
 
             content = response.choices[0].message.content

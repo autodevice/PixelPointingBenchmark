@@ -1,0 +1,1859 @@
+{
+  "test_suite": "shape_identification",
+  "screen_size": {
+    "name": "custom",
+    "width": 1024,
+    "height": 1024
+  },
+  "models": {
+    "chatgpt": "chatgpt",
+    "glm-4.6v": "glm-4.6v",
+    "haiku": "haiku",
+    "opus": "opus",
+    "qwen3-vl": "qwen3-vl",
+    "sonnet": "sonnet"
+  },
+  "tests": [
+    {
+      "test_name": "basic_circle",
+      "prompt": "Point to the center of the circle",
+      "expected_coords": [
+        512,
+        512
+      ],
+      "image_file": "images/basic_circle.png",
+      "models": {
+        "sonnet": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "shape_identification_sonnet_custom_20251216_171653"
+            },
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "shape_identification_sonnet_custom_20251216_171733"
+            },
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "shape_identification_sonnet_custom_20251216_171816"
+            }
+          ],
+          "num_passes": 3
+        },
+        "opus": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                480,
+                500
+              ],
+              "distance": 34.17601498127012,
+              "response": "(480, 500)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "shape_identification_opus_custom_20251216_171840"
+            },
+            {
+              "predicted_coords": [
+                480,
+                500
+              ],
+              "distance": 34.17601498127012,
+              "response": "(480, 500)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "shape_identification_opus_custom_20251216_171909"
+            },
+            {
+              "predicted_coords": [
+                480,
+                500
+              ],
+              "distance": 34.17601498127012,
+              "response": "(480, 500)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "shape_identification_opus_custom_20251216_171931"
+            }
+          ],
+          "num_passes": 3
+        },
+        "chatgpt": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                512,
+                448
+              ],
+              "distance": 64.0,
+              "response": "(512, 448)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "shape_identification_chatgpt_custom_20251216_172023"
+            },
+            {
+              "predicted_coords": [
+                511,
+                511
+              ],
+              "distance": 1.4142135623730951,
+              "response": "(511, 511)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "shape_identification_chatgpt_custom_20251216_172041"
+            },
+            {
+              "predicted_coords": [
+                511,
+                511
+              ],
+              "distance": 1.4142135623730951,
+              "response": "(511, 511)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "shape_identification_chatgpt_custom_20251216_172054"
+            }
+          ],
+          "num_passes": 3
+        },
+        "haiku": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                513,
+                511
+              ],
+              "distance": 1.4142135623730951,
+              "response": "(513, 511)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "shape_identification_haiku_custom_20251216_172108"
+            },
+            {
+              "predicted_coords": [
+                512,
+                510
+              ],
+              "distance": 2.0,
+              "response": "(512, 510)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "shape_identification_haiku_custom_20251216_172120"
+            },
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "shape_identification_haiku_custom_20251216_172132"
+            }
+          ],
+          "num_passes": 3
+        },
+        "qwen3-vl": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "shape_identification_qwen3-vl_custom_20251216_172156"
+            },
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "shape_identification_qwen3-vl_custom_20251216_172219"
+            },
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "shape_identification_qwen3-vl_custom_20251216_172246"
+            }
+          ],
+          "num_passes": 3
+        },
+        "glm-4.6v": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "shape_identification_glm-4.6v_custom_20251216_172324"
+            }
+          ],
+          "num_passes": 1
+        }
+      }
+    },
+    {
+      "test_name": "basic_square",
+      "prompt": "Point to the center of the square",
+      "expected_coords": [
+        512,
+        512
+      ],
+      "image_file": "images/basic_square.png",
+      "models": {
+        "sonnet": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "shape_identification_sonnet_custom_20251216_171653"
+            },
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "shape_identification_sonnet_custom_20251216_171733"
+            },
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "shape_identification_sonnet_custom_20251216_171816"
+            }
+          ],
+          "num_passes": 3
+        },
+        "opus": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                512,
+                462
+              ],
+              "distance": 50.0,
+              "response": "(512, 462)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "shape_identification_opus_custom_20251216_171840"
+            },
+            {
+              "predicted_coords": [
+                512,
+                462
+              ],
+              "distance": 50.0,
+              "response": "(512, 462)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "shape_identification_opus_custom_20251216_171909"
+            },
+            {
+              "predicted_coords": [
+                512,
+                469
+              ],
+              "distance": 43.0,
+              "response": "(512, 469)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "shape_identification_opus_custom_20251216_171931"
+            }
+          ],
+          "num_passes": 3
+        },
+        "chatgpt": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "shape_identification_chatgpt_custom_20251216_172023"
+            },
+            {
+              "predicted_coords": [
+                511,
+                511
+              ],
+              "distance": 1.4142135623730951,
+              "response": "(511, 511)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "shape_identification_chatgpt_custom_20251216_172041"
+            },
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "shape_identification_chatgpt_custom_20251216_172054"
+            }
+          ],
+          "num_passes": 3
+        },
+        "haiku": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                512,
+                511
+              ],
+              "distance": 1.0,
+              "response": "(512, 511)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "shape_identification_haiku_custom_20251216_172108"
+            },
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "shape_identification_haiku_custom_20251216_172120"
+            },
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "shape_identification_haiku_custom_20251216_172132"
+            }
+          ],
+          "num_passes": 3
+        },
+        "qwen3-vl": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "shape_identification_qwen3-vl_custom_20251216_172156"
+            },
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "shape_identification_qwen3-vl_custom_20251216_172219"
+            },
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "shape_identification_qwen3-vl_custom_20251216_172246"
+            }
+          ],
+          "num_passes": 3
+        }
+      }
+    },
+    {
+      "test_name": "basic_triangle",
+      "prompt": "Point to the center of the triangle",
+      "expected_coords": [
+        512,
+        512
+      ],
+      "image_file": "images/basic_triangle.png",
+      "models": {
+        "sonnet": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "shape_identification_sonnet_custom_20251216_171653"
+            },
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "shape_identification_sonnet_custom_20251216_171733"
+            },
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "shape_identification_sonnet_custom_20251216_171816"
+            }
+          ],
+          "num_passes": 3
+        },
+        "opus": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                512,
+                502
+              ],
+              "distance": 10.0,
+              "response": "(512, 502)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "shape_identification_opus_custom_20251216_171840"
+            },
+            {
+              "predicted_coords": [
+                512,
+                507
+              ],
+              "distance": 5.0,
+              "response": "(512, 507)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "shape_identification_opus_custom_20251216_171909"
+            },
+            {
+              "predicted_coords": [
+                512,
+                507
+              ],
+              "distance": 5.0,
+              "response": "(512, 507)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "shape_identification_opus_custom_20251216_171931"
+            }
+          ],
+          "num_passes": 3
+        },
+        "chatgpt": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                512,
+                448
+              ],
+              "distance": 64.0,
+              "response": "(512, 448)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "shape_identification_chatgpt_custom_20251216_172023"
+            },
+            {
+              "predicted_coords": [
+                517,
+                436
+              ],
+              "distance": 76.16429609731846,
+              "response": "(517, 436)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "shape_identification_chatgpt_custom_20251216_172041"
+            },
+            {
+              "predicted_coords": [
+                521,
+                436
+              ],
+              "distance": 76.53103945458993,
+              "response": "(521, 436)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "shape_identification_chatgpt_custom_20251216_172054"
+            }
+          ],
+          "num_passes": 3
+        },
+        "haiku": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                512,
+                507
+              ],
+              "distance": 5.0,
+              "response": "(512, 507)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "shape_identification_haiku_custom_20251216_172108"
+            },
+            {
+              "predicted_coords": [
+                512,
+                507
+              ],
+              "distance": 5.0,
+              "response": "(512, 507)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "shape_identification_haiku_custom_20251216_172120"
+            },
+            {
+              "predicted_coords": [
+                512,
+                507
+              ],
+              "distance": 5.0,
+              "response": "(512, 507)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "shape_identification_haiku_custom_20251216_172132"
+            }
+          ],
+          "num_passes": 3
+        },
+        "qwen3-vl": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "shape_identification_qwen3-vl_custom_20251216_172156"
+            },
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "shape_identification_qwen3-vl_custom_20251216_172219"
+            },
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "shape_identification_qwen3-vl_custom_20251216_172246"
+            }
+          ],
+          "num_passes": 3
+        }
+      }
+    },
+    {
+      "test_name": "decagon_among_circles",
+      "prompt": "Point to the center of the decagon (the 10-sided polygon, not the circles)",
+      "expected_coords": [
+        512,
+        512
+      ],
+      "image_file": "images/decagon_among_circles.png",
+      "models": {
+        "sonnet": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "shape_identification_sonnet_custom_20251216_171653"
+            },
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "shape_identification_sonnet_custom_20251216_171733"
+            },
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "shape_identification_sonnet_custom_20251216_171816"
+            }
+          ],
+          "num_passes": 3
+        },
+        "opus": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                512,
+                408
+              ],
+              "distance": 104.0,
+              "response": "(512, 408)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "shape_identification_opus_custom_20251216_171840"
+            },
+            {
+              "predicted_coords": [
+                512,
+                410
+              ],
+              "distance": 102.0,
+              "response": "(512, 410)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "shape_identification_opus_custom_20251216_171909"
+            },
+            {
+              "predicted_coords": [
+                512,
+                390
+              ],
+              "distance": 122.0,
+              "response": "(512, 390)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "shape_identification_opus_custom_20251216_171931"
+            }
+          ],
+          "num_passes": 3
+        },
+        "chatgpt": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                511,
+                450
+              ],
+              "distance": 62.00806399170998,
+              "response": "(511, 450)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "shape_identification_chatgpt_custom_20251216_172023"
+            },
+            {
+              "predicted_coords": [
+                513,
+                429
+              ],
+              "distance": 83.00602387778854,
+              "response": "(513, 429)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "shape_identification_chatgpt_custom_20251216_172041"
+            },
+            {
+              "predicted_coords": [
+                512,
+                448
+              ],
+              "distance": 64.0,
+              "response": "(512, 448)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "shape_identification_chatgpt_custom_20251216_172054"
+            }
+          ],
+          "num_passes": 3
+        },
+        "haiku": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "shape_identification_haiku_custom_20251216_172108"
+            },
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "shape_identification_haiku_custom_20251216_172120"
+            },
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "shape_identification_haiku_custom_20251216_172132"
+            }
+          ],
+          "num_passes": 3
+        },
+        "qwen3-vl": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "shape_identification_qwen3-vl_custom_20251216_172156"
+            },
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "shape_identification_qwen3-vl_custom_20251216_172219"
+            },
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "shape_identification_qwen3-vl_custom_20251216_172246"
+            }
+          ],
+          "num_passes": 3
+        }
+      }
+    },
+    {
+      "test_name": "hexagon",
+      "prompt": "Point to the center of the hexagon",
+      "expected_coords": [
+        512,
+        512
+      ],
+      "image_file": "images/hexagon.png",
+      "models": {
+        "sonnet": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "shape_identification_sonnet_custom_20251216_171653"
+            },
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "shape_identification_sonnet_custom_20251216_171733"
+            },
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "shape_identification_sonnet_custom_20251216_171816"
+            }
+          ],
+          "num_passes": 3
+        },
+        "opus": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                512,
+                462
+              ],
+              "distance": 50.0,
+              "response": "(512, 462)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "shape_identification_opus_custom_20251216_171840"
+            },
+            {
+              "predicted_coords": [
+                512,
+                460
+              ],
+              "distance": 52.0,
+              "response": "(512, 460)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "shape_identification_opus_custom_20251216_171909"
+            },
+            {
+              "predicted_coords": [
+                512,
+                460
+              ],
+              "distance": 52.0,
+              "response": "(512, 460)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "shape_identification_opus_custom_20251216_171931"
+            }
+          ],
+          "num_passes": 3
+        },
+        "chatgpt": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                529,
+                382
+              ],
+              "distance": 131.10682667199293,
+              "response": "(529, 382)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "shape_identification_chatgpt_custom_20251216_172023"
+            },
+            {
+              "predicted_coords": [
+                512,
+                426
+              ],
+              "distance": 86.0,
+              "response": "(512, 426)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "shape_identification_chatgpt_custom_20251216_172041"
+            },
+            {
+              "predicted_coords": [
+                513,
+                381
+              ],
+              "distance": 131.00381673829202,
+              "response": "(513, 381)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "shape_identification_chatgpt_custom_20251216_172054"
+            }
+          ],
+          "num_passes": 3
+        },
+        "haiku": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "shape_identification_haiku_custom_20251216_172108"
+            },
+            {
+              "predicted_coords": [
+                512,
+                525
+              ],
+              "distance": 13.0,
+              "response": "(512, 525)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "shape_identification_haiku_custom_20251216_172120"
+            },
+            {
+              "predicted_coords": [
+                512,
+                515
+              ],
+              "distance": 3.0,
+              "response": "(512, 515)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "shape_identification_haiku_custom_20251216_172132"
+            }
+          ],
+          "num_passes": 3
+        },
+        "qwen3-vl": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "shape_identification_qwen3-vl_custom_20251216_172156"
+            },
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "shape_identification_qwen3-vl_custom_20251216_172219"
+            },
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "shape_identification_qwen3-vl_custom_20251216_172246"
+            }
+          ],
+          "num_passes": 3
+        },
+        "glm-4.6v": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "shape_identification_glm-4.6v_custom_20251216_172359"
+            }
+          ],
+          "num_passes": 1
+        }
+      }
+    },
+    {
+      "test_name": "hexagon_vs_octagon",
+      "prompt": "Point to the center of the hexagon (6 sides, not 8)",
+      "expected_coords": [
+        307,
+        512
+      ],
+      "image_file": "images/hexagon_vs_octagon.png",
+      "models": {
+        "sonnet": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                306,
+                512
+              ],
+              "distance": 1.0,
+              "response": "(306, 512)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "shape_identification_sonnet_custom_20251216_171653"
+            },
+            {
+              "predicted_coords": [
+                306,
+                512
+              ],
+              "distance": 1.0,
+              "response": "(306, 512)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "shape_identification_sonnet_custom_20251216_171733"
+            },
+            {
+              "predicted_coords": [
+                307,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(307, 512)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "shape_identification_sonnet_custom_20251216_171816"
+            }
+          ],
+          "num_passes": 3
+        },
+        "opus": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                296,
+                480
+              ],
+              "distance": 33.83784863137726,
+              "response": "(296, 480)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "shape_identification_opus_custom_20251216_171840"
+            },
+            {
+              "predicted_coords": [
+                285,
+                480
+              ],
+              "distance": 38.8329756778952,
+              "response": "(285, 480)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "shape_identification_opus_custom_20251216_171909"
+            },
+            {
+              "predicted_coords": [
+                296,
+                472
+              ],
+              "distance": 41.48493702538308,
+              "response": "(296, 472)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "shape_identification_opus_custom_20251216_171931"
+            }
+          ],
+          "num_passes": 3
+        },
+        "chatgpt": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                322,
+                512
+              ],
+              "distance": 15.0,
+              "response": "(322, 512)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "shape_identification_chatgpt_custom_20251216_172023"
+            },
+            {
+              "predicted_coords": [
+                310,
+                531
+              ],
+              "distance": 19.235384061671343,
+              "response": "(310, 531)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "shape_identification_chatgpt_custom_20251216_172041"
+            },
+            {
+              "predicted_coords": [
+                297,
+                511
+              ],
+              "distance": 10.04987562112089,
+              "response": "(297, 511)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "shape_identification_chatgpt_custom_20251216_172054"
+            }
+          ],
+          "num_passes": 3
+        },
+        "haiku": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                718,
+                520
+              ],
+              "distance": 411.077851507473,
+              "response": "(718, 520)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "shape_identification_haiku_custom_20251216_172108"
+            },
+            {
+              "predicted_coords": [
+                717,
+                515
+              ],
+              "distance": 410.0109754628527,
+              "response": "(717, 515)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "shape_identification_haiku_custom_20251216_172120"
+            },
+            {
+              "predicted_coords": [
+                715,
+                520
+              ],
+              "distance": 408.0784238354192,
+              "response": "(715, 520)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "shape_identification_haiku_custom_20251216_172132"
+            }
+          ],
+          "num_passes": 3
+        },
+        "qwen3-vl": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                749,
+                509
+              ],
+              "distance": 442.01018087822365,
+              "response": "(749, 509)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "shape_identification_qwen3-vl_custom_20251216_172156"
+            },
+            {
+              "predicted_coords": [
+                753,
+                497
+              ],
+              "distance": 446.2521708630671,
+              "response": "(753, 497)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "shape_identification_qwen3-vl_custom_20251216_172219"
+            },
+            {
+              "predicted_coords": [
+                708,
+                494
+              ],
+              "distance": 401.40378672852603,
+              "response": "(708, 494)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "shape_identification_qwen3-vl_custom_20251216_172246"
+            }
+          ],
+          "num_passes": 3
+        }
+      }
+    },
+    {
+      "test_name": "octagon",
+      "prompt": "Point to the center of the octagon",
+      "expected_coords": [
+        512,
+        512
+      ],
+      "image_file": "images/octagon.png",
+      "models": {
+        "sonnet": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "shape_identification_sonnet_custom_20251216_171653"
+            },
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "shape_identification_sonnet_custom_20251216_171733"
+            },
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "shape_identification_sonnet_custom_20251216_171816"
+            }
+          ],
+          "num_passes": 3
+        },
+        "opus": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                512,
+                456
+              ],
+              "distance": 56.0,
+              "response": "(512, 456)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "shape_identification_opus_custom_20251216_171840"
+            },
+            {
+              "predicted_coords": [
+                512,
+                460
+              ],
+              "distance": 52.0,
+              "response": "(512, 460)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "shape_identification_opus_custom_20251216_171909"
+            },
+            {
+              "predicted_coords": [
+                512,
+                460
+              ],
+              "distance": 52.0,
+              "response": "(512, 460)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "shape_identification_opus_custom_20251216_171931"
+            }
+          ],
+          "num_passes": 3
+        },
+        "chatgpt": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                517,
+                347
+              ],
+              "distance": 165.07574019219177,
+              "response": "(517, 347)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "shape_identification_chatgpt_custom_20251216_172023"
+            },
+            {
+              "predicted_coords": [
+                510,
+                374
+              ],
+              "distance": 138.01449199268893,
+              "response": "(510, 374)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "shape_identification_chatgpt_custom_20251216_172041"
+            },
+            {
+              "predicted_coords": [
+                511,
+                369
+              ],
+              "distance": 143.0034964607509,
+              "response": "(511, 369)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "shape_identification_chatgpt_custom_20251216_172054"
+            }
+          ],
+          "num_passes": 3
+        },
+        "haiku": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                512,
+                510
+              ],
+              "distance": 2.0,
+              "response": "(512, 510)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "shape_identification_haiku_custom_20251216_172108"
+            },
+            {
+              "predicted_coords": [
+                512,
+                510
+              ],
+              "distance": 2.0,
+              "response": "(512, 510)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "shape_identification_haiku_custom_20251216_172120"
+            },
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "shape_identification_haiku_custom_20251216_172132"
+            }
+          ],
+          "num_passes": 3
+        },
+        "qwen3-vl": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "shape_identification_qwen3-vl_custom_20251216_172156"
+            },
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "shape_identification_qwen3-vl_custom_20251216_172219"
+            },
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "shape_identification_qwen3-vl_custom_20251216_172246"
+            }
+          ],
+          "num_passes": 3
+        }
+      }
+    },
+    {
+      "test_name": "pentagon",
+      "prompt": "Point to the center of the pentagon",
+      "expected_coords": [
+        512,
+        512
+      ],
+      "image_file": "images/pentagon.png",
+      "models": {
+        "sonnet": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                512,
+                504
+              ],
+              "distance": 8.0,
+              "response": "(512, 504)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "shape_identification_sonnet_custom_20251216_171653"
+            },
+            {
+              "predicted_coords": [
+                512,
+                505
+              ],
+              "distance": 7.0,
+              "response": "(512, 505)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "shape_identification_sonnet_custom_20251216_171733"
+            },
+            {
+              "predicted_coords": [
+                512,
+                503
+              ],
+              "distance": 9.0,
+              "response": "(512, 503)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "shape_identification_sonnet_custom_20251216_171816"
+            }
+          ],
+          "num_passes": 3
+        },
+        "opus": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                512,
+                502
+              ],
+              "distance": 10.0,
+              "response": "(512, 502)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "shape_identification_opus_custom_20251216_171840"
+            },
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "shape_identification_opus_custom_20251216_171909"
+            },
+            {
+              "predicted_coords": [
+                512,
+                502
+              ],
+              "distance": 10.0,
+              "response": "(512, 502)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "shape_identification_opus_custom_20251216_171931"
+            }
+          ],
+          "num_passes": 3
+        },
+        "chatgpt": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                511,
+                421
+              ],
+              "distance": 91.00549433962765,
+              "response": "(511, 421)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "shape_identification_chatgpt_custom_20251216_172023"
+            },
+            {
+              "predicted_coords": [
+                512,
+                384
+              ],
+              "distance": 128.0,
+              "response": "(512, 384)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "shape_identification_chatgpt_custom_20251216_172041"
+            },
+            {
+              "predicted_coords": [
+                528,
+                415
+              ],
+              "distance": 98.3107318658548,
+              "response": "(528, 415)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "shape_identification_chatgpt_custom_20251216_172054"
+            }
+          ],
+          "num_passes": 3
+        },
+        "haiku": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                512,
+                520
+              ],
+              "distance": 8.0,
+              "response": "(512, 520)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "shape_identification_haiku_custom_20251216_172108"
+            },
+            {
+              "predicted_coords": [
+                512,
+                510
+              ],
+              "distance": 2.0,
+              "response": "(512, 510)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "shape_identification_haiku_custom_20251216_172120"
+            },
+            {
+              "predicted_coords": [
+                512,
+                515
+              ],
+              "distance": 3.0,
+              "response": "(512, 515)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "shape_identification_haiku_custom_20251216_172132"
+            }
+          ],
+          "num_passes": 3
+        },
+        "qwen3-vl": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                512,
+                495
+              ],
+              "distance": 17.0,
+              "response": "(512, 495)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "shape_identification_qwen3-vl_custom_20251216_172156"
+            },
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "shape_identification_qwen3-vl_custom_20251216_172219"
+            },
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "shape_identification_qwen3-vl_custom_20251216_172246"
+            }
+          ],
+          "num_passes": 3
+        }
+      }
+    },
+    {
+      "test_name": "rounded_button",
+      "prompt": "Point to the center of the button with rounded corners",
+      "expected_coords": [
+        307,
+        512
+      ],
+      "image_file": "images/rounded_button.png",
+      "models": {
+        "sonnet": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                307,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(307, 512)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "shape_identification_sonnet_custom_20251216_171653"
+            },
+            {
+              "predicted_coords": [
+                307,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(307, 512)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "shape_identification_sonnet_custom_20251216_171733"
+            },
+            {
+              "predicted_coords": [
+                307,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(307, 512)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "shape_identification_sonnet_custom_20251216_171816"
+            }
+          ],
+          "num_passes": 3
+        },
+        "opus": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                300,
+                430
+              ],
+              "distance": 82.29823813423954,
+              "response": "(300, 430)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "shape_identification_opus_custom_20251216_171840"
+            },
+            {
+              "predicted_coords": [
+                296,
+                455
+              ],
+              "distance": 58.05170109479997,
+              "response": "(296, 455)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "shape_identification_opus_custom_20251216_171909"
+            },
+            {
+              "predicted_coords": [
+                298,
+                460
+              ],
+              "distance": 52.773099207835045,
+              "response": "(298, 460)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "shape_identification_opus_custom_20251216_171931"
+            }
+          ],
+          "num_passes": 3
+        },
+        "chatgpt": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                330,
+                462
+              ],
+              "distance": 55.036351623268054,
+              "response": "(330, 462)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "shape_identification_chatgpt_custom_20251216_172023"
+            },
+            {
+              "predicted_coords": [
+                297,
+                430
+              ],
+              "distance": 82.60750571225353,
+              "response": "(297, 430)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "shape_identification_chatgpt_custom_20251216_172041"
+            },
+            {
+              "predicted_coords": [
+                264,
+                512
+              ],
+              "distance": 43.0,
+              "response": "(264, 512)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "shape_identification_chatgpt_custom_20251216_172054"
+            }
+          ],
+          "num_passes": 3
+        },
+        "haiku": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 205.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "shape_identification_haiku_custom_20251216_172108"
+            },
+            {
+              "predicted_coords": [
+                512,
+                511
+              ],
+              "distance": 205.00243900988104,
+              "response": "(512, 511)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "shape_identification_haiku_custom_20251216_172120"
+            },
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 205.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "shape_identification_haiku_custom_20251216_172132"
+            }
+          ],
+          "num_passes": 3
+        },
+        "qwen3-vl": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                512,
+                499
+              ],
+              "distance": 205.41178155110774,
+              "response": "(512, 499)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "shape_identification_qwen3-vl_custom_20251216_172156"
+            },
+            {
+              "predicted_coords": [
+                512,
+                512
+              ],
+              "distance": 205.0,
+              "response": "(512, 512)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "shape_identification_qwen3-vl_custom_20251216_172219"
+            },
+            {
+              "predicted_coords": [
+                512,
+                499
+              ],
+              "distance": 205.41178155110774,
+              "response": "(512, 499)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "shape_identification_qwen3-vl_custom_20251216_172246"
+            }
+          ],
+          "num_passes": 3
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,178 @@
+{
+  "run_id": "resolution_test_512x512_opus_custom_20251216_173755",
+  "test_suite": "resolution_test_512x512",
+  "model": "opus",
+  "model_id": "anthropic/claude-opus-4-5-20251101",
+  "screen_size": {
+    "name": "custom",
+    "width": 512,
+    "height": 512
+  },
+  "pass_number": 1,
+  "timestamp": "2025-12-16T17:37:55.493318",
+  "metrics": {
+    "total_tests": 5,
+    "successful_extractions": 5,
+    "extraction_rate": 100.0,
+    "mean_distance": 21.147580390089256,
+    "median_distance": 19.0,
+    "max_distance": 33.1058907144937,
+    "min_distance": 14.0,
+    "accuracy_within_10px": 0.0,
+    "accuracy_within_5_percent": 100.0
+  },
+  "results": [
+    {
+      "test_name": "simple_circle_256",
+      "prompt": "Point to the center of the purple circle",
+      "expected_coords": [
+        256,
+        256
+      ],
+      "response": "(256, 270)",
+      "predicted_coords": [
+        256,
+        270
+      ],
+      "distance": 14.0,
+      "error": null,
+      "image_metadata": {
+        "size": [
+          512,
+          512
+        ],
+        "estimated_tokens": 349
+      }
+    },
+    {
+      "test_name": "simple_circle_512",
+      "prompt": "Point to the center of the purple circle",
+      "expected_coords": [
+        256,
+        256
+      ],
+      "response": "(256, 270)",
+      "predicted_coords": [
+        256,
+        270
+      ],
+      "distance": 14.0,
+      "error": null,
+      "image_metadata": {
+        "size": [
+          512,
+          512
+        ],
+        "estimated_tokens": 349
+      }
+    },
+    {
+      "test_name": "simple_circle_1024",
+      "prompt": "Point to the center of the purple circle",
+      "expected_coords": [
+        256,
+        256
+      ],
+      "response": "(226, 270)",
+      "predicted_coords": [
+        226,
+        270
+      ],
+      "distance": 33.1058907144937,
+      "error": null,
+      "image_metadata": {
+        "size": [
+          512,
+          512
+        ],
+        "estimated_tokens": 349
+      }
+    },
+    {
+      "test_name": "simple_circle_2048",
+      "prompt": "Point to the center of the purple circle",
+      "expected_coords": [
+        256,
+        256
+      ],
+      "response": "(232, 265)",
+      "predicted_coords": [
+        232,
+        265
+      ],
+      "distance": 25.632011235952593,
+      "error": null,
+      "image_metadata": {
+        "size": [
+          512,
+          512
+        ],
+        "estimated_tokens": 349
+      }
+    },
+    {
+      "test_name": "simple_circle_4096",
+      "prompt": "Point to the center of the purple circle",
+      "expected_coords": [
+        256,
+        256
+      ],
+      "response": "(256, 275)",
+      "predicted_coords": [
+        256,
+        275
+      ],
+      "distance": 19.0,
+      "error": null,
+      "image_metadata": {
+        "size": [
+          512,
+          512
+        ],
+        "estimated_tokens": 349
+      }
+    }
+  ],
+  "test_configs": [
+    {
+      "name": "simple_circle_256",
+      "prompt": "Point to the center of the purple circle",
+      "shape": "circle",
+      "color": "purple",
+      "position": "center",
+      "size": "medium"
+    },
+    {
+      "name": "simple_circle_512",
+      "prompt": "Point to the center of the purple circle",
+      "shape": "circle",
+      "color": "purple",
+      "position": "center",
+      "size": "medium"
+    },
+    {
+      "name": "simple_circle_1024",
+      "prompt": "Point to the center of the purple circle",
+      "shape": "circle",
+      "color": "purple",
+      "position": "center",
+      "size": "medium"
+    },
+    {
+      "name": "simple_circle_2048",
+      "prompt": "Point to the center of the purple circle",
+      "shape": "circle",
+      "color": "purple",
+      "position": "center",
+      "size": "medium"
+    },
+    {
+      "name": "simple_circle_4096",
+      "prompt": "Point to the center of the purple circle",
+      "shape": "circle",
+      "color": "purple",
+      "position": "center",
+      "size": "medium"
+    }
+  ]
+}

@@ -1,0 +1,178 @@
+{
+  "run_id": "resolution_test_512x512_haiku_custom_20251216_173922",
+  "test_suite": "resolution_test_512x512",
+  "model": "haiku",
+  "model_id": "anthropic/claude-haiku-4-5-20251001",
+  "screen_size": {
+    "name": "custom",
+    "width": 512,
+    "height": 512
+  },
+  "pass_number": 2,
+  "timestamp": "2025-12-16T17:39:22.737196",
+  "metrics": {
+    "total_tests": 5,
+    "successful_extractions": 5,
+    "extraction_rate": 100.0,
+    "mean_distance": 0.6,
+    "median_distance": 1.0,
+    "max_distance": 1.0,
+    "min_distance": 0.0,
+    "accuracy_within_10px": 100.0,
+    "accuracy_within_5_percent": 100.0
+  },
+  "results": [
+    {
+      "test_name": "simple_circle_256",
+      "prompt": "Point to the center of the purple circle",
+      "expected_coords": [
+        256,
+        256
+      ],
+      "response": "(256, 255)",
+      "predicted_coords": [
+        256,
+        255
+      ],
+      "distance": 1.0,
+      "error": null,
+      "image_metadata": {
+        "size": [
+          512,
+          512
+        ],
+        "estimated_tokens": 349
+      }
+    },
+    {
+      "test_name": "simple_circle_512",
+      "prompt": "Point to the center of the purple circle",
+      "expected_coords": [
+        256,
+        256
+      ],
+      "response": "(256, 256)",
+      "predicted_coords": [
+        256,
+        256
+      ],
+      "distance": 0.0,
+      "error": null,
+      "image_metadata": {
+        "size": [
+          512,
+          512
+        ],
+        "estimated_tokens": 349
+      }
+    },
+    {
+      "test_name": "simple_circle_1024",
+      "prompt": "Point to the center of the purple circle",
+      "expected_coords": [
+        256,
+        256
+      ],
+      "response": "(256, 256)",
+      "predicted_coords": [
+        256,
+        256
+      ],
+      "distance": 0.0,
+      "error": null,
+      "image_metadata": {
+        "size": [
+          512,
+          512
+        ],
+        "estimated_tokens": 349
+      }
+    },
+    {
+      "test_name": "simple_circle_2048",
+      "prompt": "Point to the center of the purple circle",
+      "expected_coords": [
+        256,
+        256
+      ],
+      "response": "(256, 255)",
+      "predicted_coords": [
+        256,
+        255
+      ],
+      "distance": 1.0,
+      "error": null,
+      "image_metadata": {
+        "size": [
+          512,
+          512
+        ],
+        "estimated_tokens": 349
+      }
+    },
+    {
+      "test_name": "simple_circle_4096",
+      "prompt": "Point to the center of the purple circle",
+      "expected_coords": [
+        256,
+        256
+      ],
+      "response": "(256, 255)",
+      "predicted_coords": [
+        256,
+        255
+      ],
+      "distance": 1.0,
+      "error": null,
+      "image_metadata": {
+        "size": [
+          512,
+          512
+        ],
+        "estimated_tokens": 349
+      }
+    }
+  ],
+  "test_configs": [
+    {
+      "name": "simple_circle_256",
+      "prompt": "Point to the center of the purple circle",
+      "shape": "circle",
+      "color": "purple",
+      "position": "center",
+      "size": "medium"
+    },
+    {
+      "name": "simple_circle_512",
+      "prompt": "Point to the center of the purple circle",
+      "shape": "circle",
+      "color": "purple",
+      "position": "center",
+      "size": "medium"
+    },
+    {
+      "name": "simple_circle_1024",
+      "prompt": "Point to the center of the purple circle",
+      "shape": "circle",
+      "color": "purple",
+      "position": "center",
+      "size": "medium"
+    },
+    {
+      "name": "simple_circle_2048",
+      "prompt": "Point to the center of the purple circle",
+      "shape": "circle",
+      "color": "purple",
+      "position": "center",
+      "size": "medium"
+    },
+    {
+      "name": "simple_circle_4096",
+      "prompt": "Point to the center of the purple circle",
+      "shape": "circle",
+      "color": "purple",
+      "position": "center",
+      "size": "medium"
+    }
+  ]
+}

@@ -1,0 +1,178 @@
+{
+  "run_id": "resolution_test_1024x1024_opus_custom_20251216_173141",
+  "test_suite": "resolution_test_1024x1024",
+  "model": "opus",
+  "model_id": "anthropic/claude-opus-4-5-20251101",
+  "screen_size": {
+    "name": "custom",
+    "width": 1024,
+    "height": 1024
+  },
+  "pass_number": 2,
+  "timestamp": "2025-12-16T17:31:41.471530",
+  "metrics": {
+    "total_tests": 5,
+    "successful_extractions": 5,
+    "extraction_rate": 100.0,
+    "mean_distance": 55.282655266355015,
+    "median_distance": 52.80151512977634,
+    "max_distance": 64.4980619863884,
+    "min_distance": 45.254833995939045,
+    "accuracy_within_10px": 0.0,
+    "accuracy_within_5_percent": 100.0
+  },
+  "results": [
+    {
+      "test_name": "simple_circle_256",
+      "prompt": "Point to the center of the purple circle",
+      "expected_coords": [
+        512,
+        512
+      ],
+      "response": "(480, 456)",
+      "predicted_coords": [
+        480,
+        456
+      ],
+      "distance": 64.4980619863884,
+      "error": null,
+      "image_metadata": {
+        "size": [
+          1024,
+          1024
+        ],
+        "estimated_tokens": 1398
+      }
+    },
+    {
+      "test_name": "simple_circle_512",
+      "prompt": "Point to the center of the purple circle",
+      "expected_coords": [
+        512,
+        512
+      ],
+      "response": "(480, 470)",
+      "predicted_coords": [
+        480,
+        470
+      ],
+      "distance": 52.80151512977634,
+      "error": null,
+      "image_metadata": {
+        "size": [
+          1024,
+          1024
+        ],
+        "estimated_tokens": 1398
+      }
+    },
+    {
+      "test_name": "simple_circle_1024",
+      "prompt": "Point to the center of the purple circle",
+      "expected_coords": [
+        512,
+        512
+      ],
+      "response": "(480, 460)",
+      "predicted_coords": [
+        480,
+        460
+      ],
+      "distance": 61.05735008989499,
+      "error": null,
+      "image_metadata": {
+        "size": [
+          1024,
+          1024
+        ],
+        "estimated_tokens": 1398
+      }
+    },
+    {
+      "test_name": "simple_circle_2048",
+      "prompt": "Point to the center of the purple circle",
+      "expected_coords": [
+        512,
+        512
+      ],
+      "response": "(480, 480)",
+      "predicted_coords": [
+        480,
+        480
+      ],
+      "distance": 45.254833995939045,
+      "error": null,
+      "image_metadata": {
+        "size": [
+          1024,
+          1024
+        ],
+        "estimated_tokens": 1398
+      }
+    },
+    {
+      "test_name": "simple_circle_4096",
+      "prompt": "Point to the center of the purple circle",
+      "expected_coords": [
+        512,
+        512
+      ],
+      "response": "(480, 470)",
+      "predicted_coords": [
+        480,
+        470
+      ],
+      "distance": 52.80151512977634,
+      "error": null,
+      "image_metadata": {
+        "size": [
+          1024,
+          1024
+        ],
+        "estimated_tokens": 1398
+      }
+    }
+  ],
+  "test_configs": [
+    {
+      "name": "simple_circle_256",
+      "prompt": "Point to the center of the purple circle",
+      "shape": "circle",
+      "color": "purple",
+      "position": "center",
+      "size": "medium"
+    },
+    {
+      "name": "simple_circle_512",
+      "prompt": "Point to the center of the purple circle",
+      "shape": "circle",
+      "color": "purple",
+      "position": "center",
+      "size": "medium"
+    },
+    {
+      "name": "simple_circle_1024",
+      "prompt": "Point to the center of the purple circle",
+      "shape": "circle",
+      "color": "purple",
+      "position": "center",
+      "size": "medium"
+    },
+    {
+      "name": "simple_circle_2048",
+      "prompt": "Point to the center of the purple circle",
+      "shape": "circle",
+      "color": "purple",
+      "position": "center",
+      "size": "medium"
+    },
+    {
+      "name": "simple_circle_4096",
+      "prompt": "Point to the center of the purple circle",
+      "shape": "circle",
+      "color": "purple",
+      "position": "center",
+      "size": "medium"
+    }
+  ]
+}

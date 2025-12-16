@@ -1,0 +1,163 @@
+{
+  "run_id": "resolution_test_1024x1024_glm-4.6v_custom_20251216_173348",
+  "test_suite": "resolution_test_1024x1024",
+  "model": "glm-4.6v",
+  "model_id": "openrouter/z-ai/glm-4.6v",
+  "screen_size": {
+    "name": "custom",
+    "width": 1024,
+    "height": 1024
+  },
+  "pass_number": 1,
+  "timestamp": "2025-12-16T17:33:48.631606",
+  "metrics": {
+    "total_tests": 5,
+    "successful_extractions": 0,
+    "extraction_rate": 0.0,
+    "mean_distance": null,
+    "median_distance": null,
+    "max_distance": null,
+    "min_distance": null,
+    "accuracy_within_10px": 0.0,
+    "accuracy_within_5_percent": 0.0
+  },
+  "results": [
+    {
+      "test_name": "simple_circle_256",
+      "prompt": "Point to the center of the purple circle",
+      "expected_coords": [
+        512,
+        512
+      ],
+      "response": "",
+      "predicted_coords": null,
+      "distance": null,
+      "error": "Could not extract coordinates",
+      "image_metadata": {
+        "size": [
+          1024,
+          1024
+        ],
+        "estimated_tokens": 1398
+      }
+    },
+    {
+      "test_name": "simple_circle_512",
+      "prompt": "Point to the center of the purple circle",
+      "expected_coords": [
+        512,
+        512
+      ],
+      "response": "The center of the purple circle is located at <|begin_of_box|>(",
+      "predicted_coords": null,
+      "distance": null,
+      "error": "Could not extract coordinates",
+      "image_metadata": {
+        "size": [
+          1024,
+          1024
+        ],
+        "estimated_tokens": 1398
+      }
+    },
+    {
+      "test_name": "simple_circle_1024",
+      "prompt": "Point to the center of the purple circle",
+      "expected_coords": [
+        512,
+        512
+      ],
+      "response": "",
+      "predicted_coords": null,
+      "distance": null,
+      "error": "Could not extract coordinates",
+      "image_metadata": {
+        "size": [
+          1024,
+          1024
+        ],
+        "estimated_tokens": 1398
+      }
+    },
+    {
+      "test_name": "simple_circle_2048",
+      "prompt": "Point to the center of the purple circle",
+      "expected_coords": [
+        512,
+        512
+      ],
+      "response": "",
+      "predicted_coords": null,
+      "distance": null,
+      "error": "Could not extract coordinates",
+      "image_metadata": {
+        "size": [
+          1024,
+          1024
+        ],
+        "estimated_tokens": 1398
+      }
+    },
+    {
+      "test_name": "simple_circle_4096",
+      "prompt": "Point to the center of the purple circle",
+      "expected_coords": [
+        512,
+        512
+      ],
+      "response": "(512",
+      "predicted_coords": null,
+      "distance": null,
+      "error": "Could not extract coordinates",
+      "image_metadata": {
+        "size": [
+          1024,
+          1024
+        ],
+        "estimated_tokens": 1398
+      }
+    }
+  ],
+  "test_configs": [
+    {
+      "name": "simple_circle_256",
+      "prompt": "Point to the center of the purple circle",
+      "shape": "circle",
+      "color": "purple",
+      "position": "center",
+      "size": "medium"
+    },
+    {
+      "name": "simple_circle_512",
+      "prompt": "Point to the center of the purple circle",
+      "shape": "circle",
+      "color": "purple",
+      "position": "center",
+      "size": "medium"
+    },
+    {
+      "name": "simple_circle_1024",
+      "prompt": "Point to the center of the purple circle",
+      "shape": "circle",
+      "color": "purple",
+      "position": "center",
+      "size": "medium"
+    },
+    {
+      "name": "simple_circle_2048",
+      "prompt": "Point to the center of the purple circle",
+      "shape": "circle",
+      "color": "purple",
+      "position": "center",
+      "size": "medium"
+    },
+    {
+      "name": "simple_circle_4096",
+      "prompt": "Point to the center of the purple circle",
+      "shape": "circle",
+      "color": "purple",
+      "position": "center",
+      "size": "medium"
+    }
+  ]
+}
