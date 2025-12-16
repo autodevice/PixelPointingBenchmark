@@ -1,138 +1,121 @@
 {
   "sonnet": [
     {
-      "run_id": "resolution_test_1024x1024_sonnet_custom_20251216_173020",
+      "run_id": "resolution_test_1024x1024_sonnet_custom_20251216_192420",
       "pass_number": 1,
-      "timestamp": "2025-12-16T17:30:20.641117"
+      "timestamp": "2025-12-16T19:24:20.535984"
     },
     {
-      "run_id": "resolution_test_1024x1024_sonnet_custom_20251216_173045",
+      "run_id": "resolution_test_1024x1024_sonnet_custom_20251216_192436",
       "pass_number": 2,
-      "timestamp": "2025-12-16T17:30:45.991235"
+      "timestamp": "2025-12-16T19:24:36.739940"
     },
     {
-      "run_id": "resolution_test_1024x1024_sonnet_custom_20251216_173107",
+      "run_id": "resolution_test_1024x1024_sonnet_custom_20251216_192452",
       "pass_number": 3,
-      "timestamp": "2025-12-16T17:31:07.131556"
+      "timestamp": "2025-12-16T19:24:52.892247"
     }
   ],
   "opus": [
     {
-      "run_id": "resolution_test_1024x1024_opus_custom_20251216_173120",
+      "run_id": "resolution_test_1024x1024_opus_custom_20251216_192508",
       "pass_number": 1,
-      "timestamp": "2025-12-16T17:31:20.333632"
+      "timestamp": "2025-12-16T19:25:08.764226"
     },
     {
-      "run_id": "resolution_test_1024x1024_opus_custom_20251216_173141",
+      "run_id": "resolution_test_1024x1024_opus_custom_20251216_192523",
       "pass_number": 2,
-      "timestamp": "2025-12-16T17:31:41.472390"
+      "timestamp": "2025-12-16T19:25:23.360148"
     },
     {
-      "run_id": "resolution_test_1024x1024_opus_custom_20251216_173154",
+      "run_id": "resolution_test_1024x1024_opus_custom_20251216_192536",
       "pass_number": 3,
-      "timestamp": "2025-12-16T17:31:54.844049"
+      "timestamp": "2025-12-16T19:25:36.882751"
     }
   ],
   "gemini3": [
     {
-      "run_id": "resolution_test_1024x1024_gemini3_custom_20251216_173157",
+      "run_id": "resolution_test_1024x1024_gemini3_custom_20251216_192539",
       "pass_number": 1,
-      "timestamp": "2025-12-16T17:31:57.512303"
+      "timestamp": "2025-12-16T19:25:39.805710"
     },
     {
-      "run_id": "resolution_test_1024x1024_gemini3_custom_20251216_173159",
+      "run_id": "resolution_test_1024x1024_gemini3_custom_20251216_192541",
       "pass_number": 2,
-      "timestamp": "2025-12-16T17:31:59.560725"
+      "timestamp": "2025-12-16T19:25:41.690976"
     },
     {
-      "run_id": "resolution_test_1024x1024_gemini3_custom_20251216_173201",
+      "run_id": "resolution_test_1024x1024_gemini3_custom_20251216_192543",
       "pass_number": 3,
-      "timestamp": "2025-12-16T17:32:01.618582"
+      "timestamp": "2025-12-16T19:25:43.643778"
     }
   ],
   "chatgpt": [
     {
-      "run_id": "resolution_test_1024x1024_chatgpt_custom_20251216_173208",
+      "run_id": "resolution_test_1024x1024_chatgpt_custom_20251216_192557",
       "pass_number": 1,
-      "timestamp": "2025-12-16T17:32:08.052535"
+      "timestamp": "2025-12-16T19:25:57.104716"
     },
     {
-      "run_id": "resolution_test_1024x1024_chatgpt_custom_20251216_173214",
+      "run_id": "resolution_test_1024x1024_chatgpt_custom_20251216_192605",
       "pass_number": 2,
-      "timestamp": "2025-12-16T17:32:14.606575"
+      "timestamp": "2025-12-16T19:26:05.378459"
     },
     {
-      "run_id": "resolution_test_1024x1024_chatgpt_custom_20251216_173240",
+      "run_id": "resolution_test_1024x1024_chatgpt_custom_20251216_192615",
       "pass_number": 3,
-      "timestamp": "2025-12-16T17:32:40.513819"
+      "timestamp": "2025-12-16T19:26:15.314426"
     }
   ],
   "haiku": [
     {
-      "run_id": "resolution_test_1024x1024_haiku_custom_20251216_173248",
+      "run_id": "resolution_test_1024x1024_haiku_custom_20251216_192623",
       "pass_number": 1,
-      "timestamp": "2025-12-16T17:32:48.553955"
+      "timestamp": "2025-12-16T19:26:23.605210"
     },
     {
-      "run_id": "resolution_test_1024x1024_haiku_custom_20251216_173255",
+      "run_id": "resolution_test_1024x1024_haiku_custom_20251216_192631",
       "pass_number": 2,
-      "timestamp": "2025-12-16T17:32:55.328965"
+      "timestamp": "2025-12-16T19:26:31.853594"
     },
     {
-      "run_id": "resolution_test_1024x1024_haiku_custom_20251216_173302",
+      "run_id": "resolution_test_1024x1024_haiku_custom_20251216_192641",
       "pass_number": 3,
-      "timestamp": "2025-12-16T17:33:02.734924"
+      "timestamp": "2025-12-16T19:26:41.712017"
     }
   ],
   "qwen3-vl": [
     {
-      "run_id": "resolution_test_1024x1024_qwen3-vl_custom_20251216_173319",
+      "run_id": "resolution_test_1024x1024_qwen3-vl_custom_20251216_192655",
       "pass_number": 1,
-      "timestamp": "2025-12-16T17:33:19.446862"
+      "timestamp": "2025-12-16T19:26:55.022777"
     },
     {
-      "run_id": "resolution_test_1024x1024_qwen3-vl_custom_20251216_173328",
+      "run_id": "resolution_test_1024x1024_qwen3-vl_custom_20251216_192701",
       "pass_number": 2,
-      "timestamp": "2025-12-16T17:33:28.539117"
+      "timestamp": "2025-12-16T19:27:01.590483"
     },
     {
-      "run_id": "resolution_test_1024x1024_qwen3-vl_custom_20251216_173334",
+      "run_id": "resolution_test_1024x1024_qwen3-vl_custom_20251216_192721",
       "pass_number": 3,
-      "timestamp": "2025-12-16T17:33:34.637411"
+      "timestamp": "2025-12-16T19:27:21.152488"
     }
   ],
   "glm-4.6v": [
     {
-      "run_id": "resolution_test_1024x1024_glm-4.6v_custom_20251216_173348",
+      "run_id": "resolution_test_1024x1024_glm-4.6v_custom_20251216_192746",
       "pass_number": 1,
-      "timestamp": "2025-12-16T17:33:48.631901"
+      "timestamp": "2025-12-16T19:27:46.132603"
     },
     {
-      "run_id": "resolution_test_1024x1024_glm-4.6v_custom_20251216_173407",
+      "run_id": "resolution_test_1024x1024_glm-4.6v_custom_20251216_192810",
       "pass_number": 2,
-      "timestamp": "2025-12-16T17:34:07.784144"
+      "timestamp": "2025-12-16T19:28:10.342043"
     },
     {
-      "run_id": "resolution_test_1024x1024_glm-4.6v_custom_20251216_173427",
+      "run_id": "resolution_test_1024x1024_glm-4.6v_custom_20251216_192824",
       "pass_number": 3,
-      "timestamp": "2025-12-16T17:34:27.100631"
-    }
-  ],
-  "gemini-2.5-flash": [
-    {
-      "run_id": "resolution_test_1024x1024_gemini-2.5-flash_custom_20251216_173434",
-      "pass_number": 1,
-      "timestamp": "2025-12-16T17:34:34.376901"
-    },
-    {
-      "run_id": "resolution_test_1024x1024_gemini-2.5-flash_custom_20251216_173440",
-      "pass_number": 2,
-      "timestamp": "2025-12-16T17:34:40.856449"
-    },
-    {
-      "run_id": "resolution_test_1024x1024_gemini-2.5-flash_custom_20251216_173448",
-      "pass_number": 3,
-      "timestamp": "2025-12-16T17:34:48.156670"
+      "timestamp": "2025-12-16T19:28:24.233664"
     }
   ]
 }

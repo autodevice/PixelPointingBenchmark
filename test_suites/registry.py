@@ -65,35 +65,34 @@ DEFAULT_SYNTHETIC_TESTS = [
     },
 ]
 
-
 COLOR_IDENTIFICATION_TESTS = [
     {
         "name": "basic_red",
         "prompt": "Point to the center of the red circle",
         "shape": "circle",
         "color": "red",
-        "position": "center",
+        "position": "top_left",
     },
     {
         "name": "basic_blue",
         "prompt": "Point to the center of the blue circle",
         "shape": "circle",
         "color": "blue",
-        "position": "center",
+        "position": "top_right",
     },
     {
         "name": "basic_green",
         "prompt": "Point to the center of the green circle",
         "shape": "circle",
         "color": "green",
-        "position": "center",
+        "position": "bottom_left",
     },
     {
         "name": "basic_yellow",
         "prompt": "Point to the center of the yellow circle",
         "shape": "circle",
         "color": "yellow",
-        "position": "center",
+        "position": "bottom_right",
     },
     {
         "name": "subtle_red_orange",
@@ -124,21 +123,21 @@ COLOR_IDENTIFICATION_TESTS = [
         "prompt": "Point to the center of the circle with hex color #FF6B9D",
         "shape": "circle",
         "color": "#FF6B9D",
-        "position": "center",
+        "position": "top_left",
     },
     {
         "name": "hexcode_2",
         "prompt": "Point to the center of the circle with hex color #4ECDC4",
         "shape": "circle",
         "color": "#4ECDC4",
-        "position": "center",
+        "position": "top_right",
     },
     {
         "name": "hexcode_3",
         "prompt": "Point to the center of the circle with hex color #95E1D3",
         "shape": "circle",
         "color": "#95E1D3",
-        "position": "center",
+        "position": "bottom_left",
     },
     {
         "name": "hexcode_similar",
@@ -153,7 +152,6 @@ COLOR_IDENTIFICATION_TESTS = [
         ],
     },
 ]
-
 
 SHAPE_IDENTIFICATION_TESTS = [
     {
@@ -242,41 +240,41 @@ SHAPE_IDENTIFICATION_TESTS = [
 
 RESOLUTION_TEST_TESTS = [
     {
-        "name": "simple_circle_256",
-        "prompt": "Point to the center of the purple circle",
-        "shape": "circle",
+        "name": "simple_rectangle_256",
+        "prompt": "Point to the center of the purple rectangle",
+        "shape": "square",
         "color": "purple",
-        "position": "center",
+        "position": "top_left",
         "size": "medium",
     },
     {
-        "name": "simple_circle_512",
-        "prompt": "Point to the center of the purple circle",
-        "shape": "circle",
+        "name": "simple_rectangle_512",
+        "prompt": "Point to the center of the purple rectangle",
+        "shape": "square",
         "color": "purple",
-        "position": "center",
+        "position": "top_right",
         "size": "medium",
     },
     {
-        "name": "simple_circle_1024",
-        "prompt": "Point to the center of the purple circle",
-        "shape": "circle",
+        "name": "simple_rectangle_1024",
+        "prompt": "Point to the center of the purple rectangle",
+        "shape": "square",
         "color": "purple",
-        "position": "center",
+        "position": "bottom_left",
         "size": "medium",
     },
     {
-        "name": "simple_circle_2048",
-        "prompt": "Point to the center of the purple circle",
-        "shape": "circle",
+        "name": "simple_rectangle_2048",
+        "prompt": "Point to the center of the purple rectangle",
+        "shape": "square",
         "color": "purple",
-        "position": "center",
+        "position": "bottom_right",
         "size": "medium",
     },
     {
-        "name": "simple_circle_4096",
-        "prompt": "Point to the center of the purple circle",
-        "shape": "circle",
+        "name": "simple_rectangle_4096",
+        "prompt": "Point to the center of the purple rectangle",
+        "shape": "square",
         "color": "purple",
         "position": "center",
         "size": "medium",

@@ -1,138 +1,121 @@
 {
   "sonnet": [
     {
-      "run_id": "shape_identification_sonnet_custom_20251216_171653",
+      "run_id": "shape_identification_sonnet_custom_20251216_192418",
       "pass_number": 1,
-      "timestamp": "2025-12-16T17:16:53.308342"
+      "timestamp": "2025-12-16T19:24:18.589552"
     },
     {
-      "run_id": "shape_identification_sonnet_custom_20251216_171733",
+      "run_id": "shape_identification_sonnet_custom_20251216_192448",
       "pass_number": 2,
-      "timestamp": "2025-12-16T17:17:33.859989"
+      "timestamp": "2025-12-16T19:24:48.375460"
     },
     {
-      "run_id": "shape_identification_sonnet_custom_20251216_171816",
+      "run_id": "shape_identification_sonnet_custom_20251216_192520",
       "pass_number": 3,
-      "timestamp": "2025-12-16T17:18:16.792258"
+      "timestamp": "2025-12-16T19:25:20.490539"
     }
   ],
   "opus": [
     {
-      "run_id": "shape_identification_opus_custom_20251216_171840",
+      "run_id": "shape_identification_opus_custom_20251216_192616",
       "pass_number": 1,
-      "timestamp": "2025-12-16T17:18:40.834710"
+      "timestamp": "2025-12-16T19:26:16.760428"
     },
     {
-      "run_id": "shape_identification_opus_custom_20251216_171909",
+      "run_id": "shape_identification_opus_custom_20251216_192647",
       "pass_number": 2,
-      "timestamp": "2025-12-16T17:19:09.438545"
+      "timestamp": "2025-12-16T19:26:47.463069"
     },
     {
-      "run_id": "shape_identification_opus_custom_20251216_171931",
+      "run_id": "shape_identification_opus_custom_20251216_192714",
       "pass_number": 3,
-      "timestamp": "2025-12-16T17:19:31.721745"
+      "timestamp": "2025-12-16T19:27:14.068623"
     }
   ],
   "gemini3": [
     {
-      "run_id": "shape_identification_gemini3_custom_20251216_171935",
+      "run_id": "shape_identification_gemini3_custom_20251216_192718",
       "pass_number": 1,
-      "timestamp": "2025-12-16T17:19:35.726038"
+      "timestamp": "2025-12-16T19:27:18.412704"
     },
     {
-      "run_id": "shape_identification_gemini3_custom_20251216_171938",
+      "run_id": "shape_identification_gemini3_custom_20251216_192721",
       "pass_number": 2,
-      "timestamp": "2025-12-16T17:19:38.933716"
+      "timestamp": "2025-12-16T19:27:21.950308"
     },
     {
-      "run_id": "shape_identification_gemini3_custom_20251216_171942",
+      "run_id": "shape_identification_gemini3_custom_20251216_192725",
       "pass_number": 3,
-      "timestamp": "2025-12-16T17:19:42.787190"
+      "timestamp": "2025-12-16T19:27:25.416241"
     }
   ],
   "chatgpt": [
     {
-      "run_id": "shape_identification_chatgpt_custom_20251216_172023",
+      "run_id": "shape_identification_chatgpt_custom_20251216_192751",
       "pass_number": 1,
-      "timestamp": "2025-12-16T17:20:23.607428"
+      "timestamp": "2025-12-16T19:27:51.165883"
     },
     {
-      "run_id": "shape_identification_chatgpt_custom_20251216_172041",
+      "run_id": "shape_identification_chatgpt_custom_20251216_192822",
       "pass_number": 2,
-      "timestamp": "2025-12-16T17:20:41.554006"
+      "timestamp": "2025-12-16T19:28:22.848030"
     },
     {
-      "run_id": "shape_identification_chatgpt_custom_20251216_172054",
+      "run_id": "shape_identification_chatgpt_custom_20251216_192846",
       "pass_number": 3,
-      "timestamp": "2025-12-16T17:20:54.669441"
+      "timestamp": "2025-12-16T19:28:46.038147"
     }
   ],
   "haiku": [
     {
-      "run_id": "shape_identification_haiku_custom_20251216_172108",
+      "run_id": "shape_identification_haiku_custom_20251216_192900",
       "pass_number": 1,
-      "timestamp": "2025-12-16T17:21:08.493898"
+      "timestamp": "2025-12-16T19:29:00.568372"
     },
     {
-      "run_id": "shape_identification_haiku_custom_20251216_172120",
+      "run_id": "shape_identification_haiku_custom_20251216_192914",
       "pass_number": 2,
-      "timestamp": "2025-12-16T17:21:20.196226"
+      "timestamp": "2025-12-16T19:29:14.304002"
     },
     {
-      "run_id": "shape_identification_haiku_custom_20251216_172132",
+      "run_id": "shape_identification_haiku_custom_20251216_192928",
       "pass_number": 3,
-      "timestamp": "2025-12-16T17:21:32.765394"
+      "timestamp": "2025-12-16T19:29:28.992580"
     }
   ],
   "qwen3-vl": [
     {
-      "run_id": "shape_identification_qwen3-vl_custom_20251216_172156",
+      "run_id": "shape_identification_qwen3-vl_custom_20251216_192950",
       "pass_number": 1,
-      "timestamp": "2025-12-16T17:21:56.226549"
+      "timestamp": "2025-12-16T19:29:50.041053"
     },
     {
-      "run_id": "shape_identification_qwen3-vl_custom_20251216_172219",
+      "run_id": "shape_identification_qwen3-vl_custom_20251216_193006",
       "pass_number": 2,
-      "timestamp": "2025-12-16T17:22:19.299412"
+      "timestamp": "2025-12-16T19:30:06.705263"
     },
     {
-      "run_id": "shape_identification_qwen3-vl_custom_20251216_172246",
+      "run_id": "shape_identification_qwen3-vl_custom_20251216_193020",
       "pass_number": 3,
-      "timestamp": "2025-12-16T17:22:46.766442"
+      "timestamp": "2025-12-16T19:30:20.567623"
     }
   ],
   "glm-4.6v": [
     {
-      "run_id": "shape_identification_glm-4.6v_custom_20251216_172324",
+      "run_id": "shape_identification_glm-4.6v_custom_20251216_193045",
       "pass_number": 1,
-      "timestamp": "2025-12-16T17:23:24.379753"
+      "timestamp": "2025-12-16T19:30:45.350980"
     },
     {
-      "run_id": "shape_identification_glm-4.6v_custom_20251216_172359",
+      "run_id": "shape_identification_glm-4.6v_custom_20251216_193109",
       "pass_number": 2,
-      "timestamp": "2025-12-16T17:23:59.193784"
+      "timestamp": "2025-12-16T19:31:09.525417"
     },
     {
-      "run_id": "shape_identification_glm-4.6v_custom_20251216_172432",
+      "run_id": "shape_identification_glm-4.6v_custom_20251216_193138",
       "pass_number": 3,
-      "timestamp": "2025-12-16T17:24:32.671024"
-    }
-  ],
-  "gemini-2.5-flash": [
-    {
-      "run_id": "shape_identification_gemini-2.5-flash_custom_20251216_172447",
-      "pass_number": 1,
-      "timestamp": "2025-12-16T17:24:47.936984"
-    },
-    {
-      "run_id": "shape_identification_gemini-2.5-flash_custom_20251216_172501",
-      "pass_number": 2,
-      "timestamp": "2025-12-16T17:25:01.704741"
-    },
-    {
-      "run_id": "shape_identification_gemini-2.5-flash_custom_20251216_172515",
-      "pass_number": 3,
-      "timestamp": "2025-12-16T17:25:15.659654"
+      "timestamp": "2025-12-16T19:31:38.636553"
     }
   ]
 }

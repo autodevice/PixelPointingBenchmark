@@ -47,7 +47,6 @@
             grid-template-columns: auto 1fr auto;
             gap: 15px;
             align-items: center;
-            colors: #000
         }
 
         .controls-group {
@@ -531,6 +530,40 @@
             <button id="tableViewBtn" onclick="switchView('table')">Table View</button>
         </div>
 
+        <div class="summary-section" id="summarySection" style="display: none; padding: 20px 30px; background: #f8f9fa; border-bottom: 1px solid #e0e0e0;">
+            <h3 style="margin-bottom: 15px; color: #333;">Overall Performance Summary</h3>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
+                <div>
+                    <h4 style="margin-bottom: 10px; color: #555;">Accuracy Table</h4>
+                    <table id="accuracyTable" style="width: 100%; border-collapse: collapse; background: white; border-radius: 6px; overflow: hidden;">
+                        <thead>
+                            <tr style="background: #667eea; color: white;">
+                                <th style="padding: 10px; text-align: left;">Model</th>
+                                <th style="padding: 10px; text-align: right;">Within 5px</th>
+                                <th style="padding: 10px; text-align: right;">Within 10px</th>
+                            </tr>
+                        </thead>
+                        <tbody id="accuracyTableBody">
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <h4 style="margin-bottom: 10px; color: #555;">Accuracy per Dollar</h4>
+                    <table id="accuracyPerDollarTable" style="width: 100%; border-collapse: collapse; background: white; border-radius: 6px; overflow: hidden;">
+                        <thead>
+                            <tr style="background: #667eea; color: white;">
+                                <th style="padding: 10px; text-align: left;">Model</th>
+                                <th style="padding: 10px; text-align: right;">Accuracy %</th>
+                                <th style="padding: 10px; text-align: right;">Acc/$ (10px)</th>
+                            </tr>
+                        </thead>
+                        <tbody id="accuracyPerDollarTableBody">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
         <div class="content" id="content">
             <div class="loading">Select a results directory and test suite to begin</div>
         </div>
@@ -559,6 +592,18 @@
             'qwen3-vl': 'rgb(34, 139, 34)',
             'glm-4.6v': 'rgb(255, 165, 0)',
             'gemini-2.5-flash': 'rgb(30, 144, 255)',
+        };
+
+        const MODEL_PRICING = {
+            'sonnet': 3.00,
+            'opus': 15.00,
+            'gemini3': 1.25,
+            'chatgpt': 5.00,
+            'haiku': 0.25,
+            'grok-4.1': 1.00,
+            'qwen3-vl': 0.50,
+            'glm-4.6v': 0.30,
+            'gemini-2.5-flash': 0.075,
         };
 
         let currentData = null;
@@ -607,6 +652,7 @@
                     updateViewToggle();
                     displayResults(data, dir, testSuite);
                     updateComparisonTable(data);
+                    updateSummaryTables(data);
                 })
                 .catch(error => {
                     content.innerHTML = `<div class="no-results">Error: ${error.message}<br><br>Available test suites are listed in the dropdown above.</div>`;
@@ -922,6 +968,135 @@
             });
             
             tableBody.appendChild(summaryRow);
+        }
+
+        function updateSummaryTables(data) {
+            const summarySection = document.getElementById('summarySection');
+            const accuracyTableBody = document.getElementById('accuracyTableBody');
+            const accuracyPerDollarTableBody = document.getElementById('accuracyPerDollarTableBody');
+            
+            if (!data || !data.tests || data.tests.length === 0) {
+                summarySection.style.display = 'none';
+                return;
+            }
+            
+            summarySection.style.display = 'block';
+            accuracyTableBody.innerHTML = '';
+            accuracyPerDollarTableBody.innerHTML = '';
+            
+            const modelStats = {};
+            
+            data.tests.forEach(test => {
+                Object.keys(test.models || {}).forEach(modelName => {
+                    if (!modelStats[modelName]) {
+                        modelStats[modelName] = {
+                            distances: [],
+                            total: 0
+                        };
+                    }
+                    
+                    const modelData = test.models[modelName];
+                    if (modelData && modelData.predictions) {
+                        modelData.predictions.forEach(pred => {
+                            if (pred.distance !== null && pred.distance !== undefined) {
+                                modelStats[modelName].distances.push(pred.distance);
+                                modelStats[modelName].total++;
+                            }
+                        });
+                    }
+                });
+            });
+            
+            const modelAccuracies = {};
+            Object.keys(modelStats).forEach(modelName => {
+                const stats = modelStats[modelName];
+                if (stats.distances.length > 0) {
+                    const accuracy5px = (stats.distances.filter(d => d <= 5).length / stats.distances.length) * 100;
+                    const accuracy10px = (stats.distances.filter(d => d <= 10).length / stats.distances.length) * 100;
+                    modelAccuracies[modelName] = {
+                        accuracy5px: accuracy5px,
+                        accuracy10px: accuracy10px,
+                        total: stats.distances.length
+                    };
+                }
+            });
+            
+            const sortedModels = Object.keys(modelAccuracies).sort((a, b) => 
+                modelAccuracies[b].accuracy10px - modelAccuracies[a].accuracy10px
+            );
+            
+            sortedModels.forEach(modelName => {
+                const acc = modelAccuracies[modelName];
+                const row = document.createElement('tr');
+                row.style.borderBottom = '1px solid #e0e0e0';
+                
+                const modelCell = document.createElement('td');
+                modelCell.style.padding = '10px';
+                modelCell.innerHTML = `<span class="model-dot" style="background-color: ${getModelColor(modelName)}; display: inline-block; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px;"></span>${modelName}`;
+                row.appendChild(modelCell);
+                
+                const acc5pxCell = document.createElement('td');
+                acc5pxCell.style.padding = '10px';
+                acc5pxCell.style.textAlign = 'right';
+                acc5pxCell.textContent = `${acc.accuracy5px.toFixed(1)}%`;
+                row.appendChild(acc5pxCell);
+                
+                const acc10pxCell = document.createElement('td');
+                acc10pxCell.style.padding = '10px';
+                acc10pxCell.style.textAlign = 'right';
+                acc10pxCell.textContent = `${acc.accuracy10px.toFixed(1)}%`;
+                if (acc.accuracy10px >= 90) {
+                    acc10pxCell.style.color = '#28a745';
+                    acc10pxCell.style.fontWeight = '600';
+                } else if (acc.accuracy10px >= 70) {
+                    acc10pxCell.style.color = '#ffc107';
+                }
+                row.appendChild(acc10pxCell);
+                
+                accuracyTableBody.appendChild(row);
+            });
+            
+            const sortedByValue = Object.keys(modelAccuracies).sort((a, b) => {
+                const priceA = MODEL_PRICING[a.toLowerCase()] || 999;
+                const priceB = MODEL_PRICING[b.toLowerCase()] || 999;
+                const valueA = modelAccuracies[a].accuracy10px / priceA;
+                const valueB = modelAccuracies[b].accuracy10px / priceB;
+                return valueB - valueA;
+            });
+            
+            sortedByValue.forEach(modelName => {
+                const acc = modelAccuracies[modelName];
+                const price = MODEL_PRICING[modelName.toLowerCase()] || 999;
+                const accuracyPerDollar = acc.accuracy10px / price;
+                
+                const row = document.createElement('tr');
+                row.style.borderBottom = '1px solid #e0e0e0';
+                
+                const modelCell = document.createElement('td');
+                modelCell.style.padding = '10px';
+                modelCell.innerHTML = `<span class="model-dot" style="background-color: ${getModelColor(modelName)}; display: inline-block; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px;"></span>${modelName}`;
+                row.appendChild(modelCell);
+                
+                const accCell = document.createElement('td');
+                accCell.style.padding = '10px';
+                accCell.style.textAlign = 'right';
+                accCell.textContent = `${acc.accuracy10px.toFixed(1)}%`;
+                row.appendChild(accCell);
+                
+                const valueCell = document.createElement('td');
+                valueCell.style.padding = '10px';
+                valueCell.style.textAlign = 'right';
+                valueCell.textContent = `${accuracyPerDollar.toFixed(2)}`;
+                if (accuracyPerDollar >= 200) {
+                    valueCell.style.color = '#28a745';
+                    valueCell.style.fontWeight = '600';
+                } else if (accuracyPerDollar >= 100) {
+                    valueCell.style.color = '#ffc107';
+                }
+                row.appendChild(valueCell);
+                
+                accuracyPerDollarTableBody.appendChild(row);
+            });
         }
 
         function createTestCard(test, baseDir, testSuite, screenSize) {
