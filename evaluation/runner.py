@@ -14,7 +14,7 @@ MODELS = {
     "sonnet": "anthropic/claude-sonnet-4-20250514",
     "opus": "anthropic/claude-opus-4-5-20251101",
     "gemini3": "gemini/gemini-3-pro-preview",
-    "chatgpt": "openai/gpt-5.1",
+    "chatgpt": "openai/gpt-5.2",
     "haiku": "anthropic/claude-haiku-4-5-20251001",
     "qwen3-vl": "openrouter/qwen/qwen3-vl-235b-a22b-instruct",
     "glm-4.6v": "openrouter/z-ai/glm-4.6v",

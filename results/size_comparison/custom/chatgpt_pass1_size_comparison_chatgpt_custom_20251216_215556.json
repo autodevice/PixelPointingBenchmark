@@ -1,0 +1,300 @@
+{
+  "run_id": "size_comparison_chatgpt_custom_20251216_215556",
+  "test_suite": "size_comparison",
+  "model": "chatgpt",
+  "model_id": "openai/gpt-5.2",
+  "screen_size": {
+    "name": "custom",
+    "width": 1024,
+    "height": 1024
+  },
+  "pass_number": 1,
+  "timestamp": "2025-12-16T21:55:56.282930",
+  "metrics": {
+    "total_tests": 6,
+    "successful_extractions": 6,
+    "extraction_rate": 100.0,
+    "mean_distance": 101.46675327849965,
+    "median_distance": 40.21938542197793,
+    "max_distance": 412.16744170300495,
+    "min_distance": 16.1245154965971,
+    "accuracy_within_5px": 0.0,
+    "accuracy_within_10px": 0.0,
+    "accuracy_within_5_percent": 83.33333333333334
+  },
+  "results": [
+    {
+      "test_name": "larger_circle_obvious",
+      "prompt": "Point to the center of the larger circle",
+      "expected_coords": [
+        307,
+        512
+      ],
+      "response": "(239, 511)",
+      "predicted_coords": [
+        239,
+        511
+      ],
+      "distance": 68.00735254367721,
+      "error": null,
+      "image_metadata": {
+        "size": [
+          1024,
+          1024
+        ],
+        "estimated_tokens": 1398
+      }
+    },
+    {
+      "test_name": "larger_circle_moderate",
+      "prompt": "Point to the center of the larger circle",
+      "expected_coords": [
+        307,
+        512
+      ],
+      "response": "(305, 544)",
+      "predicted_coords": [
+        305,
+        544
+      ],
+      "distance": 32.0624390837628,
+      "error": null,
+      "image_metadata": {
+        "size": [
+          1024,
+          1024
+        ],
+        "estimated_tokens": 1398
+      }
+    },
+    {
+      "test_name": "larger_circle_subtle",
+      "prompt": "Point to the center of the larger circle",
+      "expected_coords": [
+        307,
+        512
+      ],
+      "response": "(718, 543)",
+      "predicted_coords": [
+        718,
+        543
+      ],
+      "distance": 412.16744170300495,
+      "error": null,
+      "image_metadata": {
+        "size": [
+          1024,
+          1024
+        ],
+        "estimated_tokens": 1398
+      }
+    },
+    {
+      "test_name": "smaller_square_obvious",
+      "prompt": "Point to the center of the smaller square",
+      "expected_coords": [
+        716,
+        512
+      ],
+      "response": "(718, 496)",
+      "predicted_coords": [
+        718,
+        496
+      ],
+      "distance": 16.1245154965971,
+      "error": null,
+      "image_metadata": {
+        "size": [
+          1024,
+          1024
+        ],
+        "estimated_tokens": 1398
+      }
+    },
+    {
+      "test_name": "smaller_square_moderate",
+      "prompt": "Point to the center of the smaller square",
+      "expected_coords": [
+        716,
+        512
+      ],
+      "response": "(748, 547)",
+      "predicted_coords": [
+        748,
+        547
+      ],
+      "distance": 47.4236228055175,
+      "error": null,
+      "image_metadata": {
+        "size": [
+          1024,
+          1024
+        ],
+        "estimated_tokens": 1398
+      }
+    },
+    {
+      "test_name": "smaller_square_subtle",
+      "prompt": "Point to the center of the smaller square",
+      "expected_coords": [
+        716,
+        512
+      ],
+      "response": "(749, 513)",
+      "predicted_coords": [
+        749,
+        513
+      ],
+      "distance": 33.015148038438355,
+      "error": null,
+      "image_metadata": {
+        "size": [
+          1024,
+          1024
+        ],
+        "estimated_tokens": 1398
+      }
+    }
+  ],
+  "test_configs": [
+    {
+      "name": "larger_circle_obvious",
+      "prompt": "Point to the center of the larger circle",
+      "shape": "circle",
+      "color": "blue",
+      "position": "left",
+      "size": "large",
+      "multiple_shapes": true,
+      "shapes": [
+        {
+          "shape": "circle",
+          "color": "blue",
+          "position": "left",
+          "size": "large"
+        },
+        {
+          "shape": "circle",
+          "color": "blue",
+          "position": "right",
+          "size": "small"
+        }
+      ]
+    },
+    {
+      "name": "larger_circle_moderate",
+      "prompt": "Point to the center of the larger circle",
+      "shape": "circle",
+      "color": "blue",
+      "position": "left",
+      "size": "medium",
+      "multiple_shapes": true,
+      "shapes": [
+        {
+          "shape": "circle",
+          "color": "blue",
+          "position": "left",
+          "size": "medium"
+        },
+        {
+          "shape": "circle",
+          "color": "blue",
+          "position": "right",
+          "size": "small"
+        }
+      ]
+    },
+    {
+      "name": "larger_circle_subtle",
+      "prompt": "Point to the center of the larger circle",
+      "shape": "circle",
+      "color": "blue",
+      "position": "left",
+      "size": "medium",
+      "multiple_shapes": true,
+      "shapes": [
+        {
+          "shape": "circle",
+          "color": "blue",
+          "position": "left",
+          "size": "medium"
+        },
+        {
+          "shape": "circle",
+          "color": "blue",
+          "position": "right",
+          "size": "medium",
+          "size_override": 0.85
+        }
+      ]
+    },
+    {
+      "name": "smaller_square_obvious",
+      "prompt": "Point to the center of the smaller square",
+      "shape": "square",
+      "color": "red",
+      "position": "right",
+      "size": "small",
+      "multiple_shapes": true,
+      "shapes": [
+        {
+          "shape": "square",
+          "color": "red",
+          "position": "left",
+          "size": "large"
+        },
+        {
+          "shape": "square",
+          "color": "red",
+          "position": "right",
+          "size": "small"
+        }
+      ]
+    },
+    {
+      "name": "smaller_square_moderate",
+      "prompt": "Point to the center of the smaller square",
+      "shape": "square",
+      "color": "red",
+      "position": "right",
+      "size": "small",
+      "multiple_shapes": true,
+      "shapes": [
+        {
+          "shape": "square",
+          "color": "red",
+          "position": "left",
+          "size": "medium"
+        },
+        {
+          "shape": "square",
+          "color": "red",
+          "position": "right",
+          "size": "small"
+        }
+      ]
+    },
+    {
+      "name": "smaller_square_subtle",
+      "prompt": "Point to the center of the smaller square",
+      "shape": "square",
+      "color": "red",
+      "position": "right",
+      "size": "small",
+      "multiple_shapes": true,
+      "shapes": [
+        {
+          "shape": "square",
+          "color": "red",
+          "position": "left",
+          "size": "medium"
+        },
+        {
+          "shape": "square",
+          "color": "red",
+          "position": "right",
+          "size": "small"
+        }
+      ]
+    }
+  ]
+}
