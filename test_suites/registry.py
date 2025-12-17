@@ -240,7 +240,7 @@ SHAPE_IDENTIFICATION_TESTS = [
 
 RESOLUTION_TEST_TESTS = [
     {
-        "name": "simple_rectangle_256",
+        "name": "simple_rectangle_top_left",
         "prompt": "Point to the center of the purple rectangle",
         "shape": "square",
         "color": "purple",
@@ -248,7 +248,7 @@ RESOLUTION_TEST_TESTS = [
         "size": "medium",
     },
     {
-        "name": "simple_rectangle_512",
+        "name": "simple_rectangle_top_right",
         "prompt": "Point to the center of the purple rectangle",
         "shape": "square",
         "color": "purple",
@@ -256,7 +256,7 @@ RESOLUTION_TEST_TESTS = [
         "size": "medium",
     },
     {
-        "name": "simple_rectangle_1024",
+        "name": "simple_rectangle_bottom_left",
         "prompt": "Point to the center of the purple rectangle",
         "shape": "square",
         "color": "purple",
@@ -264,7 +264,7 @@ RESOLUTION_TEST_TESTS = [
         "size": "medium",
     },
     {
-        "name": "simple_rectangle_2048",
+        "name": "simple_rectangle_bottom_right",
         "prompt": "Point to the center of the purple rectangle",
         "shape": "square",
         "color": "purple",
@@ -272,7 +272,7 @@ RESOLUTION_TEST_TESTS = [
         "size": "medium",
     },
     {
-        "name": "simple_rectangle_4096",
+        "name": "simple_rectangle_center",
         "prompt": "Point to the center of the purple rectangle",
         "shape": "square",
         "color": "purple",
@@ -363,6 +363,28 @@ SIZE_COMPARISON_TESTS = [
     },
 ]
 
+# More explicit resolution suites (one test each). These avoid the confusion where
+# test names imply a resolution but the actual image size is determined by CLI --width/--height.
+RESOLUTION_SUITES = {
+    "resolution_test_256x256": (256, 256, "top_left"),
+    "resolution_test_512x512": (512, 512, "top_right"),
+    "resolution_test_1024x1024": (1024, 1024, "bottom_left"),
+    "resolution_test_2048x2048": (2048, 2048, "bottom_right"),
+    "resolution_test_4096x4096": (4096, 4096, "center"),
+}
+
+def _resolution_suite_config(position: str) -> List[Dict[str, str]]:
+    return [
+        {
+            "name": "simple_rectangle",
+            "prompt": "Point to the center of the purple rectangle",
+            "shape": "square",
+            "color": "purple",
+            "position": position,
+            "size": "medium",
+        }
+    ]
+
 
 class TestSuiteRegistry:
     """Registry for managing test suites."""
@@ -396,11 +418,21 @@ class TestSuiteRegistry:
         
         resolution_suite = SyntheticTestSuite(
             name="resolution_test",
-            description="Resolution stress test for 1024 x 1024 resolution: same simple test at increasing resolutions",
+            description="Legacy: position sweep for a simple rectangle at the provided --width/--height (use resolution_test_*x* for true per-resolution runs)",
             configs=RESOLUTION_TEST_TESTS
         )
         self.register(resolution_suite)
 
+        # Explicit per-resolution suites (recommended)
+        for suite_name, (w, h, pos) in RESOLUTION_SUITES.items():
+            self.register(
+                SyntheticTestSuite(
+                    name=suite_name,
+                    description=f"Single rectangle pointing test at {w}x{h} (run with --width {w} --height {h})",
+                    configs=_resolution_suite_config(pos),
+                )
+            )
+        
         
         size_suite = SyntheticTestSuite(
             name="size_comparison",

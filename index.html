@@ -608,6 +608,7 @@
 
         let currentData = null;
         let currentTestSuite = null;
+        let availableTestSuites = [];
         let visibleModels = new Set();
         let visiblePasses = new Set();
         let currentView = 'grid';
@@ -632,6 +633,72 @@
 
             const content = document.getElementById('content');
             content.innerHTML = '<div class="loading">Loading results</div>';
+
+            if (testSuite === '__resolution_sweep__') {
+                const sweepSuites = (availableTestSuites || []).filter(s => s.startsWith('resolution_test_'));
+                if (sweepSuites.length === 0) {
+                    content.innerHTML = '<div class="no-results">No resolution_test_* suites found in this results directory.</div>';
+                    return;
+                }
+
+                Promise.all(
+                    sweepSuites.map(suiteName =>
+                        fetch(`${dir}/${suiteName}/custom/consolidated_results.json`)
+                            .then(r => {
+                                if (!r.ok) throw new Error(`Failed to load results for ${suiteName}`);
+                                return r.json();
+                            })
+                            .then(d => ({ suiteName, data: d }))
+                    )
+                )
+                    .then(items => {
+                        const merged = {
+                            test_suite: '__resolution_sweep__',
+                            screen_size: { name: 'mixed', width: null, height: null },
+                            models: {},
+                            tests: []
+                        };
+
+                        items.forEach(({ suiteName, data }) => {
+                            if (data && data.models) {
+                                Object.keys(data.models).forEach(m => {
+                                    merged.models[m] = data.models[m];
+                                });
+                            }
+
+                            const screenSize = data && data.screen_size ? data.screen_size : null;
+                            (data.tests || []).forEach(t => {
+                                merged.tests.push({
+                                    ...t,
+                                    test_name: `${suiteName} / ${t.test_name}`,
+                                    prompt: `[${suiteName}] ${t.prompt || ''}`.trim(),
+                                    _suiteName: suiteName,
+                                    _screenSize: screenSize
+                                });
+                            });
+                        });
+
+                        if (!merged.tests || merged.tests.length === 0) {
+                            throw new Error('No test results found in resolution sweep suites');
+                        }
+
+                        currentData = merged;
+                        currentTestSuite = '__resolution_sweep__';
+                        visibleModels.clear();
+                        visiblePasses.clear();
+                        updateFilters(merged);
+                        updateViewToggle();
+                        displayResults(merged, dir, '__resolution_sweep__');
+                        updateComparisonTable(merged);
+                        updateSummaryTables(merged);
+                    })
+                    .catch(error => {
+                        content.innerHTML = `<div class="no-results">Error: ${error.message}</div>`;
+                        console.error('Error loading resolution sweep:', error);
+                    });
+
+                return;
+            }
 
             fetch(`${dir}/${testSuite}/custom/consolidated_results.json`)
                 .then(response => {
@@ -820,7 +887,8 @@
             grid.className = 'test-grid';
 
             data.tests.forEach(test => {
-                const card = createTestCard(test, baseDir, testSuite, data.screen_size);
+                const screenSize = test._screenSize || data.screen_size;
+                const card = createTestCard(test, baseDir, testSuite, screenSize);
                 grid.appendChild(card);
             });
 
@@ -1164,7 +1232,8 @@
             
             const img = document.createElement('img');
             img.className = 'test-image';
-            img.src = `${baseDir}/${testSuite}/custom/${test.image_file}`;
+            const suiteForImage = test._suiteName || testSuite;
+            img.src = `${baseDir}/${suiteForImage}/custom/${test.image_file}`;
             img.alt = test.test_name;
             img.onload = function() {
                 drawOverlay(imageContainer, test, screenSize, img);
@@ -1363,6 +1432,16 @@
                     const select = document.getElementById('testSuite');
                     select.innerHTML = '<option value="">Select test suite...</option>';
                     if (data.test_suites && data.test_suites.length > 0) {
+                        availableTestSuites = data.test_suites.slice();
+
+                        const sweepSuites = availableTestSuites.filter(s => s.startsWith('resolution_test_'));
+                        if (sweepSuites.length >= 2) {
+                            const opt = document.createElement('option');
+                            opt.value = '__resolution_sweep__';
+                            opt.textContent = `resolution_sweep (${sweepSuites.length} suites)`;
+                            select.appendChild(opt);
+                        }
+
                         data.test_suites.forEach(suite => {
                             const option = document.createElement('option');
                             option.value = suite;

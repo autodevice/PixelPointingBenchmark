@@ -21,7 +21,7 @@ This benchmark evaluates how accurately different VLMs can identify and point to
   - Claude Sonnet 4
   - Claude Opus 4
   - Gemini 3 Pro
-  - GPT-5.1
+  - GPT-5.2
   - Claude Haiku 4
   - Grok 4.1 (via OpenRouter)
   - Qwen3-VL (via OpenRouter)
@@ -75,6 +75,9 @@ The codebase has been refactored with a modular architecture. Use the new `evalu
 # List available test suites
 python evaluate.py --list-suites
 
+# Run a suite by itself (defaults to all available models, 3 passes)
+python evaluate.py --test-suite basic_shapes
+
 # Run a specific test suite with specific models
 python evaluate.py --test-suite basic_shapes --models sonnet opus gemini3
 
@@ -83,6 +86,30 @@ python evaluate.py --test-suite basic_shapes --models sonnet --num-passes 3
 
 # Custom screen size
 python evaluate.py --test-suite basic_shapes --width 1080 --height 2400
+```
+
+### Running Different Test Suites
+
+Suites available in this repo (see `python evaluate.py --list-suites`):
+
+- **basic_shapes**: simple shapes + a few harder variants (overlap, transparency, low contrast) at your chosen `--width/--height`
+- **color_identification**: basic colors → subtle differences → hex colors (square images recommended)
+- **shape_identification**: confusable shapes (e.g., hexagon vs octagon, decagon among circles)
+- **size_comparison**: “pick larger/smaller” comparisons (can trigger wrong-object clicks)
+- **resolution_test_256x256 / 512x512 / 1024x1024**: explicit per-resolution suites (recommended for resolution comparisons)
+
+Examples:
+
+```bash
+# Color/shape/size suites at 1024x1024
+python evaluate.py --test-suite color_identification --width 1024 --height 1024
+python evaluate.py --test-suite shape_identification --width 1024 --height 1024
+python evaluate.py --test-suite size_comparison --width 1024 --height 1024
+
+# Resolution sweep (run each suite at matching width/height)
+python evaluate.py --test-suite resolution_test_256x256 --width 256 --height 256
+python evaluate.py --test-suite resolution_test_512x512 --width 512 --height 512
+python evaluate.py --test-suite resolution_test_1024x1024 --width 1024 --height 1024
 ```
 
 ### Custom Options
@@ -150,7 +177,6 @@ Then open `http://localhost:8000/index.html` in your browser.
    - Show/hide specific models
    - Show/hide specific passes (for multi-pass runs)
 5. Browse through test images with visual overlays showing:
-   - **Black circle with white center**: Ground truth location
    - **Colored dots**: Each model's prediction (multiple passes shown with reduced opacity)
    - **Legend**: Click legend items to toggle model visibility
    - **Statistics**: Mean distance, standard deviation, and min/max across passes
