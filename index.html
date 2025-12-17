@@ -1013,7 +1013,8 @@
                 }
             });
             
-            const validAverages = Object.values(modelAverages).filter(v => v > 0);
+            // Include 0 as a valid average (0 is falsy in JS but should be displayed/highlighted).
+            const validAverages = Object.values(modelAverages).filter(v => v !== null && v !== undefined && !Number.isNaN(v));
             const bestAvg = validAverages.length > 0 ? Math.min(...validAverages) : null;
             const worstAvg = validAverages.length > 0 ? Math.max(...validAverages) : null;
             
@@ -1021,7 +1022,7 @@
                 const cell = document.createElement('td');
                 cell.className = 'metric-cell';
                 
-                if (modelAverages[model]) {
+                if (modelAverages[model] !== undefined && modelAverages[model] !== null && !Number.isNaN(modelAverages[model])) {
                     cell.textContent = `${modelAverages[model].toFixed(2)}px`;
                     if (bestAvg !== null && modelAverages[model] === bestAvg) {
                         cell.classList.add('best-metric');

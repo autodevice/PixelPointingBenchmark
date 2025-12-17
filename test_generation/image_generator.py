@@ -79,6 +79,7 @@ class ImageGenerator:
         bg_color_name = config.get("background", "white")
         
         expected_coords = config.get("expected_coords")
+        print("debug: expected_coords", expected_coords)
         if expected_coords:
             if isinstance(expected_coords, list) and len(expected_coords) == 2:
                 center_x, center_y = expected_coords[0], expected_coords[1]
@@ -159,7 +160,10 @@ class ImageGenerator:
                 center_y + shape_size // 2,
             ]
             draw.rectangle(bbox, fill=fill_color)
-            if position == "top_right":
+
+            prompt_text = (config.get("prompt") or "").lower()
+            has_explicit_expected = config.get("expected_coords") is not None
+            if (not has_explicit_expected) and position == "top_right" and "corner" in prompt_text:
                 expected_coords = (bbox[2], bbox[1])
             else:
                 expected_coords = (center_x, center_y)

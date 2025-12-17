@@ -49,6 +49,7 @@ def run_evaluation(
     if save_images:
         for config in test_configs:
             image, expected_coords = test_suite.generate_test_image(config, screen_width, screen_height)
+            print("debug: expected_coords", expected_coords)
             img_path = images_dir / f"{config['name']}.png"
             Image.fromarray(image).save(img_path)
             test_images[config['name']] = (image, expected_coords)

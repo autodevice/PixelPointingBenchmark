@@ -237,51 +237,6 @@ SHAPE_IDENTIFICATION_TESTS = [
     },
 ]
 
-
-RESOLUTION_TEST_TESTS = [
-    {
-        "name": "simple_rectangle_top_left",
-        "prompt": "Point to the center of the purple rectangle",
-        "shape": "square",
-        "color": "purple",
-        "position": "top_left",
-        "size": "medium",
-    },
-    {
-        "name": "simple_rectangle_top_right",
-        "prompt": "Point to the center of the purple rectangle",
-        "shape": "square",
-        "color": "purple",
-        "position": "top_right",
-        "size": "medium",
-    },
-    {
-        "name": "simple_rectangle_bottom_left",
-        "prompt": "Point to the center of the purple rectangle",
-        "shape": "square",
-        "color": "purple",
-        "position": "bottom_left",
-        "size": "medium",
-    },
-    {
-        "name": "simple_rectangle_bottom_right",
-        "prompt": "Point to the center of the purple rectangle",
-        "shape": "square",
-        "color": "purple",
-        "position": "bottom_right",
-        "size": "medium",
-    },
-    {
-        "name": "simple_rectangle_center",
-        "prompt": "Point to the center of the purple rectangle",
-        "shape": "square",
-        "color": "purple",
-        "position": "center",
-        "size": "medium",
-    },
-]
-
-
 SIZE_COMPARISON_TESTS = [
     {
         "name": "larger_circle_obvious",
@@ -363,8 +318,6 @@ SIZE_COMPARISON_TESTS = [
     },
 ]
 
-# More explicit resolution suites (one test each). These avoid the confusion where
-# test names imply a resolution but the actual image size is determined by CLI --width/--height.
 RESOLUTION_SUITES = {
     "resolution_test_256x256": (256, 256, "top_left"),
     "resolution_test_512x512": (512, 512, "top_right"),
@@ -430,14 +383,6 @@ class TestSuiteRegistry:
         )
         self.register(shape_suite)
         
-        resolution_suite = SyntheticTestSuite(
-            name="resolution_test",
-            description="Legacy: position sweep for a simple rectangle at the provided --width/--height (use resolution_test_*x* for true per-resolution runs)",
-            configs=RESOLUTION_TEST_TESTS
-        )
-        self.register(resolution_suite)
-
-        # Explicit per-resolution suites (recommended)
         for suite_name, (w, h, pos) in RESOLUTION_SUITES.items():
             self.register(
                 SyntheticTestSuite(

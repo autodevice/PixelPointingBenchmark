@@ -1,0 +1,121 @@
+{
+  "sonnet": [
+    {
+      "run_id": "resolution_test_256x256_sonnet_custom_20251217_200921",
+      "pass_number": 1,
+      "timestamp": "2025-12-17T20:09:21.591419"
+    },
+    {
+      "run_id": "resolution_test_256x256_sonnet_custom_20251217_200924",
+      "pass_number": 2,
+      "timestamp": "2025-12-17T20:09:24.621939"
+    },
+    {
+      "run_id": "resolution_test_256x256_sonnet_custom_20251217_200927",
+      "pass_number": 3,
+      "timestamp": "2025-12-17T20:09:27.371896"
+    }
+  ],
+  "opus": [
+    {
+      "run_id": "resolution_test_256x256_opus_custom_20251217_200929",
+      "pass_number": 1,
+      "timestamp": "2025-12-17T20:09:29.185113"
+    },
+    {
+      "run_id": "resolution_test_256x256_opus_custom_20251217_200931",
+      "pass_number": 2,
+      "timestamp": "2025-12-17T20:09:31.178799"
+    },
+    {
+      "run_id": "resolution_test_256x256_opus_custom_20251217_200933",
+      "pass_number": 3,
+      "timestamp": "2025-12-17T20:09:33.503945"
+    }
+  ],
+  "gemini3": [
+    {
+      "run_id": "resolution_test_256x256_gemini3_custom_20251217_200938",
+      "pass_number": 1,
+      "timestamp": "2025-12-17T20:09:38.623959"
+    },
+    {
+      "run_id": "resolution_test_256x256_gemini3_custom_20251217_200942",
+      "pass_number": 2,
+      "timestamp": "2025-12-17T20:09:42.418656"
+    },
+    {
+      "run_id": "resolution_test_256x256_gemini3_custom_20251217_200946",
+      "pass_number": 3,
+      "timestamp": "2025-12-17T20:09:46.236602"
+    }
+  ],
+  "chatgpt": [
+    {
+      "run_id": "resolution_test_256x256_chatgpt_custom_20251217_200947",
+      "pass_number": 1,
+      "timestamp": "2025-12-17T20:09:47.434303"
+    },
+    {
+      "run_id": "resolution_test_256x256_chatgpt_custom_20251217_200948",
+      "pass_number": 2,
+      "timestamp": "2025-12-17T20:09:48.560013"
+    },
+    {
+      "run_id": "resolution_test_256x256_chatgpt_custom_20251217_200950",
+      "pass_number": 3,
+      "timestamp": "2025-12-17T20:09:50.689873"
+    }
+  ],
+  "haiku": [
+    {
+      "run_id": "resolution_test_256x256_haiku_custom_20251217_200953",
+      "pass_number": 1,
+      "timestamp": "2025-12-17T20:09:53.134516"
+    },
+    {
+      "run_id": "resolution_test_256x256_haiku_custom_20251217_200954",
+      "pass_number": 2,
+      "timestamp": "2025-12-17T20:09:54.749244"
+    },
+    {
+      "run_id": "resolution_test_256x256_haiku_custom_20251217_200956",
+      "pass_number": 3,
+      "timestamp": "2025-12-17T20:09:56.153435"
+    }
+  ],
+  "qwen3-vl": [
+    {
+      "run_id": "resolution_test_256x256_qwen3-vl_custom_20251217_201000",
+      "pass_number": 1,
+      "timestamp": "2025-12-17T20:10:00.468974"
+    },
+    {
+      "run_id": "resolution_test_256x256_qwen3-vl_custom_20251217_201003",
+      "pass_number": 2,
+      "timestamp": "2025-12-17T20:10:03.401948"
+    },
+    {
+      "run_id": "resolution_test_256x256_qwen3-vl_custom_20251217_201005",
+      "pass_number": 3,
+      "timestamp": "2025-12-17T20:10:05.126875"
+    }
+  ],
+  "glm-4.6v": [
+    {
+      "run_id": "resolution_test_256x256_glm-4.6v_custom_20251217_201024",
+      "pass_number": 1,
+      "timestamp": "2025-12-17T20:10:24.600618"
+    },
+    {
+      "run_id": "resolution_test_256x256_glm-4.6v_custom_20251217_201041",
+      "pass_number": 2,
+      "timestamp": "2025-12-17T20:10:41.664681"
+    },
+    {
+      "run_id": "resolution_test_256x256_glm-4.6v_custom_20251217_201056",
+      "pass_number": 3,
+      "timestamp": "2025-12-17T20:10:56.313208"
+    }
+  ]
+}

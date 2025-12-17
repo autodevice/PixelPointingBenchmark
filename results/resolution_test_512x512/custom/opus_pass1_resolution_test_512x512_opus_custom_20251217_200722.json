@@ -1,0 +1,63 @@
+{
+  "run_id": "resolution_test_512x512_opus_custom_20251217_200722",
+  "test_suite": "resolution_test_512x512",
+  "model": "opus",
+  "model_id": "anthropic/claude-opus-4-5-20251101",
+  "screen_size": {
+    "name": "custom",
+    "width": 512,
+    "height": 512
+  },
+  "pass_number": 1,
+  "timestamp": "2025-12-17T20:07:22.994120",
+  "metrics": {
+    "total_tests": 1,
+    "successful_extractions": 1,
+    "extraction_rate": 100.0,
+    "mean_distance": 12.206555615733702,
+    "median_distance": 12.206555615733702,
+    "max_distance": 12.206555615733702,
+    "min_distance": 12.206555615733702,
+    "accuracy_within_5px": 0.0,
+    "accuracy_within_10px": 0.0,
+    "accuracy_within_5_percent": 100.0
+  },
+  "results": [
+    {
+      "test_name": "simple_rectangle",
+      "prompt": "Point to the center of the purple rectangle",
+      "expected_coords": [
+        384,
+        128
+      ],
+      "response": "(391, 138)",
+      "predicted_coords": [
+        391,
+        138
+      ],
+      "distance": 12.206555615733702,
+      "error": null,
+      "image_metadata": {
+        "size": [
+          512,
+          512
+        ],
+        "estimated_tokens": 349
+      }
+    }
+  ],
+  "test_configs": [
+    {
+      "name": "simple_rectangle",
+      "prompt": "Point to the center of the purple rectangle",
+      "shape": "square",
+      "color": "purple",
+      "position": "top_right",
+      "size": "medium",
+      "expected_coords": [
+        384,
+        128
+      ]
+    }
+  ]
+}
