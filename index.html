@@ -634,7 +634,7 @@
             const content = document.getElementById('content');
             content.innerHTML = '<div class="loading">Loading results</div>';
 
-            if (testSuite === '__resolution_sweep__') {
+            if (testSuite === '__resolution_test__') {
                 const sweepSuites = (availableTestSuites || []).filter(s => s.startsWith('resolution_test_'));
                 if (sweepSuites.length === 0) {
                     content.innerHTML = '<div class="no-results">No resolution_test_* suites found in this results directory.</div>';
@@ -653,7 +653,7 @@
                 )
                     .then(items => {
                         const merged = {
-                            test_suite: '__resolution_sweep__',
+                            test_suite: '__resolution_test__',
                             screen_size: { name: 'mixed', width: null, height: null },
                             models: {},
                             tests: []
@@ -679,16 +679,16 @@
                         });
 
                         if (!merged.tests || merged.tests.length === 0) {
-                            throw new Error('No test results found in resolution sweep suites');
+                            throw new Error('No test results found in resolution test suites');
                         }
 
                         currentData = merged;
-                        currentTestSuite = '__resolution_sweep__';
+                        currentTestSuite = '__resolution_test__';
                         visibleModels.clear();
                         visiblePasses.clear();
                         updateFilters(merged);
                         updateViewToggle();
-                        displayResults(merged, dir, '__resolution_sweep__');
+                        displayResults(merged, dir, '__resolution_test__');
                         updateComparisonTable(merged);
                         updateSummaryTables(merged);
                     })
@@ -1435,10 +1435,10 @@
                         availableTestSuites = data.test_suites.slice();
 
                         const sweepSuites = availableTestSuites.filter(s => s.startsWith('resolution_test_'));
-                        if (sweepSuites.length >= 2) {
+                        if (sweepSuites.length >= 1) {
                             const opt = document.createElement('option');
-                            opt.value = '__resolution_sweep__';
-                            opt.textContent = `resolution_sweep (${sweepSuites.length} suites)`;
+                            opt.value = '__resolution_test__';
+                            opt.textContent = `resolution_test`;
                             select.appendChild(opt);
                         }
 

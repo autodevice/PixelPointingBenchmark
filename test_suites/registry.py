@@ -373,7 +373,20 @@ RESOLUTION_SUITES = {
     "resolution_test_4096x4096": (4096, 4096, "center"),
 }
 
-def _resolution_suite_config(position: str) -> List[Dict[str, str]]:
+def _resolution_expected_center(width: int, height: int, position: str) -> List[int]:
+    if position == "center":
+        return [width // 2, height // 2]
+    if position == "top_right":
+        return [int(width * 0.75), int(height * 0.25)]
+    if position == "bottom_left":
+        return [int(width * 0.25), int(height * 0.75)]
+    if position == "top_left":
+        return [int(width * 0.25), int(height * 0.25)]
+    if position == "bottom_right":
+        return [int(width * 0.75), int(height * 0.75)]
+    return [width // 2, height // 2]
+
+def _resolution_suite_config(width: int, height: int, position: str) -> List[Dict[str, str]]:
     return [
         {
             "name": "simple_rectangle",
@@ -382,6 +395,7 @@ def _resolution_suite_config(position: str) -> List[Dict[str, str]]:
             "color": "purple",
             "position": position,
             "size": "medium",
+            "expected_coords": _resolution_expected_center(width, height, position),
         }
     ]
 
@@ -429,7 +443,7 @@ class TestSuiteRegistry:
                 SyntheticTestSuite(
                     name=suite_name,
                     description=f"Single rectangle pointing test at {w}x{h} (run with --width {w} --height {h})",
-                    configs=_resolution_suite_config(pos),
+                    configs=_resolution_suite_config(w, h, pos),
                 )
             )
         
