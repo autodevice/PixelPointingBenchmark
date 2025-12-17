@@ -1,121 +1,121 @@
 {
   "sonnet": [
     {
-      "run_id": "shape_identification_sonnet_custom_20251216_215405",
+      "run_id": "shape_identification_sonnet_custom_20251217_141758",
       "pass_number": 1,
-      "timestamp": "2025-12-16T21:54:05.598913"
+      "timestamp": "2025-12-17T14:17:58.174153"
     },
     {
-      "run_id": "shape_identification_sonnet_custom_20251216_215451",
+      "run_id": "shape_identification_sonnet_custom_20251217_141840",
       "pass_number": 2,
-      "timestamp": "2025-12-16T21:54:51.142681"
+      "timestamp": "2025-12-17T14:18:40.105507"
     },
     {
-      "run_id": "shape_identification_sonnet_custom_20251216_215537",
+      "run_id": "shape_identification_sonnet_custom_20251217_141927",
       "pass_number": 3,
-      "timestamp": "2025-12-16T21:55:37.540113"
+      "timestamp": "2025-12-17T14:19:27.528964"
     }
   ],
   "opus": [
     {
-      "run_id": "shape_identification_opus_custom_20251216_215607",
+      "run_id": "shape_identification_opus_custom_20251217_141953",
       "pass_number": 1,
-      "timestamp": "2025-12-16T21:56:07.057292"
+      "timestamp": "2025-12-17T14:19:53.263639"
     },
     {
-      "run_id": "shape_identification_opus_custom_20251216_215631",
+      "run_id": "shape_identification_opus_custom_20251217_142025",
       "pass_number": 2,
-      "timestamp": "2025-12-16T21:56:31.028936"
+      "timestamp": "2025-12-17T14:20:25.001220"
     },
     {
-      "run_id": "shape_identification_opus_custom_20251216_215656",
+      "run_id": "shape_identification_opus_custom_20251217_142049",
       "pass_number": 3,
-      "timestamp": "2025-12-16T21:56:56.083420"
+      "timestamp": "2025-12-17T14:20:49.311214"
     }
   ],
   "gemini3": [
     {
-      "run_id": "shape_identification_gemini3_custom_20251216_215700",
+      "run_id": "shape_identification_gemini3_custom_20251217_142124",
       "pass_number": 1,
-      "timestamp": "2025-12-16T21:57:00.298419"
+      "timestamp": "2025-12-17T14:21:24.931355"
     },
     {
-      "run_id": "shape_identification_gemini3_custom_20251216_215703",
+      "run_id": "shape_identification_gemini3_custom_20251217_142155",
       "pass_number": 2,
-      "timestamp": "2025-12-16T21:57:03.608929"
+      "timestamp": "2025-12-17T14:21:55.173879"
     },
     {
-      "run_id": "shape_identification_gemini3_custom_20251216_215707",
+      "run_id": "shape_identification_gemini3_custom_20251217_142226",
       "pass_number": 3,
-      "timestamp": "2025-12-16T21:57:07.133254"
+      "timestamp": "2025-12-17T14:22:26.379889"
     }
   ],
   "chatgpt": [
     {
-      "run_id": "shape_identification_chatgpt_custom_20251216_215718",
+      "run_id": "shape_identification_chatgpt_custom_20251217_142238",
       "pass_number": 1,
-      "timestamp": "2025-12-16T21:57:18.900976"
+      "timestamp": "2025-12-17T14:22:38.474244"
     },
     {
-      "run_id": "shape_identification_chatgpt_custom_20251216_215728",
+      "run_id": "shape_identification_chatgpt_custom_20251217_142249",
       "pass_number": 2,
-      "timestamp": "2025-12-16T21:57:28.850515"
+      "timestamp": "2025-12-17T14:22:49.420366"
     },
     {
-      "run_id": "shape_identification_chatgpt_custom_20251216_215739",
+      "run_id": "shape_identification_chatgpt_custom_20251217_142300",
       "pass_number": 3,
-      "timestamp": "2025-12-16T21:57:39.911167"
+      "timestamp": "2025-12-17T14:23:00.239097"
     }
   ],
   "haiku": [
     {
-      "run_id": "shape_identification_haiku_custom_20251216_215755",
+      "run_id": "shape_identification_haiku_custom_20251217_142316",
       "pass_number": 1,
-      "timestamp": "2025-12-16T21:57:55.611163"
+      "timestamp": "2025-12-17T14:23:16.154701"
     },
     {
-      "run_id": "shape_identification_haiku_custom_20251216_215813",
+      "run_id": "shape_identification_haiku_custom_20251217_142330",
       "pass_number": 2,
-      "timestamp": "2025-12-16T21:58:13.089074"
+      "timestamp": "2025-12-17T14:23:30.855055"
     },
     {
-      "run_id": "shape_identification_haiku_custom_20251216_215826",
+      "run_id": "shape_identification_haiku_custom_20251217_142346",
       "pass_number": 3,
-      "timestamp": "2025-12-16T21:58:26.180389"
+      "timestamp": "2025-12-17T14:23:46.559297"
     }
   ],
   "qwen3-vl": [
     {
-      "run_id": "shape_identification_qwen3-vl_custom_20251216_215845",
+      "run_id": "shape_identification_qwen3-vl_custom_20251217_142402",
       "pass_number": 1,
-      "timestamp": "2025-12-16T21:58:45.980104"
+      "timestamp": "2025-12-17T14:24:02.120562"
     },
     {
-      "run_id": "shape_identification_qwen3-vl_custom_20251216_215858",
+      "run_id": "shape_identification_qwen3-vl_custom_20251217_142422",
       "pass_number": 2,
-      "timestamp": "2025-12-16T21:58:58.107113"
+      "timestamp": "2025-12-17T14:24:22.588584"
     },
     {
-      "run_id": "shape_identification_qwen3-vl_custom_20251216_215914",
+      "run_id": "shape_identification_qwen3-vl_custom_20251217_142437",
       "pass_number": 3,
-      "timestamp": "2025-12-16T21:59:14.625276"
+      "timestamp": "2025-12-17T14:24:37.037642"
     }
   ],
   "glm-4.6v": [
     {
-      "run_id": "shape_identification_glm-4.6v_custom_20251216_220014",
+      "run_id": "shape_identification_glm-4.6v_custom_20251217_142534",
       "pass_number": 1,
-      "timestamp": "2025-12-16T22:00:14.995418"
+      "timestamp": "2025-12-17T14:25:34.588474"
     },
     {
-      "run_id": "shape_identification_glm-4.6v_custom_20251216_220102",
+      "run_id": "shape_identification_glm-4.6v_custom_20251217_142646",
       "pass_number": 2,
-      "timestamp": "2025-12-16T22:01:02.305327"
+      "timestamp": "2025-12-17T14:26:46.376364"
     },
     {
-      "run_id": "shape_identification_glm-4.6v_custom_20251216_220209",
+      "run_id": "shape_identification_glm-4.6v_custom_20251217_142734",
       "pass_number": 3,
-      "timestamp": "2025-12-16T22:02:09.011675"
+      "timestamp": "2025-12-17T14:27:34.765202"
     }
   ]
 }

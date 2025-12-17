@@ -60,7 +60,7 @@ class VLMEvaluator:
             ]
 
             base_url = None
-            completion_kwargs = {"max_tokens": 100}
+            completion_kwargs = {}
             
             if "openrouter" in self.model.lower():
                 # Get OpenRouter configuration (matching test_glm_comparison.py)
@@ -76,6 +76,24 @@ class VLMEvaluator:
                 base_url = openrouter_base_url
                 # Don't set max_tokens for OpenRouter (let model decide, matching test file)
                 completion_kwargs = {}
+            elif "gemini" in self.model.lower():
+                gemini_api_key = os.getenv("GEMINI_API_KEY")
+                if gemini_api_key:
+                    os.environ["GEMINI_API_KEY"] = gemini_api_key
+
+                completion_kwargs = {
+                    "temperature": 0,
+                    "max_tokens": 512,
+                    "max_output_tokens": 512,
+                    "extra_body": {
+                        "generationConfig": {
+                            "thinkingConfig": {"includeThoughts": False}
+                        }
+                    },
+                }
+            else:
+                # Default for other models (Anthropic, OpenAI, etc.)
+                completion_kwargs = {"max_tokens": 100}
             
             response = litellm.completion(
                 model=self.model,

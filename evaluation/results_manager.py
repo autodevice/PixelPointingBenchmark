@@ -245,6 +245,15 @@ class ResultsManager:
                                     "pass_number": run.get("pass_number"),
                                     "run_id": run.get("run_id"),
                                 })
+                            elif result.get("error"):
+                                model_predictions.append({
+                                    "predicted_coords": None,
+                                    "distance": None,
+                                    "response": result.get("response"),
+                                    "error": result.get("error"),
+                                    "pass_number": run.get("pass_number"),
+                                    "run_id": run.get("run_id"),
+                                })
                 
                 if model_predictions:
                     test_data["models"][model] = {

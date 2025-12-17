@@ -7,6 +7,7 @@
   },
   "models": {
     "chatgpt": "chatgpt",
+    "gemini3": "gemini3",
     "glm-4.6v": "glm-4.6v",
     "haiku": "haiku",
     "opus": "opus",
@@ -34,29 +35,29 @@
               "response": "(308, 512)",
               "error": null,
               "pass_number": 1,
-              "run_id": "size_comparison_sonnet_custom_20251216_215349"
-            },
-            {
-              "predicted_coords": [
-                307,
-                512
-              ],
-              "distance": 0.0,
-              "response": "(307, 512)",
-              "error": null,
-              "pass_number": 2,
-              "run_id": "size_comparison_sonnet_custom_20251216_215420"
+              "run_id": "size_comparison_sonnet_custom_20251217_144815"
             },
             {
               "predicted_coords": [
                 308,
-                511
+                512
               ],
-              "distance": 1.4142135623730951,
-              "response": "(308, 511)",
+              "distance": 1.0,
+              "response": "(308, 512)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "size_comparison_sonnet_custom_20251217_144833"
+            },
+            {
+              "predicted_coords": [
+                308,
+                512
+              ],
+              "distance": 1.0,
+              "response": "(308, 512)",
               "error": null,
               "pass_number": 3,
-              "run_id": "size_comparison_sonnet_custom_20251216_215453"
+              "run_id": "size_comparison_sonnet_custom_20251217_144853"
             }
           ],
           "num_passes": 3
@@ -65,14 +66,14 @@
           "predictions": [
             {
               "predicted_coords": [
-                315,
+                310,
                 450
               ],
-              "distance": 62.51399843235114,
-              "response": "(315, 450)",
+              "distance": 62.07253821135398,
+              "response": "(310, 450)",
               "error": null,
               "pass_number": 1,
-              "run_id": "size_comparison_opus_custom_20251216_215506"
+              "run_id": "size_comparison_opus_custom_20251217_144911"
             },
             {
               "predicted_coords": [
@@ -83,18 +84,56 @@
               "response": "(310, 450)",
               "error": null,
               "pass_number": 2,
-              "run_id": "size_comparison_opus_custom_20251216_215523"
+              "run_id": "size_comparison_opus_custom_20251217_144930"
             },
             {
               "predicted_coords": [
                 310,
-                450
+                445
               ],
-              "distance": 62.07253821135398,
-              "response": "(310, 450)",
+              "distance": 67.06713054842886,
+              "response": "(310, 445)",
               "error": null,
               "pass_number": 3,
-              "run_id": "size_comparison_opus_custom_20251216_215540"
+              "run_id": "size_comparison_opus_custom_20251217_144948"
+            }
+          ],
+          "num_passes": 3
+        },
+        "gemini3": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                300,
+                500
+              ],
+              "distance": 13.892443989449804,
+              "response": "(300, 500)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "size_comparison_gemini3_custom_20251217_145009"
+            },
+            {
+              "predicted_coords": [
+                300,
+                500
+              ],
+              "distance": 13.892443989449804,
+              "response": "(300, 500)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "size_comparison_gemini3_custom_20251217_145030"
+            },
+            {
+              "predicted_coords": [
+                300,
+                500
+              ],
+              "distance": 13.892443989449804,
+              "response": "(300, 500)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "size_comparison_gemini3_custom_20251217_145049"
             }
           ],
           "num_passes": 3
@@ -103,36 +142,36 @@
           "predictions": [
             {
               "predicted_coords": [
-                305,
-                544
+                308,
+                559
               ],
-              "distance": 32.0624390837628,
-              "response": "(305, 544)",
+              "distance": 47.01063709417264,
+              "response": "(308, 559)",
               "error": null,
               "pass_number": 1,
-              "run_id": "size_comparison_chatgpt_custom_20251216_215556"
+              "run_id": "size_comparison_chatgpt_custom_20251217_145058"
             },
             {
               "predicted_coords": [
                 307,
-                544
+                513
               ],
-              "distance": 32.0,
-              "response": "(307, 544)",
+              "distance": 1.0,
+              "response": "(307, 513)",
               "error": null,
               "pass_number": 2,
-              "run_id": "size_comparison_chatgpt_custom_20251216_215603"
+              "run_id": "size_comparison_chatgpt_custom_20251217_145107"
             },
             {
               "predicted_coords": [
-                276,
-                519
+                305,
+                512
               ],
-              "distance": 31.78049716414141,
-              "response": "(276, 519)",
+              "distance": 2.0,
+              "response": "(305, 512)",
               "error": null,
               "pass_number": 3,
-              "run_id": "size_comparison_chatgpt_custom_20251216_215610"
+              "run_id": "size_comparison_chatgpt_custom_20251217_145115"
             }
           ],
           "num_passes": 3
@@ -148,18 +187,18 @@
               "response": "(310, 510)",
               "error": null,
               "pass_number": 1,
-              "run_id": "size_comparison_haiku_custom_20251216_215619"
+              "run_id": "size_comparison_haiku_custom_20251217_145124"
             },
             {
               "predicted_coords": [
-                310,
+                308,
                 510
               ],
-              "distance": 3.605551275463989,
-              "response": "(310, 510)",
+              "distance": 2.23606797749979,
+              "response": "(308, 510)",
               "error": null,
               "pass_number": 2,
-              "run_id": "size_comparison_haiku_custom_20251216_215628"
+              "run_id": "size_comparison_haiku_custom_20251217_145133"
             },
             {
               "predicted_coords": [
@@ -170,7 +209,7 @@
               "response": "(308, 510)",
               "error": null,
               "pass_number": 3,
-              "run_id": "size_comparison_haiku_custom_20251216_215638"
+              "run_id": "size_comparison_haiku_custom_20251217_145143"
             }
           ],
           "num_passes": 3
@@ -179,36 +218,36 @@
           "predictions": [
             {
               "predicted_coords": [
+                307,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(307, 512)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "size_comparison_qwen3-vl_custom_20251217_145158"
+            },
+            {
+              "predicted_coords": [
+                298,
+                499
+              ],
+              "distance": 15.811388300841896,
+              "response": "(298, 499)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "size_comparison_qwen3-vl_custom_20251217_145231"
+            },
+            {
+              "predicted_coords": [
                 300,
                 495
               ],
               "distance": 18.384776310850235,
               "response": "(300, 495)",
               "error": null,
-              "pass_number": 1,
-              "run_id": "size_comparison_qwen3-vl_custom_20251216_215651"
-            },
-            {
-              "predicted_coords": [
-                299,
-                496
-              ],
-              "distance": 17.88854381999832,
-              "response": "(299, 496)",
-              "error": null,
-              "pass_number": 2,
-              "run_id": "size_comparison_qwen3-vl_custom_20251216_215704"
-            },
-            {
-              "predicted_coords": [
-                299,
-                497
-              ],
-              "distance": 17.0,
-              "response": "(299, 497)",
-              "error": null,
               "pass_number": 3,
-              "run_id": "size_comparison_qwen3-vl_custom_20251216_215714"
+              "run_id": "size_comparison_qwen3-vl_custom_20251217_145251"
             }
           ],
           "num_passes": 3
@@ -216,37 +255,34 @@
         "glm-4.6v": {
           "predictions": [
             {
+              "predicted_coords": null,
+              "distance": null,
+              "response": null,
+              "error": "Model returned empty response (model: openrouter/z-ai/glm-4.6v). Response object type: <class 'litellm.types.utils.ModelResponse'>, model: z-ai/glm-4.6v, choice type: <class 'litellm.types.utils.Choices'>, message type: <class 'litellm.types.utils.Message'>, content type: <class 'str'>, content: '' Check OpenRouter API key and model availability.",
+              "pass_number": 1,
+              "run_id": "size_comparison_glm-4.6v_custom_20251217_145635"
+            },
+            {
               "predicted_coords": [
                 256,
                 512
               ],
               "distance": 51.0,
-              "response": "<|begin_of_box|>(256, 512)<|end_of_box|>",
-              "error": null,
-              "pass_number": 1,
-              "run_id": "size_comparison_glm-4.6v_custom_20251216_215833"
-            },
-            {
-              "predicted_coords": [
-                300,
-                512
-              ],
-              "distance": 7.0,
-              "response": "(300, 512)",
+              "response": "(256, 512)",
               "error": null,
               "pass_number": 2,
-              "run_id": "size_comparison_glm-4.6v_custom_20251216_215955"
+              "run_id": "size_comparison_glm-4.6v_custom_20251217_145746"
             },
             {
               "predicted_coords": [
-                300,
-                500
+                296,
+                492
               ],
-              "distance": 13.892443989449804,
-              "response": "(300, 500)",
+              "distance": 22.825424421026653,
+              "response": "(296, 492)",
               "error": null,
               "pass_number": 3,
-              "run_id": "size_comparison_glm-4.6v_custom_20251216_220123"
+              "run_id": "size_comparison_glm-4.6v_custom_20251217_145907"
             }
           ],
           "num_passes": 3
@@ -266,36 +302,36 @@
           "predictions": [
             {
               "predicted_coords": [
-                306,
-                516
+                307,
+                517
               ],
-              "distance": 4.123105625617661,
-              "response": "(306, 516)",
+              "distance": 5.0,
+              "response": "(307, 517)",
               "error": null,
               "pass_number": 1,
-              "run_id": "size_comparison_sonnet_custom_20251216_215349"
+              "run_id": "size_comparison_sonnet_custom_20251217_144815"
             },
             {
               "predicted_coords": [
-                305,
-                515
-              ],
-              "distance": 3.605551275463989,
-              "response": "(305, 515)",
-              "error": null,
-              "pass_number": 2,
-              "run_id": "size_comparison_sonnet_custom_20251216_215420"
-            },
-            {
-              "predicted_coords": [
-                306,
+                307,
                 516
               ],
-              "distance": 4.123105625617661,
-              "response": "(306, 516)",
+              "distance": 4.0,
+              "response": "(307, 516)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "size_comparison_sonnet_custom_20251217_144833"
+            },
+            {
+              "predicted_coords": [
+                307,
+                516
+              ],
+              "distance": 4.0,
+              "response": "(307, 516)",
               "error": null,
               "pass_number": 3,
-              "run_id": "size_comparison_sonnet_custom_20251216_215453"
+              "run_id": "size_comparison_sonnet_custom_20251217_144853"
             }
           ],
           "num_passes": 3
@@ -305,35 +341,73 @@
             {
               "predicted_coords": [
                 340,
-                410
-              ],
-              "distance": 107.20541031123382,
-              "response": "(340, 410)",
-              "error": null,
-              "pass_number": 1,
-              "run_id": "size_comparison_opus_custom_20251216_215506"
-            },
-            {
-              "predicted_coords": [
-                330,
-                410
-              ],
-              "distance": 104.5609869884557,
-              "response": "(330, 410)",
-              "error": null,
-              "pass_number": 2,
-              "run_id": "size_comparison_opus_custom_20251216_215523"
-            },
-            {
-              "predicted_coords": [
-                330,
                 430
               ],
-              "distance": 85.16454661418682,
-              "response": "(330, 430)",
+              "distance": 88.3911760301898,
+              "response": "(340, 430)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "size_comparison_opus_custom_20251217_144911"
+            },
+            {
+              "predicted_coords": [
+                340,
+                420
+              ],
+              "distance": 97.73944955850733,
+              "response": "(340, 420)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "size_comparison_opus_custom_20251217_144930"
+            },
+            {
+              "predicted_coords": [
+                340,
+                430
+              ],
+              "distance": 88.3911760301898,
+              "response": "(340, 430)",
               "error": null,
               "pass_number": 3,
-              "run_id": "size_comparison_opus_custom_20251216_215540"
+              "run_id": "size_comparison_opus_custom_20251217_144948"
+            }
+          ],
+          "num_passes": 3
+        },
+        "gemini3": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                300,
+                500
+              ],
+              "distance": 13.892443989449804,
+              "response": "(300, 500)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "size_comparison_gemini3_custom_20251217_145009"
+            },
+            {
+              "predicted_coords": [
+                300,
+                500
+              ],
+              "distance": 13.892443989449804,
+              "response": "(300, 500)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "size_comparison_gemini3_custom_20251217_145030"
+            },
+            {
+              "predicted_coords": [
+                300,
+                500
+              ],
+              "distance": 13.892443989449804,
+              "response": "(300, 500)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "size_comparison_gemini3_custom_20251217_145049"
             }
           ],
           "num_passes": 3
@@ -342,36 +416,36 @@
           "predictions": [
             {
               "predicted_coords": [
-                239,
-                511
+                242,
+                544
               ],
-              "distance": 68.00735254367721,
-              "response": "(239, 511)",
+              "distance": 72.44998274671983,
+              "response": "(242, 544)",
               "error": null,
               "pass_number": 1,
-              "run_id": "size_comparison_chatgpt_custom_20251216_215556"
+              "run_id": "size_comparison_chatgpt_custom_20251217_145058"
             },
             {
               "predicted_coords": [
-                240,
-                545
+                250,
+                510
               ],
-              "distance": 74.68600939935136,
-              "response": "(240, 545)",
+              "distance": 57.0350769263968,
+              "response": "(250, 510)",
               "error": null,
               "pass_number": 2,
-              "run_id": "size_comparison_chatgpt_custom_20251216_215603"
+              "run_id": "size_comparison_chatgpt_custom_20251217_145107"
             },
             {
               "predicted_coords": [
-                249,
-                573
+                250,
+                543
               ],
-              "distance": 84.17244204607586,
-              "response": "(249, 573)",
+              "distance": 64.88451279003334,
+              "response": "(250, 543)",
               "error": null,
               "pass_number": 3,
-              "run_id": "size_comparison_chatgpt_custom_20251216_215610"
+              "run_id": "size_comparison_chatgpt_custom_20251217_145115"
             }
           ],
           "num_passes": 3
@@ -387,18 +461,18 @@
               "response": "(310, 510)",
               "error": null,
               "pass_number": 1,
-              "run_id": "size_comparison_haiku_custom_20251216_215619"
+              "run_id": "size_comparison_haiku_custom_20251217_145124"
             },
             {
               "predicted_coords": [
                 310,
-                515
+                510
               ],
-              "distance": 4.242640687119285,
-              "response": "(310, 515)",
+              "distance": 3.605551275463989,
+              "response": "(310, 510)",
               "error": null,
               "pass_number": 2,
-              "run_id": "size_comparison_haiku_custom_20251216_215628"
+              "run_id": "size_comparison_haiku_custom_20251217_145133"
             },
             {
               "predicted_coords": [
@@ -409,7 +483,7 @@
               "response": "(310, 510)",
               "error": null,
               "pass_number": 3,
-              "run_id": "size_comparison_haiku_custom_20251216_215638"
+              "run_id": "size_comparison_haiku_custom_20251217_145143"
             }
           ],
           "num_passes": 3
@@ -418,36 +492,36 @@
           "predictions": [
             {
               "predicted_coords": [
+                297,
+                497
+              ],
+              "distance": 18.027756377319946,
+              "response": "(297, 497)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "size_comparison_qwen3-vl_custom_20251217_145158"
+            },
+            {
+              "predicted_coords": [
                 300,
                 500
               ],
               "distance": 13.892443989449804,
               "response": "(300, 500)",
               "error": null,
-              "pass_number": 1,
-              "run_id": "size_comparison_qwen3-vl_custom_20251216_215651"
+              "pass_number": 2,
+              "run_id": "size_comparison_qwen3-vl_custom_20251217_145231"
             },
             {
               "predicted_coords": [
                 300,
-                512
+                500
               ],
-              "distance": 7.0,
-              "response": "(300, 512)",
-              "error": null,
-              "pass_number": 2,
-              "run_id": "size_comparison_qwen3-vl_custom_20251216_215704"
-            },
-            {
-              "predicted_coords": [
-                298,
-                499
-              ],
-              "distance": 15.811388300841896,
-              "response": "(298, 499)",
+              "distance": 13.892443989449804,
+              "response": "(300, 500)",
               "error": null,
               "pass_number": 3,
-              "run_id": "size_comparison_qwen3-vl_custom_20251216_215714"
+              "run_id": "size_comparison_qwen3-vl_custom_20251217_145251"
             }
           ],
           "num_passes": 3
@@ -463,7 +537,7 @@
               "response": "<|begin_of_box|>(256, 512)<|end_of_box|>",
               "error": null,
               "pass_number": 1,
-              "run_id": "size_comparison_glm-4.6v_custom_20251216_215833"
+              "run_id": "size_comparison_glm-4.6v_custom_20251217_145635"
             },
             {
               "predicted_coords": [
@@ -474,7 +548,7 @@
               "response": "(256, 512)",
               "error": null,
               "pass_number": 2,
-              "run_id": "size_comparison_glm-4.6v_custom_20251216_215955"
+              "run_id": "size_comparison_glm-4.6v_custom_20251217_145746"
             },
             {
               "predicted_coords": [
@@ -485,7 +559,7 @@
               "response": "(256, 512)",
               "error": null,
               "pass_number": 3,
-              "run_id": "size_comparison_glm-4.6v_custom_20251216_220123"
+              "run_id": "size_comparison_glm-4.6v_custom_20251217_145907"
             }
           ],
           "num_passes": 3
@@ -505,14 +579,14 @@
           "predictions": [
             {
               "predicted_coords": [
-                715,
-                510
+                716,
+                511
               ],
-              "distance": 408.0049019313371,
-              "response": "(715, 510)",
+              "distance": 409.00122249206055,
+              "response": "(716, 511)",
               "error": null,
               "pass_number": 1,
-              "run_id": "size_comparison_sonnet_custom_20251216_215349"
+              "run_id": "size_comparison_sonnet_custom_20251217_144815"
             },
             {
               "predicted_coords": [
@@ -520,10 +594,10 @@
                 510
               ],
               "distance": 408.0049019313371,
-              "response": "Looking at the image, I can see two blue circles that appear to be the same size. Since both circles appear to be identical in size, I'll point to the center of the circle on the right, which could be considered the \"larger\" circle if there's a slight size difference not clearly visible.\n\n(715, 510)",
+              "response": "(715, 510)",
               "error": null,
               "pass_number": 2,
-              "run_id": "size_comparison_sonnet_custom_20251216_215420"
+              "run_id": "size_comparison_sonnet_custom_20251217_144833"
             },
             {
               "predicted_coords": [
@@ -534,7 +608,7 @@
               "response": "(715, 510)",
               "error": null,
               "pass_number": 3,
-              "run_id": "size_comparison_sonnet_custom_20251216_215453"
+              "run_id": "size_comparison_sonnet_custom_20251217_144853"
             }
           ],
           "num_passes": 3
@@ -543,36 +617,74 @@
           "predictions": [
             {
               "predicted_coords": [
-                320,
-                450
+                305,
+                430
               ],
-              "distance": 63.34824385884742,
-              "response": "(320, 450)",
+              "distance": 82.02438661763951,
+              "response": "(305, 430)",
               "error": null,
               "pass_number": 1,
-              "run_id": "size_comparison_opus_custom_20251216_215506"
-            },
-            {
-              "predicted_coords": [
-                307,
-                456
-              ],
-              "distance": 56.0,
-              "response": "(307, 456)",
-              "error": null,
-              "pass_number": 2,
-              "run_id": "size_comparison_opus_custom_20251216_215523"
+              "run_id": "size_comparison_opus_custom_20251217_144911"
             },
             {
               "predicted_coords": [
                 310,
+                450
+              ],
+              "distance": 62.07253821135398,
+              "response": "(310, 450)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "size_comparison_opus_custom_20251217_144930"
+            },
+            {
+              "predicted_coords": [
+                320,
                 430
               ],
-              "distance": 82.05485969764375,
-              "response": "(310, 430)",
+              "distance": 83.02409288875127,
+              "response": "(320, 430)",
               "error": null,
               "pass_number": 3,
-              "run_id": "size_comparison_opus_custom_20251216_215540"
+              "run_id": "size_comparison_opus_custom_20251217_144948"
+            }
+          ],
+          "num_passes": 3
+        },
+        "gemini3": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                700,
+                500
+              ],
+              "distance": 393.1831634238679,
+              "response": "(700, 500)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "size_comparison_gemini3_custom_20251217_145009"
+            },
+            {
+              "predicted_coords": [
+                700,
+                500
+              ],
+              "distance": 393.1831634238679,
+              "response": "(700, 500)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "size_comparison_gemini3_custom_20251217_145030"
+            },
+            {
+              "predicted_coords": [
+                700,
+                500
+              ],
+              "distance": 393.1831634238679,
+              "response": "(700, 500)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "size_comparison_gemini3_custom_20251217_145049"
             }
           ],
           "num_passes": 3
@@ -581,36 +693,36 @@
           "predictions": [
             {
               "predicted_coords": [
-                718,
-                543
+                307,
+                571
               ],
-              "distance": 412.16744170300495,
-              "response": "(718, 543)",
+              "distance": 59.0,
+              "response": "(307, 571)",
               "error": null,
               "pass_number": 1,
-              "run_id": "size_comparison_chatgpt_custom_20251216_215556"
+              "run_id": "size_comparison_chatgpt_custom_20251217_145058"
             },
             {
               "predicted_coords": [
-                303,
-                593
+                774,
+                521
               ],
-              "distance": 81.09870529176159,
-              "response": "(303, 593)",
+              "distance": 467.0867157177562,
+              "response": "(774, 521)",
               "error": null,
               "pass_number": 2,
-              "run_id": "size_comparison_chatgpt_custom_20251216_215603"
+              "run_id": "size_comparison_chatgpt_custom_20251217_145107"
             },
             {
               "predicted_coords": [
-                306,
-                513
+                771,
+                545
               ],
-              "distance": 1.4142135623730951,
-              "response": "(306, 513)",
+              "distance": 465.1720111958586,
+              "response": "(771, 545)",
               "error": null,
               "pass_number": 3,
-              "run_id": "size_comparison_chatgpt_custom_20251216_215610"
+              "run_id": "size_comparison_chatgpt_custom_20251217_145115"
             }
           ],
           "num_passes": 3
@@ -619,14 +731,14 @@
           "predictions": [
             {
               "predicted_coords": [
-                716,
-                512
+                715,
+                510
               ],
-              "distance": 409.0,
-              "response": "(716, 512)",
+              "distance": 408.0049019313371,
+              "response": "(715, 510)",
               "error": null,
               "pass_number": 1,
-              "run_id": "size_comparison_haiku_custom_20251216_215619"
+              "run_id": "size_comparison_haiku_custom_20251217_145124"
             },
             {
               "predicted_coords": [
@@ -634,10 +746,10 @@
                 510
               ],
               "distance": 408.0049019313371,
-              "response": "I need to identify the larger circle and find its center.\n\nLooking at the image, there are two blue circles. Comparing their sizes, the circle on the right appears to be slightly larger than the circle on the left.\n\nThe larger circle (on the right) appears to have its center at approximately:\n\n(715, 510)",
+              "response": "(715, 510)",
               "error": null,
               "pass_number": 2,
-              "run_id": "size_comparison_haiku_custom_20251216_215628"
+              "run_id": "size_comparison_haiku_custom_20251217_145133"
             },
             {
               "predicted_coords": [
@@ -648,7 +760,7 @@
               "response": "(715, 510)",
               "error": null,
               "pass_number": 3,
-              "run_id": "size_comparison_haiku_custom_20251216_215638"
+              "run_id": "size_comparison_haiku_custom_20251217_145143"
             }
           ],
           "num_passes": 3
@@ -657,36 +769,36 @@
           "predictions": [
             {
               "predicted_coords": [
-                736,
-                485
-              ],
-              "distance": 429.8488106299702,
-              "response": "(736, 485)",
-              "error": null,
-              "pass_number": 1,
-              "run_id": "size_comparison_qwen3-vl_custom_20251216_215651"
-            },
-            {
-              "predicted_coords": [
-                697,
+                698,
                 497
               ],
-              "distance": 390.2883549377306,
-              "response": "(697, 497)",
+              "distance": 391.28761799985443,
+              "response": "(698, 497)",
               "error": null,
-              "pass_number": 2,
-              "run_id": "size_comparison_qwen3-vl_custom_20251216_215704"
+              "pass_number": 1,
+              "run_id": "size_comparison_qwen3-vl_custom_20251217_145158"
             },
             {
               "predicted_coords": [
-                748,
-                496
+                743,
+                491
               ],
-              "distance": 441.29015398034886,
-              "response": "(748, 496)",
+              "distance": 436.50544097410744,
+              "response": "(743, 491)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "size_comparison_qwen3-vl_custom_20251217_145231"
+            },
+            {
+              "predicted_coords": [
+                770,
+                490
+              ],
+              "distance": 463.52238349404445,
+              "response": "(770, 490)",
               "error": null,
               "pass_number": 3,
-              "run_id": "size_comparison_qwen3-vl_custom_20251216_215714"
+              "run_id": "size_comparison_qwen3-vl_custom_20251217_145251"
             }
           ],
           "num_passes": 3
@@ -695,14 +807,14 @@
           "predictions": [
             {
               "predicted_coords": [
-                296,
-                496
+                256,
+                512
               ],
-              "distance": 19.4164878389476,
-              "response": "(296, 496)",
+              "distance": 51.0,
+              "response": "(256, 512)",
               "error": null,
               "pass_number": 1,
-              "run_id": "size_comparison_glm-4.6v_custom_20251216_215833"
+              "run_id": "size_comparison_glm-4.6v_custom_20251217_145635"
             },
             {
               "predicted_coords": [
@@ -713,18 +825,18 @@
               "response": "(256, 512)",
               "error": null,
               "pass_number": 2,
-              "run_id": "size_comparison_glm-4.6v_custom_20251216_215955"
+              "run_id": "size_comparison_glm-4.6v_custom_20251217_145746"
             },
             {
               "predicted_coords": [
                 300,
-                500
+                512
               ],
-              "distance": 13.892443989449804,
-              "response": "(300, 500)",
+              "distance": 7.0,
+              "response": "(300, 512)",
               "error": null,
               "pass_number": 3,
-              "run_id": "size_comparison_glm-4.6v_custom_20251216_220123"
+              "run_id": "size_comparison_glm-4.6v_custom_20251217_145907"
             }
           ],
           "num_passes": 3
@@ -745,13 +857,13 @@
             {
               "predicted_coords": [
                 716,
-                514
+                513
               ],
-              "distance": 2.0,
-              "response": "(716, 514)",
+              "distance": 1.0,
+              "response": "(716, 513)",
               "error": null,
               "pass_number": 1,
-              "run_id": "size_comparison_sonnet_custom_20251216_215349"
+              "run_id": "size_comparison_sonnet_custom_20251217_144815"
             },
             {
               "predicted_coords": [
@@ -762,18 +874,18 @@
               "response": "(716, 513)",
               "error": null,
               "pass_number": 2,
-              "run_id": "size_comparison_sonnet_custom_20251216_215420"
+              "run_id": "size_comparison_sonnet_custom_20251217_144833"
             },
             {
               "predicted_coords": [
                 716,
-                513
+                512
               ],
-              "distance": 1.0,
-              "response": "(716, 513)",
+              "distance": 0.0,
+              "response": "(716, 512)",
               "error": null,
               "pass_number": 3,
-              "run_id": "size_comparison_sonnet_custom_20251216_215453"
+              "run_id": "size_comparison_sonnet_custom_20251217_144853"
             }
           ],
           "num_passes": 3
@@ -789,29 +901,67 @@
               "response": "(720, 502)",
               "error": null,
               "pass_number": 1,
-              "run_id": "size_comparison_opus_custom_20251216_215506"
+              "run_id": "size_comparison_opus_custom_20251217_144911"
             },
             {
               "predicted_coords": [
                 720,
-                502
+                520
               ],
-              "distance": 10.770329614269007,
-              "response": "(720, 502)",
+              "distance": 8.94427190999916,
+              "response": "(720, 520)",
               "error": null,
               "pass_number": 2,
-              "run_id": "size_comparison_opus_custom_20251216_215523"
+              "run_id": "size_comparison_opus_custom_20251217_144930"
             },
             {
               "predicted_coords": [
                 720,
-                495
+                490
               ],
-              "distance": 17.46424919657298,
-              "response": "(720, 495)",
+              "distance": 22.360679774997898,
+              "response": "(720, 490)",
               "error": null,
               "pass_number": 3,
-              "run_id": "size_comparison_opus_custom_20251216_215540"
+              "run_id": "size_comparison_opus_custom_20251217_144948"
+            }
+          ],
+          "num_passes": 3
+        },
+        "gemini3": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                699,
+                500
+              ],
+              "distance": 20.808652046684813,
+              "response": "(699, 500)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "size_comparison_gemini3_custom_20251217_145009"
+            },
+            {
+              "predicted_coords": [
+                699,
+                500
+              ],
+              "distance": 20.808652046684813,
+              "response": "(699, 500)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "size_comparison_gemini3_custom_20251217_145030"
+            },
+            {
+              "predicted_coords": [
+                699,
+                500
+              ],
+              "distance": 20.808652046684813,
+              "response": "(699, 500)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "size_comparison_gemini3_custom_20251217_145049"
             }
           ],
           "num_passes": 3
@@ -820,36 +970,36 @@
           "predictions": [
             {
               "predicted_coords": [
-                748,
-                547
+                725,
+                549
               ],
-              "distance": 47.4236228055175,
-              "response": "(748, 547)",
+              "distance": 38.07886552931954,
+              "response": "(725, 549)",
               "error": null,
               "pass_number": 1,
-              "run_id": "size_comparison_chatgpt_custom_20251216_215556"
+              "run_id": "size_comparison_chatgpt_custom_20251217_145058"
             },
             {
               "predicted_coords": [
-                748,
+                736,
                 512
               ],
-              "distance": 32.0,
-              "response": "(748, 512)",
+              "distance": 20.0,
+              "response": "(736, 512)",
               "error": null,
               "pass_number": 2,
-              "run_id": "size_comparison_chatgpt_custom_20251216_215603"
+              "run_id": "size_comparison_chatgpt_custom_20251217_145107"
             },
             {
               "predicted_coords": [
-                735,
-                542
+                736,
+                512
               ],
-              "distance": 35.510561809129406,
-              "response": "(735, 542)",
+              "distance": 20.0,
+              "response": "(736, 512)",
               "error": null,
               "pass_number": 3,
-              "run_id": "size_comparison_chatgpt_custom_20251216_215610"
+              "run_id": "size_comparison_chatgpt_custom_20251217_145115"
             }
           ],
           "num_passes": 3
@@ -865,7 +1015,7 @@
               "response": "(716, 512)",
               "error": null,
               "pass_number": 1,
-              "run_id": "size_comparison_haiku_custom_20251216_215619"
+              "run_id": "size_comparison_haiku_custom_20251217_145124"
             },
             {
               "predicted_coords": [
@@ -876,7 +1026,7 @@
               "response": "(716, 512)",
               "error": null,
               "pass_number": 2,
-              "run_id": "size_comparison_haiku_custom_20251216_215628"
+              "run_id": "size_comparison_haiku_custom_20251217_145133"
             },
             {
               "predicted_coords": [
@@ -887,7 +1037,7 @@
               "response": "(716, 512)",
               "error": null,
               "pass_number": 3,
-              "run_id": "size_comparison_haiku_custom_20251216_215638"
+              "run_id": "size_comparison_haiku_custom_20251217_145143"
             }
           ],
           "num_passes": 3
@@ -896,36 +1046,36 @@
           "predictions": [
             {
               "predicted_coords": [
-                704,
-                495
+                696,
+                496
               ],
-              "distance": 20.808652046684813,
-              "response": "(704, 495)",
+              "distance": 25.612496949731394,
+              "response": "(696, 496)",
               "error": null,
               "pass_number": 1,
-              "run_id": "size_comparison_qwen3-vl_custom_20251216_215651"
+              "run_id": "size_comparison_qwen3-vl_custom_20251217_145158"
             },
             {
               "predicted_coords": [
-                700,
-                495
+                786,
+                494
               ],
-              "distance": 23.345235059857504,
-              "response": "(700, 495)",
+              "distance": 72.27724399837061,
+              "response": "(786, 494)",
               "error": null,
               "pass_number": 2,
-              "run_id": "size_comparison_qwen3-vl_custom_20251216_215704"
+              "run_id": "size_comparison_qwen3-vl_custom_20251217_145231"
             },
             {
               "predicted_coords": [
-                700,
-                495
+                695,
+                494
               ],
-              "distance": 23.345235059857504,
-              "response": "(700, 495)",
+              "distance": 27.65863337187866,
+              "response": "(695, 494)",
               "error": null,
               "pass_number": 3,
-              "run_id": "size_comparison_qwen3-vl_custom_20251216_215714"
+              "run_id": "size_comparison_qwen3-vl_custom_20251217_145251"
             }
           ],
           "num_passes": 3
@@ -935,35 +1085,35 @@
             {
               "predicted_coords": [
                 700,
-                512
+                500
               ],
-              "distance": 16.0,
-              "response": "(700, 512)",
+              "distance": 20.0,
+              "response": "(700, 500)",
               "error": null,
               "pass_number": 1,
-              "run_id": "size_comparison_glm-4.6v_custom_20251216_215833"
+              "run_id": "size_comparison_glm-4.6v_custom_20251217_145635"
             },
             {
               "predicted_coords": [
-                700,
-                500
+                704,
+                512
               ],
-              "distance": 20.0,
-              "response": "(700, 500)",
+              "distance": 12.0,
+              "response": "(704, 512)",
               "error": null,
               "pass_number": 2,
-              "run_id": "size_comparison_glm-4.6v_custom_20251216_215955"
+              "run_id": "size_comparison_glm-4.6v_custom_20251217_145746"
             },
             {
               "predicted_coords": [
-                700,
-                500
+                696,
+                492
               ],
-              "distance": 20.0,
-              "response": "(700, 500)",
+              "distance": 28.284271247461902,
+              "response": "(696, 492)",
               "error": null,
               "pass_number": 3,
-              "run_id": "size_comparison_glm-4.6v_custom_20251216_220123"
+              "run_id": "size_comparison_glm-4.6v_custom_20251217_145907"
             }
           ],
           "num_passes": 3
@@ -983,25 +1133,25 @@
           "predictions": [
             {
               "predicted_coords": [
-                715,
-                514
-              ],
-              "distance": 2.23606797749979,
-              "response": "(715, 514)",
-              "error": null,
-              "pass_number": 1,
-              "run_id": "size_comparison_sonnet_custom_20251216_215349"
-            },
-            {
-              "predicted_coords": [
                 716,
                 514
               ],
               "distance": 2.0,
               "response": "(716, 514)",
               "error": null,
+              "pass_number": 1,
+              "run_id": "size_comparison_sonnet_custom_20251217_144815"
+            },
+            {
+              "predicted_coords": [
+                715,
+                513
+              ],
+              "distance": 1.4142135623730951,
+              "response": "(715, 513)",
+              "error": null,
               "pass_number": 2,
-              "run_id": "size_comparison_sonnet_custom_20251216_215420"
+              "run_id": "size_comparison_sonnet_custom_20251217_144833"
             },
             {
               "predicted_coords": [
@@ -1012,7 +1162,7 @@
               "response": "(716, 514)",
               "error": null,
               "pass_number": 3,
-              "run_id": "size_comparison_sonnet_custom_20251216_215453"
+              "run_id": "size_comparison_sonnet_custom_20251217_144853"
             }
           ],
           "num_passes": 3
@@ -1022,24 +1172,24 @@
             {
               "predicted_coords": [
                 702,
-                512
+                488
               ],
-              "distance": 14.0,
-              "response": "(702, 512)",
+              "distance": 27.784887978899608,
+              "response": "(702, 488)",
               "error": null,
               "pass_number": 1,
-              "run_id": "size_comparison_opus_custom_20251216_215506"
+              "run_id": "size_comparison_opus_custom_20251217_144911"
             },
             {
               "predicted_coords": [
-                690,
-                507
+                700,
+                502
               ],
-              "distance": 26.476404589747453,
-              "response": "(690, 507)",
+              "distance": 18.867962264113206,
+              "response": "(700, 502)",
               "error": null,
               "pass_number": 2,
-              "run_id": "size_comparison_opus_custom_20251216_215523"
+              "run_id": "size_comparison_opus_custom_20251217_144930"
             },
             {
               "predicted_coords": [
@@ -1050,7 +1200,45 @@
               "response": "(702, 512)",
               "error": null,
               "pass_number": 3,
-              "run_id": "size_comparison_opus_custom_20251216_215540"
+              "run_id": "size_comparison_opus_custom_20251217_144948"
+            }
+          ],
+          "num_passes": 3
+        },
+        "gemini3": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                716,
+                500
+              ],
+              "distance": 12.0,
+              "response": "(716, 500)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "size_comparison_gemini3_custom_20251217_145009"
+            },
+            {
+              "predicted_coords": [
+                716,
+                500
+              ],
+              "distance": 12.0,
+              "response": "(716, 500)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "size_comparison_gemini3_custom_20251217_145030"
+            },
+            {
+              "predicted_coords": [
+                716,
+                500
+              ],
+              "distance": 12.0,
+              "response": "(716, 500)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "size_comparison_gemini3_custom_20251217_145049"
             }
           ],
           "num_passes": 3
@@ -1059,36 +1247,36 @@
           "predictions": [
             {
               "predicted_coords": [
-                718,
-                496
+                731,
+                512
               ],
-              "distance": 16.1245154965971,
-              "response": "(718, 496)",
+              "distance": 15.0,
+              "response": "(731, 512)",
               "error": null,
               "pass_number": 1,
-              "run_id": "size_comparison_chatgpt_custom_20251216_215556"
+              "run_id": "size_comparison_chatgpt_custom_20251217_145058"
             },
             {
               "predicted_coords": [
                 731,
-                464
+                522
               ],
-              "distance": 50.28916384272063,
-              "response": "(731, 464)",
+              "distance": 18.027756377319946,
+              "response": "(731, 522)",
               "error": null,
               "pass_number": 2,
-              "run_id": "size_comparison_chatgpt_custom_20251216_215603"
+              "run_id": "size_comparison_chatgpt_custom_20251217_145107"
             },
             {
               "predicted_coords": [
-                732,
-                494
+                734,
+                512
               ],
-              "distance": 24.08318915758459,
-              "response": "(732, 494)",
+              "distance": 18.0,
+              "response": "(734, 512)",
               "error": null,
               "pass_number": 3,
-              "run_id": "size_comparison_chatgpt_custom_20251216_215610"
+              "run_id": "size_comparison_chatgpt_custom_20251217_145115"
             }
           ],
           "num_passes": 3
@@ -1104,7 +1292,7 @@
               "response": "(716, 512)",
               "error": null,
               "pass_number": 1,
-              "run_id": "size_comparison_haiku_custom_20251216_215619"
+              "run_id": "size_comparison_haiku_custom_20251217_145124"
             },
             {
               "predicted_coords": [
@@ -1115,7 +1303,7 @@
               "response": "(716, 512)",
               "error": null,
               "pass_number": 2,
-              "run_id": "size_comparison_haiku_custom_20251216_215628"
+              "run_id": "size_comparison_haiku_custom_20251217_145133"
             },
             {
               "predicted_coords": [
@@ -1126,7 +1314,7 @@
               "response": "(716, 512)",
               "error": null,
               "pass_number": 3,
-              "run_id": "size_comparison_haiku_custom_20251216_215638"
+              "run_id": "size_comparison_haiku_custom_20251217_145143"
             }
           ],
           "num_passes": 3
@@ -1135,36 +1323,36 @@
           "predictions": [
             {
               "predicted_coords": [
-                768,
-                512
-              ],
-              "distance": 52.0,
-              "response": "(768, 512)",
-              "error": null,
-              "pass_number": 1,
-              "run_id": "size_comparison_qwen3-vl_custom_20251216_215651"
-            },
-            {
-              "predicted_coords": [
-                780,
+                704,
                 496
               ],
-              "distance": 65.96969000988257,
-              "response": "(780, 496)",
+              "distance": 20.0,
+              "response": "(704, 496)",
               "error": null,
-              "pass_number": 2,
-              "run_id": "size_comparison_qwen3-vl_custom_20251216_215704"
+              "pass_number": 1,
+              "run_id": "size_comparison_qwen3-vl_custom_20251217_145158"
             },
             {
               "predicted_coords": [
                 768,
-                512
+                496
               ],
-              "distance": 52.0,
-              "response": "(768, 512)",
+              "distance": 54.405882034941776,
+              "response": "(768, 496)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "size_comparison_qwen3-vl_custom_20251217_145231"
+            },
+            {
+              "predicted_coords": [
+                696,
+                496
+              ],
+              "distance": 25.612496949731394,
+              "response": "(696, 496)",
               "error": null,
               "pass_number": 3,
-              "run_id": "size_comparison_qwen3-vl_custom_20251216_215714"
+              "run_id": "size_comparison_qwen3-vl_custom_20251217_145251"
             }
           ],
           "num_passes": 3
@@ -1173,36 +1361,36 @@
           "predictions": [
             {
               "predicted_coords": [
-                700,
-                500
+                695,
+                495
               ],
-              "distance": 20.0,
-              "response": "(700, 500)",
+              "distance": 27.018512172212592,
+              "response": "(695, 495)",
               "error": null,
               "pass_number": 1,
-              "run_id": "size_comparison_glm-4.6v_custom_20251216_215833"
+              "run_id": "size_comparison_glm-4.6v_custom_20251217_145635"
             },
             {
               "predicted_coords": [
-                698,
-                498
+                695,
+                495
               ],
-              "distance": 22.80350850198276,
-              "response": "(698, 498)",
+              "distance": 27.018512172212592,
+              "response": "(695, 495)",
               "error": null,
               "pass_number": 2,
-              "run_id": "size_comparison_glm-4.6v_custom_20251216_215955"
+              "run_id": "size_comparison_glm-4.6v_custom_20251217_145746"
             },
             {
               "predicted_coords": [
-                700,
-                500
+                720,
+                512
               ],
-              "distance": 20.0,
-              "response": "(700, 500)",
+              "distance": 4.0,
+              "response": "(720, 512)",
               "error": null,
               "pass_number": 3,
-              "run_id": "size_comparison_glm-4.6v_custom_20251216_220123"
+              "run_id": "size_comparison_glm-4.6v_custom_20251217_145907"
             }
           ],
           "num_passes": 3
@@ -1229,18 +1417,18 @@
               "response": "(716, 513)",
               "error": null,
               "pass_number": 1,
-              "run_id": "size_comparison_sonnet_custom_20251216_215349"
+              "run_id": "size_comparison_sonnet_custom_20251217_144815"
             },
             {
               "predicted_coords": [
-                715,
+                716,
                 513
               ],
-              "distance": 1.4142135623730951,
-              "response": "(715, 513)",
+              "distance": 1.0,
+              "response": "(716, 513)",
               "error": null,
               "pass_number": 2,
-              "run_id": "size_comparison_sonnet_custom_20251216_215420"
+              "run_id": "size_comparison_sonnet_custom_20251217_144833"
             },
             {
               "predicted_coords": [
@@ -1251,7 +1439,7 @@
               "response": "(716, 513)",
               "error": null,
               "pass_number": 3,
-              "run_id": "size_comparison_sonnet_custom_20251216_215453"
+              "run_id": "size_comparison_sonnet_custom_20251217_144853"
             }
           ],
           "num_passes": 3
@@ -1260,36 +1448,74 @@
           "predictions": [
             {
               "predicted_coords": [
-                702,
-                488
+                720,
+                497
               ],
-              "distance": 27.784887978899608,
-              "response": "(702, 488)",
+              "distance": 15.524174696260024,
+              "response": "(720, 497)",
               "error": null,
               "pass_number": 1,
-              "run_id": "size_comparison_opus_custom_20251216_215506"
+              "run_id": "size_comparison_opus_custom_20251217_144911"
             },
             {
               "predicted_coords": [
                 720,
-                495
+                500
               ],
-              "distance": 17.46424919657298,
-              "response": "(720, 495)",
+              "distance": 12.649110640673518,
+              "response": "(720, 500)",
               "error": null,
               "pass_number": 2,
-              "run_id": "size_comparison_opus_custom_20251216_215523"
+              "run_id": "size_comparison_opus_custom_20251217_144930"
             },
             {
               "predicted_coords": [
                 720,
-                495
+                502
               ],
-              "distance": 17.46424919657298,
-              "response": "(720, 495)",
+              "distance": 10.770329614269007,
+              "response": "(720, 502)",
               "error": null,
               "pass_number": 3,
-              "run_id": "size_comparison_opus_custom_20251216_215540"
+              "run_id": "size_comparison_opus_custom_20251217_144948"
+            }
+          ],
+          "num_passes": 3
+        },
+        "gemini3": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                699,
+                500
+              ],
+              "distance": 20.808652046684813,
+              "response": "(699, 500)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "size_comparison_gemini3_custom_20251217_145009"
+            },
+            {
+              "predicted_coords": [
+                699,
+                500
+              ],
+              "distance": 20.808652046684813,
+              "response": "(699, 500)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "size_comparison_gemini3_custom_20251217_145030"
+            },
+            {
+              "predicted_coords": [
+                699,
+                500
+              ],
+              "distance": 20.808652046684813,
+              "response": "(699, 500)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "size_comparison_gemini3_custom_20251217_145049"
             }
           ],
           "num_passes": 3
@@ -1298,36 +1524,36 @@
           "predictions": [
             {
               "predicted_coords": [
-                749,
-                513
+                731,
+                511
               ],
-              "distance": 33.015148038438355,
-              "response": "(749, 513)",
+              "distance": 15.033296378372908,
+              "response": "(731, 511)",
               "error": null,
               "pass_number": 1,
-              "run_id": "size_comparison_chatgpt_custom_20251216_215556"
+              "run_id": "size_comparison_chatgpt_custom_20251217_145058"
             },
             {
               "predicted_coords": [
-                730,
-                502
+                724,
+                541
               ],
-              "distance": 17.204650534085253,
-              "response": "(730, 502)",
+              "distance": 30.083217912982647,
+              "response": "(724, 541)",
               "error": null,
               "pass_number": 2,
-              "run_id": "size_comparison_chatgpt_custom_20251216_215603"
+              "run_id": "size_comparison_chatgpt_custom_20251217_145107"
             },
             {
               "predicted_coords": [
-                743,
-                550
+                725,
+                512
               ],
-              "distance": 46.61544808322666,
-              "response": "(743, 550)",
+              "distance": 9.0,
+              "response": "(725, 512)",
               "error": null,
               "pass_number": 3,
-              "run_id": "size_comparison_chatgpt_custom_20251216_215610"
+              "run_id": "size_comparison_chatgpt_custom_20251217_145115"
             }
           ],
           "num_passes": 3
@@ -1343,7 +1569,7 @@
               "response": "(716, 512)",
               "error": null,
               "pass_number": 1,
-              "run_id": "size_comparison_haiku_custom_20251216_215619"
+              "run_id": "size_comparison_haiku_custom_20251217_145124"
             },
             {
               "predicted_coords": [
@@ -1354,7 +1580,7 @@
               "response": "(716, 512)",
               "error": null,
               "pass_number": 2,
-              "run_id": "size_comparison_haiku_custom_20251216_215628"
+              "run_id": "size_comparison_haiku_custom_20251217_145133"
             },
             {
               "predicted_coords": [
@@ -1365,7 +1591,7 @@
               "response": "(716, 512)",
               "error": null,
               "pass_number": 3,
-              "run_id": "size_comparison_haiku_custom_20251216_215638"
+              "run_id": "size_comparison_haiku_custom_20251217_145143"
             }
           ],
           "num_passes": 3
@@ -1374,36 +1600,36 @@
           "predictions": [
             {
               "predicted_coords": [
-                704,
-                496
-              ],
-              "distance": 20.0,
-              "response": "(704, 496)",
-              "error": null,
-              "pass_number": 1,
-              "run_id": "size_comparison_qwen3-vl_custom_20251216_215651"
-            },
-            {
-              "predicted_coords": [
-                695,
+                700,
                 495
               ],
-              "distance": 27.018512172212592,
-              "response": "(695, 495)",
+              "distance": 23.345235059857504,
+              "response": "(700, 495)",
               "error": null,
-              "pass_number": 2,
-              "run_id": "size_comparison_qwen3-vl_custom_20251216_215704"
+              "pass_number": 1,
+              "run_id": "size_comparison_qwen3-vl_custom_20251217_145158"
             },
             {
               "predicted_coords": [
                 768,
-                512
+                496
               ],
-              "distance": 52.0,
-              "response": "(768, 512)",
+              "distance": 54.405882034941776,
+              "response": "(768, 496)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "size_comparison_qwen3-vl_custom_20251217_145231"
+            },
+            {
+              "predicted_coords": [
+                768,
+                496
+              ],
+              "distance": 54.405882034941776,
+              "response": "(768, 496)",
               "error": null,
               "pass_number": 3,
-              "run_id": "size_comparison_qwen3-vl_custom_20251216_215714"
+              "run_id": "size_comparison_qwen3-vl_custom_20251217_145251"
             }
           ],
           "num_passes": 3
@@ -1412,14 +1638,14 @@
           "predictions": [
             {
               "predicted_coords": [
-                696,
-                496
+                700,
+                500
               ],
-              "distance": 25.612496949731394,
-              "response": "(696, 496)",
+              "distance": 20.0,
+              "response": "(700, 500)",
               "error": null,
               "pass_number": 1,
-              "run_id": "size_comparison_glm-4.6v_custom_20251216_215833"
+              "run_id": "size_comparison_glm-4.6v_custom_20251217_145635"
             },
             {
               "predicted_coords": [
@@ -1430,18 +1656,18 @@
               "response": "(700, 500)",
               "error": null,
               "pass_number": 2,
-              "run_id": "size_comparison_glm-4.6v_custom_20251216_215955"
+              "run_id": "size_comparison_glm-4.6v_custom_20251217_145746"
             },
             {
               "predicted_coords": [
-                700,
-                495
+                704,
+                496
               ],
-              "distance": 23.345235059857504,
-              "response": "(700, 495)",
+              "distance": 20.0,
+              "response": "(704, 496)",
               "error": null,
               "pass_number": 3,
-              "run_id": "size_comparison_glm-4.6v_custom_20251216_220123"
+              "run_id": "size_comparison_glm-4.6v_custom_20251217_145907"
             }
           ],
           "num_passes": 3

@@ -2,8 +2,7 @@
   "test_suites": [
     "basic_shapes",
     "color_identification",
-    "resolution_test_1024x1024",
-    "resolution_test_512x512",
+    "resolution_test",
     "shape_identification",
     "size_comparison"
   ]

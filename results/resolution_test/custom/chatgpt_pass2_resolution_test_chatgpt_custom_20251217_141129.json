@@ -1,0 +1,179 @@
+{
+  "run_id": "resolution_test_chatgpt_custom_20251217_141129",
+  "test_suite": "resolution_test",
+  "model": "chatgpt",
+  "model_id": "openai/gpt-5.2",
+  "screen_size": {
+    "name": "custom",
+    "width": 1024,
+    "height": 1024
+  },
+  "pass_number": 2,
+  "timestamp": "2025-12-17T14:11:29.497080",
+  "metrics": {
+    "total_tests": 5,
+    "successful_extractions": 5,
+    "extraction_rate": 100.0,
+    "mean_distance": 47.278617976131954,
+    "median_distance": 35.014282800023196,
+    "max_distance": 122.03687967167957,
+    "min_distance": 1.0,
+    "accuracy_within_5px": 20.0,
+    "accuracy_within_10px": 20.0,
+    "accuracy_within_5_percent": 80.0
+  },
+  "results": [
+    {
+      "test_name": "simple_rectangle_256",
+      "prompt": "Point to the center of the purple rectangle",
+      "expected_coords": [
+        256,
+        256
+      ],
+      "response": "(257, 221)",
+      "predicted_coords": [
+        257,
+        221
+      ],
+      "distance": 35.014282800023196,
+      "error": null,
+      "image_metadata": {
+        "size": [
+          1024,
+          1024
+        ],
+        "estimated_tokens": 1398
+      }
+    },
+    {
+      "test_name": "simple_rectangle_512",
+      "prompt": "Point to the center of the purple rectangle",
+      "expected_coords": [
+        870,
+        154
+      ],
+      "response": "(768, 221)",
+      "predicted_coords": [
+        768,
+        221
+      ],
+      "distance": 122.03687967167957,
+      "error": null,
+      "image_metadata": {
+        "size": [
+          1024,
+          1024
+        ],
+        "estimated_tokens": 1398
+      }
+    },
+    {
+      "test_name": "simple_rectangle_1024",
+      "prompt": "Point to the center of the purple rectangle",
+      "expected_coords": [
+        256,
+        768
+      ],
+      "response": "(241, 744)",
+      "predicted_coords": [
+        241,
+        744
+      ],
+      "distance": 28.30194339616981,
+      "error": null,
+      "image_metadata": {
+        "size": [
+          1024,
+          1024
+        ],
+        "estimated_tokens": 1398
+      }
+    },
+    {
+      "test_name": "simple_rectangle_2048",
+      "prompt": "Point to the center of the purple rectangle",
+      "expected_coords": [
+        768,
+        768
+      ],
+      "response": "(770, 718)",
+      "predicted_coords": [
+        770,
+        718
+      ],
+      "distance": 50.039984012787215,
+      "error": null,
+      "image_metadata": {
+        "size": [
+          1024,
+          1024
+        ],
+        "estimated_tokens": 1398
+      }
+    },
+    {
+      "test_name": "simple_rectangle_4096",
+      "prompt": "Point to the center of the purple rectangle",
+      "expected_coords": [
+        512,
+        512
+      ],
+      "response": "(512, 511)",
+      "predicted_coords": [
+        512,
+        511
+      ],
+      "distance": 1.0,
+      "error": null,
+      "image_metadata": {
+        "size": [
+          1024,
+          1024
+        ],
+        "estimated_tokens": 1398
+      }
+    }
+  ],
+  "test_configs": [
+    {
+      "name": "simple_rectangle_256",
+      "prompt": "Point to the center of the purple rectangle",
+      "shape": "square",
+      "color": "purple",
+      "position": "top_left",
+      "size": "medium"
+    },
+    {
+      "name": "simple_rectangle_512",
+      "prompt": "Point to the center of the purple rectangle",
+      "shape": "square",
+      "color": "purple",
+      "position": "top_right",
+      "size": "medium"
+    },
+    {
+      "name": "simple_rectangle_1024",
+      "prompt": "Point to the center of the purple rectangle",
+      "shape": "square",
+      "color": "purple",
+      "position": "bottom_left",
+      "size": "medium"
+    },
+    {
+      "name": "simple_rectangle_2048",
+      "prompt": "Point to the center of the purple rectangle",
+      "shape": "square",
+      "color": "purple",
+      "position": "bottom_right",
+      "size": "medium"
+    },
+    {
+      "name": "simple_rectangle_4096",
+      "prompt": "Point to the center of the purple rectangle",
+      "shape": "square",
+      "color": "purple",
+      "position": "center",
+      "size": "medium"
+    }
+  ]
+}

@@ -394,19 +394,13 @@ class TestSuiteRegistry:
         )
         self.register(shape_suite)
         
-        resolution_suite_1024x1024 = SyntheticTestSuite(
-            name="resolution_test_1024x1024",
+        resolution_suite = SyntheticTestSuite(
+            name="resolution_test",
             description="Resolution stress test for 1024 x 1024 resolution: same simple test at increasing resolutions",
             configs=RESOLUTION_TEST_TESTS
         )
-        self.register(resolution_suite_1024x1024)
-        
-        resolution_suite_512x512 = SyntheticTestSuite(
-            name="resolution_test_512x512",
-            description="Resolution stress test for 512 x 512 resolution: same simple test at increasing resolutions",
-            configs=RESOLUTION_TEST_TESTS
-        )
-        self.register(resolution_suite_512x512)
+        self.register(resolution_suite)
+
         
         size_suite = SyntheticTestSuite(
             name="size_comparison",

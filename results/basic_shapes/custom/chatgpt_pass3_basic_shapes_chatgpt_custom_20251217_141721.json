@@ -1,0 +1,264 @@
+{
+  "run_id": "basic_shapes_chatgpt_custom_20251217_141721",
+  "test_suite": "basic_shapes",
+  "model": "chatgpt",
+  "model_id": "openai/gpt-5.2",
+  "screen_size": {
+    "name": "custom",
+    "width": 819,
+    "height": 1456
+  },
+  "pass_number": 3,
+  "timestamp": "2025-12-17T14:17:21.684255",
+  "metrics": {
+    "total_tests": 8,
+    "successful_extractions": 8,
+    "extraction_rate": 100.0,
+    "mean_distance": 69.78092742478174,
+    "median_distance": 67.00337822415678,
+    "max_distance": 149.164338901763,
+    "min_distance": 5.0,
+    "accuracy_within_5px": 12.5,
+    "accuracy_within_10px": 12.5,
+    "accuracy_within_5_percent": 75.0
+  },
+  "results": [
+    {
+      "test_name": "simple_circle",
+      "prompt": "Point to the center of the purple circle",
+      "expected_coords": [
+        409,
+        728
+      ],
+      "response": "(379, 764)",
+      "predicted_coords": [
+        379,
+        764
+      ],
+      "distance": 46.861498055439924,
+      "error": null,
+      "image_metadata": {
+        "size": [
+          819,
+          1456
+        ],
+        "estimated_tokens": 1589
+      }
+    },
+    {
+      "test_name": "top_right_square",
+      "prompt": "Point to the top right corner of the red square",
+      "expected_coords": [
+        695,
+        283
+      ],
+      "response": "(663, 251)",
+      "predicted_coords": [
+        663,
+        251
+      ],
+      "distance": 45.254833995939045,
+      "error": null,
+      "image_metadata": {
+        "size": [
+          819,
+          1456
+        ],
+        "estimated_tokens": 1589
+      }
+    },
+    {
+      "test_name": "middle_x",
+      "prompt": "Point to the middle of the X in the top right",
+      "expected_coords": [
+        614,
+        364
+      ],
+      "response": "(580, 270)",
+      "predicted_coords": [
+        580,
+        270
+      ],
+      "distance": 99.9599919967984,
+      "error": null,
+      "image_metadata": {
+        "size": [
+          819,
+          1456
+        ],
+        "estimated_tokens": 1589
+      }
+    },
+    {
+      "test_name": "transparent_button",
+      "prompt": "Point to the center of the transparent button",
+      "expected_coords": [
+        409,
+        728
+      ],
+      "response": "(409, 788)",
+      "predicted_coords": [
+        409,
+        788
+      ],
+      "distance": 60.0,
+      "error": null,
+      "image_metadata": {
+        "size": [
+          819,
+          1456
+        ],
+        "estimated_tokens": 1589
+      }
+    },
+    {
+      "test_name": "small_circle",
+      "prompt": "Point to the center of the small green circle",
+      "expected_coords": [
+        409,
+        728
+      ],
+      "response": "(409, 723)",
+      "predicted_coords": [
+        409,
+        723
+      ],
+      "distance": 5.0,
+      "error": null,
+      "image_metadata": {
+        "size": [
+          819,
+          1456
+        ],
+        "estimated_tokens": 1589
+      }
+    },
+    {
+      "test_name": "bottom_left_triangle",
+      "prompt": "Point to the center of the yellow triangle in the bottom left",
+      "expected_coords": [
+        204,
+        1092
+      ],
+      "response": "(204, 1170)",
+      "predicted_coords": [
+        204,
+        1170
+      ],
+      "distance": 78.0,
+      "error": null,
+      "image_metadata": {
+        "size": [
+          819,
+          1456
+        ],
+        "estimated_tokens": 1589
+      }
+    },
+    {
+      "test_name": "overlapping_shapes",
+      "prompt": "Point to the center of the orange circle that is behind the blue square",
+      "expected_coords": [
+        369,
+        688
+      ],
+      "response": "(334, 833)",
+      "predicted_coords": [
+        334,
+        833
+      ],
+      "distance": 149.164338901763,
+      "error": null,
+      "image_metadata": {
+        "size": [
+          819,
+          1456
+        ],
+        "estimated_tokens": 1589
+      }
+    },
+    {
+      "test_name": "low_contrast_button",
+      "prompt": "Point to the center of the gray button on gray background",
+      "expected_coords": [
+        409,
+        728
+      ],
+      "response": "(408, 802)",
+      "predicted_coords": [
+        408,
+        802
+      ],
+      "distance": 74.00675644831355,
+      "error": null,
+      "image_metadata": {
+        "size": [
+          819,
+          1456
+        ],
+        "estimated_tokens": 1589
+      }
+    }
+  ],
+  "test_configs": [
+    {
+      "name": "simple_circle",
+      "prompt": "Point to the center of the purple circle",
+      "shape": "circle",
+      "color": "purple",
+      "position": "center"
+    },
+    {
+      "name": "top_right_square",
+      "prompt": "Point to the top right corner of the red square",
+      "shape": "square",
+      "color": "red",
+      "position": "top_right"
+    },
+    {
+      "name": "middle_x",
+      "prompt": "Point to the middle of the X in the top right",
+      "shape": "x",
+      "color": "blue",
+      "position": "top_right"
+    },
+    {
+      "name": "transparent_button",
+      "prompt": "Point to the center of the transparent button",
+      "shape": "button",
+      "color": "transparent",
+      "position": "center"
+    },
+    {
+      "name": "small_circle",
+      "prompt": "Point to the center of the small green circle",
+      "shape": "circle",
+      "color": "green",
+      "position": "center",
+      "size": "small"
+    },
+    {
+      "name": "bottom_left_triangle",
+      "prompt": "Point to the center of the yellow triangle in the bottom left",
+      "shape": "triangle",
+      "color": "yellow",
+      "position": "bottom_left"
+    },
+    {
+      "name": "overlapping_shapes",
+      "prompt": "Point to the center of the orange circle that is behind the blue square",
+      "shape": "circle",
+      "color": "orange",
+      "position": "center",
+      "overlap": true
+    },
+    {
+      "name": "low_contrast_button",
+      "prompt": "Point to the center of the gray button on gray background",
+      "shape": "button",
+      "color": "lightgray",
+      "position": "center",
+      "background": "gray"
+    }
+  ]
+}

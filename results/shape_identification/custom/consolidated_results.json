@@ -7,6 +7,7 @@
   },
   "models": {
     "chatgpt": "chatgpt",
+    "gemini3": "gemini3",
     "glm-4.6v": "glm-4.6v",
     "haiku": "haiku",
     "opus": "opus",
@@ -34,7 +35,7 @@
               "response": "(512, 512)",
               "error": null,
               "pass_number": 1,
-              "run_id": "shape_identification_sonnet_custom_20251216_215405"
+              "run_id": "shape_identification_sonnet_custom_20251217_141758"
             },
             {
               "predicted_coords": [
@@ -45,7 +46,7 @@
               "response": "(512, 512)",
               "error": null,
               "pass_number": 2,
-              "run_id": "shape_identification_sonnet_custom_20251216_215451"
+              "run_id": "shape_identification_sonnet_custom_20251217_141840"
             },
             {
               "predicted_coords": [
@@ -56,7 +57,7 @@
               "response": "(512, 512)",
               "error": null,
               "pass_number": 3,
-              "run_id": "shape_identification_sonnet_custom_20251216_215537"
+              "run_id": "shape_identification_sonnet_custom_20251217_141927"
             }
           ],
           "num_passes": 3
@@ -72,18 +73,7 @@
               "response": "(470, 500)",
               "error": null,
               "pass_number": 1,
-              "run_id": "shape_identification_opus_custom_20251216_215607"
-            },
-            {
-              "predicted_coords": [
-                470,
-                500
-              ],
-              "distance": 43.68065933568311,
-              "response": "(470, 500)",
-              "error": null,
-              "pass_number": 2,
-              "run_id": "shape_identification_opus_custom_20251216_215631"
+              "run_id": "shape_identification_opus_custom_20251217_141953"
             },
             {
               "predicted_coords": [
@@ -93,8 +83,57 @@
               "distance": 34.17601498127012,
               "response": "(480, 500)",
               "error": null,
+              "pass_number": 2,
+              "run_id": "shape_identification_opus_custom_20251217_142025"
+            },
+            {
+              "predicted_coords": [
+                470,
+                500
+              ],
+              "distance": 43.68065933568311,
+              "response": "(470, 500)",
+              "error": null,
               "pass_number": 3,
-              "run_id": "shape_identification_opus_custom_20251216_215656"
+              "run_id": "shape_identification_opus_custom_20251217_142049"
+            }
+          ],
+          "num_passes": 3
+        },
+        "gemini3": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                500,
+                500
+              ],
+              "distance": 16.97056274847714,
+              "response": "(500, 500)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "shape_identification_gemini3_custom_20251217_142124"
+            },
+            {
+              "predicted_coords": [
+                500,
+                500
+              ],
+              "distance": 16.97056274847714,
+              "response": "(500, 500)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "shape_identification_gemini3_custom_20251217_142155"
+            },
+            {
+              "predicted_coords": [
+                500,
+                500
+              ],
+              "distance": 16.97056274847714,
+              "response": "(500, 500)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "shape_identification_gemini3_custom_20251217_142226"
             }
           ],
           "num_passes": 3
@@ -110,29 +149,29 @@
               "response": "(512, 543)",
               "error": null,
               "pass_number": 1,
-              "run_id": "shape_identification_chatgpt_custom_20251216_215718"
+              "run_id": "shape_identification_chatgpt_custom_20251217_142238"
             },
             {
               "predicted_coords": [
-                448,
-                546
+                511,
+                595
               ],
-              "distance": 72.47068372797375,
-              "response": "(448, 546)",
+              "distance": 83.00602387778854,
+              "response": "(511, 595)",
               "error": null,
               "pass_number": 2,
-              "run_id": "shape_identification_chatgpt_custom_20251216_215728"
+              "run_id": "shape_identification_chatgpt_custom_20251217_142249"
             },
             {
               "predicted_coords": [
                 512,
-                516
+                538
               ],
-              "distance": 4.0,
-              "response": "(512, 516)",
+              "distance": 26.0,
+              "response": "(512, 538)",
               "error": null,
               "pass_number": 3,
-              "run_id": "shape_identification_chatgpt_custom_20251216_215739"
+              "run_id": "shape_identification_chatgpt_custom_20251217_142300"
             }
           ],
           "num_passes": 3
@@ -141,36 +180,36 @@
           "predictions": [
             {
               "predicted_coords": [
-                513,
-                510
+                512,
+                512
               ],
-              "distance": 2.23606797749979,
-              "response": "(513, 510)",
+              "distance": 0.0,
+              "response": "(512, 512)",
               "error": null,
               "pass_number": 1,
-              "run_id": "shape_identification_haiku_custom_20251216_215755"
+              "run_id": "shape_identification_haiku_custom_20251217_142316"
             },
             {
               "predicted_coords": [
-                512,
-                510
+                513,
+                512
               ],
-              "distance": 2.0,
-              "response": "(512, 510)",
+              "distance": 1.0,
+              "response": "(513, 512)",
               "error": null,
               "pass_number": 2,
-              "run_id": "shape_identification_haiku_custom_20251216_215813"
+              "run_id": "shape_identification_haiku_custom_20251217_142330"
             },
             {
               "predicted_coords": [
                 512,
-                510
+                512
               ],
-              "distance": 2.0,
-              "response": "(512, 510)",
+              "distance": 0.0,
+              "response": "(512, 512)",
               "error": null,
               "pass_number": 3,
-              "run_id": "shape_identification_haiku_custom_20251216_215826"
+              "run_id": "shape_identification_haiku_custom_20251217_142346"
             }
           ],
           "num_passes": 3
@@ -186,7 +225,7 @@
               "response": "(512, 512)",
               "error": null,
               "pass_number": 1,
-              "run_id": "shape_identification_qwen3-vl_custom_20251216_215845"
+              "run_id": "shape_identification_qwen3-vl_custom_20251217_142402"
             },
             {
               "predicted_coords": [
@@ -197,7 +236,7 @@
               "response": "(512, 512)",
               "error": null,
               "pass_number": 2,
-              "run_id": "shape_identification_qwen3-vl_custom_20251216_215858"
+              "run_id": "shape_identification_qwen3-vl_custom_20251217_142422"
             },
             {
               "predicted_coords": [
@@ -208,7 +247,7 @@
               "response": "(512, 512)",
               "error": null,
               "pass_number": 3,
-              "run_id": "shape_identification_qwen3-vl_custom_20251216_215914"
+              "run_id": "shape_identification_qwen3-vl_custom_20251217_142437"
             }
           ],
           "num_passes": 3
@@ -224,7 +263,7 @@
               "response": "(512, 512)",
               "error": null,
               "pass_number": 1,
-              "run_id": "shape_identification_glm-4.6v_custom_20251216_220014"
+              "run_id": "shape_identification_glm-4.6v_custom_20251217_142534"
             },
             {
               "predicted_coords": [
@@ -235,7 +274,7 @@
               "response": "(512, 512)",
               "error": null,
               "pass_number": 2,
-              "run_id": "shape_identification_glm-4.6v_custom_20251216_220102"
+              "run_id": "shape_identification_glm-4.6v_custom_20251217_142646"
             },
             {
               "predicted_coords": [
@@ -246,7 +285,7 @@
               "response": "(512, 512)",
               "error": null,
               "pass_number": 3,
-              "run_id": "shape_identification_glm-4.6v_custom_20251216_220209"
+              "run_id": "shape_identification_glm-4.6v_custom_20251217_142734"
             }
           ],
           "num_passes": 3
@@ -273,7 +312,7 @@
               "response": "(512, 512)",
               "error": null,
               "pass_number": 1,
-              "run_id": "shape_identification_sonnet_custom_20251216_215405"
+              "run_id": "shape_identification_sonnet_custom_20251217_141758"
             },
             {
               "predicted_coords": [
@@ -284,7 +323,7 @@
               "response": "(512, 512)",
               "error": null,
               "pass_number": 2,
-              "run_id": "shape_identification_sonnet_custom_20251216_215451"
+              "run_id": "shape_identification_sonnet_custom_20251217_141840"
             },
             {
               "predicted_coords": [
@@ -295,7 +334,7 @@
               "response": "(512, 512)",
               "error": null,
               "pass_number": 3,
-              "run_id": "shape_identification_sonnet_custom_20251216_215537"
+              "run_id": "shape_identification_sonnet_custom_20251217_141927"
             }
           ],
           "num_passes": 3
@@ -311,7 +350,7 @@
               "response": "(512, 472)",
               "error": null,
               "pass_number": 1,
-              "run_id": "shape_identification_opus_custom_20251216_215607"
+              "run_id": "shape_identification_opus_custom_20251217_141953"
             },
             {
               "predicted_coords": [
@@ -322,18 +361,56 @@
               "response": "(512, 472)",
               "error": null,
               "pass_number": 2,
-              "run_id": "shape_identification_opus_custom_20251216_215631"
+              "run_id": "shape_identification_opus_custom_20251217_142025"
             },
             {
               "predicted_coords": [
                 512,
-                462
+                472
               ],
-              "distance": 50.0,
-              "response": "(512, 462)",
+              "distance": 40.0,
+              "response": "(512, 472)",
               "error": null,
               "pass_number": 3,
-              "run_id": "shape_identification_opus_custom_20251216_215656"
+              "run_id": "shape_identification_opus_custom_20251217_142049"
+            }
+          ],
+          "num_passes": 3
+        },
+        "gemini3": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                500,
+                500
+              ],
+              "distance": 16.97056274847714,
+              "response": "(500, 500)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "shape_identification_gemini3_custom_20251217_142124"
+            },
+            {
+              "predicted_coords": [
+                500,
+                500
+              ],
+              "distance": 16.97056274847714,
+              "response": "(500, 500)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "shape_identification_gemini3_custom_20251217_142155"
+            },
+            {
+              "predicted_coords": [
+                500,
+                500
+              ],
+              "distance": 16.97056274847714,
+              "response": "(500, 500)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "shape_identification_gemini3_custom_20251217_142226"
             }
           ],
           "num_passes": 3
@@ -342,14 +419,14 @@
           "predictions": [
             {
               "predicted_coords": [
-                512,
+                511,
                 512
               ],
-              "distance": 0.0,
-              "response": "(512, 512)",
+              "distance": 1.0,
+              "response": "(511, 512)",
               "error": null,
               "pass_number": 1,
-              "run_id": "shape_identification_chatgpt_custom_20251216_215718"
+              "run_id": "shape_identification_chatgpt_custom_20251217_142238"
             },
             {
               "predicted_coords": [
@@ -360,7 +437,7 @@
               "response": "(512, 512)",
               "error": null,
               "pass_number": 2,
-              "run_id": "shape_identification_chatgpt_custom_20251216_215728"
+              "run_id": "shape_identification_chatgpt_custom_20251217_142249"
             },
             {
               "predicted_coords": [
@@ -371,7 +448,7 @@
               "response": "(512, 512)",
               "error": null,
               "pass_number": 3,
-              "run_id": "shape_identification_chatgpt_custom_20251216_215739"
+              "run_id": "shape_identification_chatgpt_custom_20251217_142300"
             }
           ],
           "num_passes": 3
@@ -381,13 +458,13 @@
             {
               "predicted_coords": [
                 512,
-                512
+                511
               ],
-              "distance": 0.0,
-              "response": "(512, 512)",
+              "distance": 1.0,
+              "response": "(512, 511)",
               "error": null,
               "pass_number": 1,
-              "run_id": "shape_identification_haiku_custom_20251216_215755"
+              "run_id": "shape_identification_haiku_custom_20251217_142316"
             },
             {
               "predicted_coords": [
@@ -398,18 +475,18 @@
               "response": "(512, 512)",
               "error": null,
               "pass_number": 2,
-              "run_id": "shape_identification_haiku_custom_20251216_215813"
+              "run_id": "shape_identification_haiku_custom_20251217_142330"
             },
             {
               "predicted_coords": [
                 512,
-                511
+                512
               ],
-              "distance": 1.0,
-              "response": "(512, 511)",
+              "distance": 0.0,
+              "response": "(512, 512)",
               "error": null,
               "pass_number": 3,
-              "run_id": "shape_identification_haiku_custom_20251216_215826"
+              "run_id": "shape_identification_haiku_custom_20251217_142346"
             }
           ],
           "num_passes": 3
@@ -425,7 +502,7 @@
               "response": "(512, 512)",
               "error": null,
               "pass_number": 1,
-              "run_id": "shape_identification_qwen3-vl_custom_20251216_215845"
+              "run_id": "shape_identification_qwen3-vl_custom_20251217_142402"
             },
             {
               "predicted_coords": [
@@ -436,7 +513,7 @@
               "response": "(512, 512)",
               "error": null,
               "pass_number": 2,
-              "run_id": "shape_identification_qwen3-vl_custom_20251216_215858"
+              "run_id": "shape_identification_qwen3-vl_custom_20251217_142422"
             },
             {
               "predicted_coords": [
@@ -447,7 +524,7 @@
               "response": "(512, 512)",
               "error": null,
               "pass_number": 3,
-              "run_id": "shape_identification_qwen3-vl_custom_20251216_215914"
+              "run_id": "shape_identification_qwen3-vl_custom_20251217_142437"
             }
           ],
           "num_passes": 3
@@ -463,7 +540,7 @@
               "response": "(512, 512)",
               "error": null,
               "pass_number": 1,
-              "run_id": "shape_identification_glm-4.6v_custom_20251216_220014"
+              "run_id": "shape_identification_glm-4.6v_custom_20251217_142534"
             },
             {
               "predicted_coords": [
@@ -474,7 +551,7 @@
               "response": "(512, 512)",
               "error": null,
               "pass_number": 2,
-              "run_id": "shape_identification_glm-4.6v_custom_20251216_220102"
+              "run_id": "shape_identification_glm-4.6v_custom_20251217_142646"
             },
             {
               "predicted_coords": [
@@ -485,7 +562,7 @@
               "response": "(512, 512)",
               "error": null,
               "pass_number": 3,
-              "run_id": "shape_identification_glm-4.6v_custom_20251216_220209"
+              "run_id": "shape_identification_glm-4.6v_custom_20251217_142734"
             }
           ],
           "num_passes": 3
@@ -512,18 +589,18 @@
               "response": "(512, 512)",
               "error": null,
               "pass_number": 1,
-              "run_id": "shape_identification_sonnet_custom_20251216_215405"
+              "run_id": "shape_identification_sonnet_custom_20251217_141758"
             },
             {
               "predicted_coords": [
                 512,
-                513
+                512
               ],
-              "distance": 1.0,
-              "response": "(512, 513)",
+              "distance": 0.0,
+              "response": "(512, 512)",
               "error": null,
               "pass_number": 2,
-              "run_id": "shape_identification_sonnet_custom_20251216_215451"
+              "run_id": "shape_identification_sonnet_custom_20251217_141840"
             },
             {
               "predicted_coords": [
@@ -534,7 +611,7 @@
               "response": "(512, 512)",
               "error": null,
               "pass_number": 3,
-              "run_id": "shape_identification_sonnet_custom_20251216_215537"
+              "run_id": "shape_identification_sonnet_custom_20251217_141927"
             }
           ],
           "num_passes": 3
@@ -544,13 +621,13 @@
             {
               "predicted_coords": [
                 512,
-                507
+                513
               ],
-              "distance": 5.0,
-              "response": "(512, 507)",
+              "distance": 1.0,
+              "response": "(512, 513)",
               "error": null,
               "pass_number": 1,
-              "run_id": "shape_identification_opus_custom_20251216_215607"
+              "run_id": "shape_identification_opus_custom_20251217_141953"
             },
             {
               "predicted_coords": [
@@ -561,7 +638,7 @@
               "response": "(512, 507)",
               "error": null,
               "pass_number": 2,
-              "run_id": "shape_identification_opus_custom_20251216_215631"
+              "run_id": "shape_identification_opus_custom_20251217_142025"
             },
             {
               "predicted_coords": [
@@ -572,7 +649,45 @@
               "response": "(512, 505)",
               "error": null,
               "pass_number": 3,
-              "run_id": "shape_identification_opus_custom_20251216_215656"
+              "run_id": "shape_identification_opus_custom_20251217_142049"
+            }
+          ],
+          "num_passes": 3
+        },
+        "gemini3": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                500,
+                533
+              ],
+              "distance": 24.186773244895647,
+              "response": "(500, 533)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "shape_identification_gemini3_custom_20251217_142124"
+            },
+            {
+              "predicted_coords": [
+                500,
+                533
+              ],
+              "distance": 24.186773244895647,
+              "response": "(500, 533)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "shape_identification_gemini3_custom_20251217_142155"
+            },
+            {
+              "predicted_coords": [
+                500,
+                533
+              ],
+              "distance": 24.186773244895647,
+              "response": "(500, 533)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "shape_identification_gemini3_custom_20251217_142226"
             }
           ],
           "num_passes": 3
@@ -581,36 +696,36 @@
           "predictions": [
             {
               "predicted_coords": [
-                511,
-                602
+                512,
+                592
               ],
-              "distance": 90.00555538409837,
-              "response": "(511, 602)",
+              "distance": 80.0,
+              "response": "(512, 592)",
               "error": null,
               "pass_number": 1,
-              "run_id": "shape_identification_chatgpt_custom_20251216_215718"
-            },
-            {
-              "predicted_coords": [
-                511,
-                606
-              ],
-              "distance": 94.00531899844816,
-              "response": "(511, 606)",
-              "error": null,
-              "pass_number": 2,
-              "run_id": "shape_identification_chatgpt_custom_20251216_215728"
+              "run_id": "shape_identification_chatgpt_custom_20251217_142238"
             },
             {
               "predicted_coords": [
                 512,
-                619
+                570
               ],
-              "distance": 107.0,
-              "response": "(512, 619)",
+              "distance": 58.0,
+              "response": "(512, 570)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "shape_identification_chatgpt_custom_20251217_142249"
+            },
+            {
+              "predicted_coords": [
+                512,
+                584
+              ],
+              "distance": 72.0,
+              "response": "(512, 584)",
               "error": null,
               "pass_number": 3,
-              "run_id": "shape_identification_chatgpt_custom_20251216_215739"
+              "run_id": "shape_identification_chatgpt_custom_20251217_142300"
             }
           ],
           "num_passes": 3
@@ -620,13 +735,13 @@
             {
               "predicted_coords": [
                 512,
-                506
+                507
               ],
-              "distance": 6.0,
-              "response": "(512, 506)",
+              "distance": 5.0,
+              "response": "(512, 507)",
               "error": null,
               "pass_number": 1,
-              "run_id": "shape_identification_haiku_custom_20251216_215755"
+              "run_id": "shape_identification_haiku_custom_20251217_142316"
             },
             {
               "predicted_coords": [
@@ -637,18 +752,18 @@
               "response": "(512, 507)",
               "error": null,
               "pass_number": 2,
-              "run_id": "shape_identification_haiku_custom_20251216_215813"
+              "run_id": "shape_identification_haiku_custom_20251217_142330"
             },
             {
               "predicted_coords": [
                 512,
-                507
+                505
               ],
-              "distance": 5.0,
-              "response": "(512, 507)",
+              "distance": 7.0,
+              "response": "(512, 505)",
               "error": null,
               "pass_number": 3,
-              "run_id": "shape_identification_haiku_custom_20251216_215826"
+              "run_id": "shape_identification_haiku_custom_20251217_142346"
             }
           ],
           "num_passes": 3
@@ -664,7 +779,7 @@
               "response": "(512, 512)",
               "error": null,
               "pass_number": 1,
-              "run_id": "shape_identification_qwen3-vl_custom_20251216_215845"
+              "run_id": "shape_identification_qwen3-vl_custom_20251217_142402"
             },
             {
               "predicted_coords": [
@@ -675,7 +790,7 @@
               "response": "(512, 512)",
               "error": null,
               "pass_number": 2,
-              "run_id": "shape_identification_qwen3-vl_custom_20251216_215858"
+              "run_id": "shape_identification_qwen3-vl_custom_20251217_142422"
             },
             {
               "predicted_coords": [
@@ -686,7 +801,7 @@
               "response": "(512, 512)",
               "error": null,
               "pass_number": 3,
-              "run_id": "shape_identification_qwen3-vl_custom_20251216_215914"
+              "run_id": "shape_identification_qwen3-vl_custom_20251217_142437"
             }
           ],
           "num_passes": 3
@@ -702,7 +817,7 @@
               "response": "(512, 512)",
               "error": null,
               "pass_number": 1,
-              "run_id": "shape_identification_glm-4.6v_custom_20251216_220014"
+              "run_id": "shape_identification_glm-4.6v_custom_20251217_142534"
             },
             {
               "predicted_coords": [
@@ -713,7 +828,7 @@
               "response": "(512, 512)",
               "error": null,
               "pass_number": 2,
-              "run_id": "shape_identification_glm-4.6v_custom_20251216_220102"
+              "run_id": "shape_identification_glm-4.6v_custom_20251217_142646"
             },
             {
               "predicted_coords": [
@@ -724,7 +839,7 @@
               "response": "(512, 512)",
               "error": null,
               "pass_number": 3,
-              "run_id": "shape_identification_glm-4.6v_custom_20251216_220209"
+              "run_id": "shape_identification_glm-4.6v_custom_20251217_142734"
             }
           ],
           "num_passes": 3
@@ -751,7 +866,7 @@
               "response": "(512, 512)",
               "error": null,
               "pass_number": 1,
-              "run_id": "shape_identification_sonnet_custom_20251216_215405"
+              "run_id": "shape_identification_sonnet_custom_20251217_141758"
             },
             {
               "predicted_coords": [
@@ -762,7 +877,7 @@
               "response": "(512, 512)",
               "error": null,
               "pass_number": 2,
-              "run_id": "shape_identification_sonnet_custom_20251216_215451"
+              "run_id": "shape_identification_sonnet_custom_20251217_141840"
             },
             {
               "predicted_coords": [
@@ -773,7 +888,7 @@
               "response": "(512, 512)",
               "error": null,
               "pass_number": 3,
-              "run_id": "shape_identification_sonnet_custom_20251216_215537"
+              "run_id": "shape_identification_sonnet_custom_20251217_141927"
             }
           ],
           "num_passes": 3
@@ -783,13 +898,13 @@
             {
               "predicted_coords": [
                 512,
-                420
+                390
               ],
-              "distance": 92.0,
-              "response": "(512, 420)",
+              "distance": 122.0,
+              "response": "(512, 390)",
               "error": null,
               "pass_number": 1,
-              "run_id": "shape_identification_opus_custom_20251216_215607"
+              "run_id": "shape_identification_opus_custom_20251217_141953"
             },
             {
               "predicted_coords": [
@@ -800,7 +915,7 @@
               "response": "(512, 390)",
               "error": null,
               "pass_number": 2,
-              "run_id": "shape_identification_opus_custom_20251216_215631"
+              "run_id": "shape_identification_opus_custom_20251217_142025"
             },
             {
               "predicted_coords": [
@@ -811,7 +926,45 @@
               "response": "(512, 390)",
               "error": null,
               "pass_number": 3,
-              "run_id": "shape_identification_opus_custom_20251216_215656"
+              "run_id": "shape_identification_opus_custom_20251217_142049"
+            }
+          ],
+          "num_passes": 3
+        },
+        "gemini3": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                500,
+                500
+              ],
+              "distance": 16.97056274847714,
+              "response": "(500, 500)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "shape_identification_gemini3_custom_20251217_142124"
+            },
+            {
+              "predicted_coords": [
+                500,
+                500
+              ],
+              "distance": 16.97056274847714,
+              "response": "(500, 500)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "shape_identification_gemini3_custom_20251217_142155"
+            },
+            {
+              "predicted_coords": [
+                500,
+                500
+              ],
+              "distance": 16.97056274847714,
+              "response": "(500, 500)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "shape_identification_gemini3_custom_20251217_142226"
             }
           ],
           "num_passes": 3
@@ -821,35 +974,35 @@
             {
               "predicted_coords": [
                 512,
-                512
+                519
               ],
-              "distance": 0.0,
-              "response": "(512, 512)",
+              "distance": 7.0,
+              "response": "(512, 519)",
               "error": null,
               "pass_number": 1,
-              "run_id": "shape_identification_chatgpt_custom_20251216_215718"
+              "run_id": "shape_identification_chatgpt_custom_20251217_142238"
             },
             {
               "predicted_coords": [
-                510,
-                507
+                512,
+                511
               ],
-              "distance": 5.385164807134504,
-              "response": "(510, 507)",
+              "distance": 1.0,
+              "response": "(512, 511)",
               "error": null,
               "pass_number": 2,
-              "run_id": "shape_identification_chatgpt_custom_20251216_215728"
+              "run_id": "shape_identification_chatgpt_custom_20251217_142249"
             },
             {
               "predicted_coords": [
                 510,
-                527
+                512
               ],
-              "distance": 15.132745950421556,
-              "response": "(510, 527)",
+              "distance": 2.0,
+              "response": "(510, 512)",
               "error": null,
               "pass_number": 3,
-              "run_id": "shape_identification_chatgpt_custom_20251216_215739"
+              "run_id": "shape_identification_chatgpt_custom_20251217_142300"
             }
           ],
           "num_passes": 3
@@ -865,7 +1018,7 @@
               "response": "(512, 512)",
               "error": null,
               "pass_number": 1,
-              "run_id": "shape_identification_haiku_custom_20251216_215755"
+              "run_id": "shape_identification_haiku_custom_20251217_142316"
             },
             {
               "predicted_coords": [
@@ -876,7 +1029,7 @@
               "response": "(512, 512)",
               "error": null,
               "pass_number": 2,
-              "run_id": "shape_identification_haiku_custom_20251216_215813"
+              "run_id": "shape_identification_haiku_custom_20251217_142330"
             },
             {
               "predicted_coords": [
@@ -884,10 +1037,10 @@
                 512
               ],
               "distance": 0.0,
-              "response": "(512, 512)",
+              "response": "# (512, 512)\n\nThe red decagon (10-sided polygon) is centered in the image at the midpoint of the 1024\u00d71024 coordinate system.",
               "error": null,
               "pass_number": 3,
-              "run_id": "shape_identification_haiku_custom_20251216_215826"
+              "run_id": "shape_identification_haiku_custom_20251217_142346"
             }
           ],
           "num_passes": 3
@@ -903,7 +1056,7 @@
               "response": "(512, 512)",
               "error": null,
               "pass_number": 1,
-              "run_id": "shape_identification_qwen3-vl_custom_20251216_215845"
+              "run_id": "shape_identification_qwen3-vl_custom_20251217_142402"
             },
             {
               "predicted_coords": [
@@ -914,7 +1067,7 @@
               "response": "(512, 512)",
               "error": null,
               "pass_number": 2,
-              "run_id": "shape_identification_qwen3-vl_custom_20251216_215858"
+              "run_id": "shape_identification_qwen3-vl_custom_20251217_142422"
             },
             {
               "predicted_coords": [
@@ -925,7 +1078,7 @@
               "response": "(512, 512)",
               "error": null,
               "pass_number": 3,
-              "run_id": "shape_identification_qwen3-vl_custom_20251216_215914"
+              "run_id": "shape_identification_qwen3-vl_custom_20251217_142437"
             }
           ],
           "num_passes": 3
@@ -941,7 +1094,7 @@
               "response": "(512, 512)",
               "error": null,
               "pass_number": 1,
-              "run_id": "shape_identification_glm-4.6v_custom_20251216_220014"
+              "run_id": "shape_identification_glm-4.6v_custom_20251217_142534"
             },
             {
               "predicted_coords": [
@@ -952,7 +1105,7 @@
               "response": "(512, 512)",
               "error": null,
               "pass_number": 2,
-              "run_id": "shape_identification_glm-4.6v_custom_20251216_220102"
+              "run_id": "shape_identification_glm-4.6v_custom_20251217_142646"
             },
             {
               "predicted_coords": [
@@ -963,7 +1116,7 @@
               "response": "(512, 512)",
               "error": null,
               "pass_number": 3,
-              "run_id": "shape_identification_glm-4.6v_custom_20251216_220209"
+              "run_id": "shape_identification_glm-4.6v_custom_20251217_142734"
             }
           ],
           "num_passes": 3
@@ -990,7 +1143,7 @@
               "response": "(512, 512)",
               "error": null,
               "pass_number": 1,
-              "run_id": "shape_identification_sonnet_custom_20251216_215405"
+              "run_id": "shape_identification_sonnet_custom_20251217_141758"
             },
             {
               "predicted_coords": [
@@ -1001,7 +1154,7 @@
               "response": "(512, 512)",
               "error": null,
               "pass_number": 2,
-              "run_id": "shape_identification_sonnet_custom_20251216_215451"
+              "run_id": "shape_identification_sonnet_custom_20251217_141840"
             },
             {
               "predicted_coords": [
@@ -1012,7 +1165,7 @@
               "response": "(512, 512)",
               "error": null,
               "pass_number": 3,
-              "run_id": "shape_identification_sonnet_custom_20251216_215537"
+              "run_id": "shape_identification_sonnet_custom_20251217_141927"
             }
           ],
           "num_passes": 3
@@ -1022,24 +1175,24 @@
             {
               "predicted_coords": [
                 512,
-                480
+                453
               ],
-              "distance": 32.0,
-              "response": "(512, 480)",
+              "distance": 59.0,
+              "response": "(512, 453)",
               "error": null,
               "pass_number": 1,
-              "run_id": "shape_identification_opus_custom_20251216_215607"
+              "run_id": "shape_identification_opus_custom_20251217_141953"
             },
             {
               "predicted_coords": [
                 512,
-                480
+                460
               ],
-              "distance": 32.0,
-              "response": "(512, 480)",
+              "distance": 52.0,
+              "response": "(512, 460)",
               "error": null,
               "pass_number": 2,
-              "run_id": "shape_identification_opus_custom_20251216_215631"
+              "run_id": "shape_identification_opus_custom_20251217_142025"
             },
             {
               "predicted_coords": [
@@ -1050,7 +1203,45 @@
               "response": "(512, 480)",
               "error": null,
               "pass_number": 3,
-              "run_id": "shape_identification_opus_custom_20251216_215656"
+              "run_id": "shape_identification_opus_custom_20251217_142049"
+            }
+          ],
+          "num_passes": 3
+        },
+        "gemini3": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                500,
+                500
+              ],
+              "distance": 16.97056274847714,
+              "response": "(500, 500)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "shape_identification_gemini3_custom_20251217_142124"
+            },
+            {
+              "predicted_coords": [
+                500,
+                500
+              ],
+              "distance": 16.97056274847714,
+              "response": "(500, 500)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "shape_identification_gemini3_custom_20251217_142155"
+            },
+            {
+              "predicted_coords": [
+                500,
+                500
+              ],
+              "distance": 16.97056274847714,
+              "response": "(500, 500)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "shape_identification_gemini3_custom_20251217_142226"
             }
           ],
           "num_passes": 3
@@ -1060,35 +1251,35 @@
             {
               "predicted_coords": [
                 512,
-                563
+                512
               ],
-              "distance": 51.0,
-              "response": "(512, 563)",
+              "distance": 0.0,
+              "response": "(512, 512)",
               "error": null,
               "pass_number": 1,
-              "run_id": "shape_identification_chatgpt_custom_20251216_215718"
+              "run_id": "shape_identification_chatgpt_custom_20251217_142238"
             },
             {
               "predicted_coords": [
                 512,
-                573
+                552
               ],
-              "distance": 61.0,
-              "response": "(512, 573)",
+              "distance": 40.0,
+              "response": "(512, 552)",
               "error": null,
               "pass_number": 2,
-              "run_id": "shape_identification_chatgpt_custom_20251216_215728"
+              "run_id": "shape_identification_chatgpt_custom_20251217_142249"
             },
             {
               "predicted_coords": [
                 512,
-                554
+                512
               ],
-              "distance": 42.0,
-              "response": "(512, 554)",
+              "distance": 0.0,
+              "response": "(512, 512)",
               "error": null,
               "pass_number": 3,
-              "run_id": "shape_identification_chatgpt_custom_20251216_215739"
+              "run_id": "shape_identification_chatgpt_custom_20251217_142300"
             }
           ],
           "num_passes": 3
@@ -1098,35 +1289,35 @@
             {
               "predicted_coords": [
                 512,
-                530
+                512
               ],
-              "distance": 18.0,
-              "response": "(512, 530)",
+              "distance": 0.0,
+              "response": "(512, 512)",
               "error": null,
               "pass_number": 1,
-              "run_id": "shape_identification_haiku_custom_20251216_215755"
+              "run_id": "shape_identification_haiku_custom_20251217_142316"
             },
             {
               "predicted_coords": [
                 512,
-                530
+                512
               ],
-              "distance": 18.0,
-              "response": "(512, 530)",
+              "distance": 0.0,
+              "response": "(512, 512)",
               "error": null,
               "pass_number": 2,
-              "run_id": "shape_identification_haiku_custom_20251216_215813"
+              "run_id": "shape_identification_haiku_custom_20251217_142330"
             },
             {
               "predicted_coords": [
                 512,
-                530
+                515
               ],
-              "distance": 18.0,
-              "response": "(512, 530)",
+              "distance": 3.0,
+              "response": "(512, 515)",
               "error": null,
               "pass_number": 3,
-              "run_id": "shape_identification_haiku_custom_20251216_215826"
+              "run_id": "shape_identification_haiku_custom_20251217_142346"
             }
           ],
           "num_passes": 3
@@ -1142,7 +1333,7 @@
               "response": "(512, 512)",
               "error": null,
               "pass_number": 1,
-              "run_id": "shape_identification_qwen3-vl_custom_20251216_215845"
+              "run_id": "shape_identification_qwen3-vl_custom_20251217_142402"
             },
             {
               "predicted_coords": [
@@ -1153,7 +1344,7 @@
               "response": "(512, 512)",
               "error": null,
               "pass_number": 2,
-              "run_id": "shape_identification_qwen3-vl_custom_20251216_215858"
+              "run_id": "shape_identification_qwen3-vl_custom_20251217_142422"
             },
             {
               "predicted_coords": [
@@ -1164,7 +1355,7 @@
               "response": "(512, 512)",
               "error": null,
               "pass_number": 3,
-              "run_id": "shape_identification_qwen3-vl_custom_20251216_215914"
+              "run_id": "shape_identification_qwen3-vl_custom_20251217_142437"
             }
           ],
           "num_passes": 3
@@ -1180,7 +1371,7 @@
               "response": "(512, 512)",
               "error": null,
               "pass_number": 1,
-              "run_id": "shape_identification_glm-4.6v_custom_20251216_220014"
+              "run_id": "shape_identification_glm-4.6v_custom_20251217_142534"
             },
             {
               "predicted_coords": [
@@ -1191,7 +1382,7 @@
               "response": "(512, 512)",
               "error": null,
               "pass_number": 2,
-              "run_id": "shape_identification_glm-4.6v_custom_20251216_220102"
+              "run_id": "shape_identification_glm-4.6v_custom_20251217_142646"
             },
             {
               "predicted_coords": [
@@ -1202,7 +1393,7 @@
               "response": "(512, 512)",
               "error": null,
               "pass_number": 3,
-              "run_id": "shape_identification_glm-4.6v_custom_20251216_220209"
+              "run_id": "shape_identification_glm-4.6v_custom_20251217_142734"
             }
           ],
           "num_passes": 3
@@ -1222,25 +1413,25 @@
           "predictions": [
             {
               "predicted_coords": [
+                306,
+                512
+              ],
+              "distance": 1.0,
+              "response": "(306, 512)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "shape_identification_sonnet_custom_20251217_141758"
+            },
+            {
+              "predicted_coords": [
                 307,
                 512
               ],
               "distance": 0.0,
               "response": "(307, 512)",
               "error": null,
-              "pass_number": 1,
-              "run_id": "shape_identification_sonnet_custom_20251216_215405"
-            },
-            {
-              "predicted_coords": [
-                307,
-                511
-              ],
-              "distance": 1.0,
-              "response": "(307, 511)",
-              "error": null,
               "pass_number": 2,
-              "run_id": "shape_identification_sonnet_custom_20251216_215451"
+              "run_id": "shape_identification_sonnet_custom_20251217_141840"
             },
             {
               "predicted_coords": [
@@ -1251,7 +1442,7 @@
               "response": "(307, 512)",
               "error": null,
               "pass_number": 3,
-              "run_id": "shape_identification_sonnet_custom_20251216_215537"
+              "run_id": "shape_identification_sonnet_custom_20251217_141927"
             }
           ],
           "num_passes": 3
@@ -1260,36 +1451,74 @@
           "predictions": [
             {
               "predicted_coords": [
-                287,
+                285,
                 480
               ],
-              "distance": 37.73592452822641,
-              "response": "(287, 480)",
+              "distance": 38.8329756778952,
+              "response": "(285, 480)",
               "error": null,
               "pass_number": 1,
-              "run_id": "shape_identification_opus_custom_20251216_215607"
+              "run_id": "shape_identification_opus_custom_20251217_141953"
             },
             {
               "predicted_coords": [
-                293,
-                477
-              ],
-              "distance": 37.69615364994153,
-              "response": "(293, 477)",
-              "error": null,
-              "pass_number": 2,
-              "run_id": "shape_identification_opus_custom_20251216_215631"
-            },
-            {
-              "predicted_coords": [
-                305,
+                296,
                 480
               ],
-              "distance": 32.0624390837628,
-              "response": "(305, 480)",
+              "distance": 33.83784863137726,
+              "response": "(296, 480)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "shape_identification_opus_custom_20251217_142025"
+            },
+            {
+              "predicted_coords": [
+                289,
+                480
+              ],
+              "distance": 36.71511950137164,
+              "response": "(289, 480)",
               "error": null,
               "pass_number": 3,
-              "run_id": "shape_identification_opus_custom_20251216_215656"
+              "run_id": "shape_identification_opus_custom_20251217_142049"
+            }
+          ],
+          "num_passes": 3
+        },
+        "gemini3": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                300,
+                499
+              ],
+              "distance": 14.7648230602334,
+              "response": "(300, 499)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "shape_identification_gemini3_custom_20251217_142124"
+            },
+            {
+              "predicted_coords": [
+                300,
+                499
+              ],
+              "distance": 14.7648230602334,
+              "response": "(300, 499)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "shape_identification_gemini3_custom_20251217_142155"
+            },
+            {
+              "predicted_coords": [
+                300,
+                499
+              ],
+              "distance": 14.7648230602334,
+              "response": "(300, 499)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "shape_identification_gemini3_custom_20251217_142226"
             }
           ],
           "num_passes": 3
@@ -1298,36 +1527,36 @@
           "predictions": [
             {
               "predicted_coords": [
-                282,
-                563
-              ],
-              "distance": 56.79788728465171,
-              "response": "(282, 563)",
-              "error": null,
-              "pass_number": 1,
-              "run_id": "shape_identification_chatgpt_custom_20251216_215718"
-            },
-            {
-              "predicted_coords": [
-                307,
+                275,
                 512
               ],
-              "distance": 0.0,
-              "response": "(307, 512)",
+              "distance": 32.0,
+              "response": "(275, 512)",
               "error": null,
-              "pass_number": 2,
-              "run_id": "shape_identification_chatgpt_custom_20251216_215728"
+              "pass_number": 1,
+              "run_id": "shape_identification_chatgpt_custom_20251217_142238"
             },
             {
               "predicted_coords": [
-                295,
-                538
+                275,
+                550
               ],
-              "distance": 28.635642126552707,
-              "response": "(295, 538)",
+              "distance": 49.678969393496885,
+              "response": "(275, 550)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "shape_identification_chatgpt_custom_20251217_142249"
+            },
+            {
+              "predicted_coords": [
+                276,
+                511
+              ],
+              "distance": 31.016124838541646,
+              "response": "(276, 511)",
               "error": null,
               "pass_number": 3,
-              "run_id": "shape_identification_chatgpt_custom_20251216_215739"
+              "run_id": "shape_identification_chatgpt_custom_20251217_142300"
             }
           ],
           "num_passes": 3
@@ -1336,63 +1565,74 @@
           "predictions": [
             {
               "predicted_coords": [
+                716,
+                510
+              ],
+              "distance": 409.0048899463184,
+              "response": "# (716, 510)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "shape_identification_haiku_custom_20251217_142316"
+            },
+            {
+              "predicted_coords": [
+                715,
+                515
+              ],
+              "distance": 408.0110292626904,
+              "response": "(715, 515)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "shape_identification_haiku_custom_20251217_142330"
+            },
+            {
+              "predicted_coords": [
                 715,
                 520
               ],
               "distance": 408.0784238354192,
               "response": "(715, 520)",
               "error": null,
-              "pass_number": 2,
-              "run_id": "shape_identification_haiku_custom_20251216_215813"
-            },
-            {
-              "predicted_coords": [
-                720,
-                515
-              ],
-              "distance": 413.01089574005186,
-              "response": "# (720, 515)",
-              "error": null,
               "pass_number": 3,
-              "run_id": "shape_identification_haiku_custom_20251216_215826"
+              "run_id": "shape_identification_haiku_custom_20251217_142346"
             }
           ],
-          "num_passes": 2
+          "num_passes": 3
         },
         "qwen3-vl": {
           "predictions": [
             {
               "predicted_coords": [
-                737,
-                507
-              ],
-              "distance": 430.0290687848904,
-              "response": "(737, 507)",
-              "error": null,
-              "pass_number": 1,
-              "run_id": "shape_identification_qwen3-vl_custom_20251216_215845"
-            },
-            {
-              "predicted_coords": [
-                716,
+                712,
                 495
               ],
-              "distance": 409.35314827175813,
-              "response": "(716, 495)",
+              "distance": 405.3566331022597,
+              "response": "(712, 495)",
               "error": null,
-              "pass_number": 2,
-              "run_id": "shape_identification_qwen3-vl_custom_20251216_215858"
+              "pass_number": 1,
+              "run_id": "shape_identification_qwen3-vl_custom_20251217_142402"
             },
             {
               "predicted_coords": [
-                700,
-                496
+                752,
+                500
               ],
-              "distance": 393.3255648950371,
-              "response": "(700, 496)",
+              "distance": 445.16176834943946,
+              "response": "(752, 500)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "shape_identification_qwen3-vl_custom_20251217_142422"
+            },
+            {
+              "predicted_coords": [
+                712,
+                495
+              ],
+              "distance": 405.3566331022597,
+              "response": "(712, 495)",
               "error": null,
               "pass_number": 3,
-              "run_id": "shape_identification_qwen3-vl_custom_20251216_215914"
+              "run_id": "shape_identification_qwen3-vl_custom_20251217_142437"
             }
           ],
           "num_passes": 3
@@ -1402,35 +1642,35 @@
             {
               "predicted_coords": [
                 292,
-                500
+                498
               ],
-              "distance": 19.209372712298546,
-              "response": "(292, 500)",
+              "distance": 20.518284528683193,
+              "response": "(292, 498)",
               "error": null,
               "pass_number": 1,
-              "run_id": "shape_identification_glm-4.6v_custom_20251216_220014"
+              "run_id": "shape_identification_glm-4.6v_custom_20251217_142534"
             },
             {
               "predicted_coords": [
-                256,
-                512
+                292,
+                492
               ],
-              "distance": 51.0,
-              "response": "(256, 512)",
+              "distance": 25.0,
+              "response": "(292, 492)",
               "error": null,
               "pass_number": 2,
-              "run_id": "shape_identification_glm-4.6v_custom_20251216_220102"
+              "run_id": "shape_identification_glm-4.6v_custom_20251217_142646"
             },
             {
               "predicted_coords": [
                 300,
-                512
+                500
               ],
-              "distance": 7.0,
-              "response": "(300, 512)",
+              "distance": 13.892443989449804,
+              "response": "(300, 500)",
               "error": null,
               "pass_number": 3,
-              "run_id": "shape_identification_glm-4.6v_custom_20251216_220209"
+              "run_id": "shape_identification_glm-4.6v_custom_20251217_142734"
             }
           ],
           "num_passes": 3
@@ -1457,7 +1697,7 @@
               "response": "(512, 512)",
               "error": null,
               "pass_number": 1,
-              "run_id": "shape_identification_sonnet_custom_20251216_215405"
+              "run_id": "shape_identification_sonnet_custom_20251217_141758"
             },
             {
               "predicted_coords": [
@@ -1468,7 +1708,7 @@
               "response": "(512, 512)",
               "error": null,
               "pass_number": 2,
-              "run_id": "shape_identification_sonnet_custom_20251216_215451"
+              "run_id": "shape_identification_sonnet_custom_20251217_141840"
             },
             {
               "predicted_coords": [
@@ -1479,7 +1719,7 @@
               "response": "(512, 512)",
               "error": null,
               "pass_number": 3,
-              "run_id": "shape_identification_sonnet_custom_20251216_215537"
+              "run_id": "shape_identification_sonnet_custom_20251217_141927"
             }
           ],
           "num_passes": 3
@@ -1489,13 +1729,24 @@
             {
               "predicted_coords": [
                 512,
+                472
+              ],
+              "distance": 40.0,
+              "response": "(512, 472)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "shape_identification_opus_custom_20251217_141953"
+            },
+            {
+              "predicted_coords": [
+                512,
                 460
               ],
               "distance": 52.0,
               "response": "(512, 460)",
               "error": null,
-              "pass_number": 1,
-              "run_id": "shape_identification_opus_custom_20251216_215607"
+              "pass_number": 2,
+              "run_id": "shape_identification_opus_custom_20251217_142025"
             },
             {
               "predicted_coords": [
@@ -1505,19 +1756,46 @@
               "distance": 42.0,
               "response": "(512, 470)",
               "error": null,
-              "pass_number": 2,
-              "run_id": "shape_identification_opus_custom_20251216_215631"
+              "pass_number": 3,
+              "run_id": "shape_identification_opus_custom_20251217_142049"
+            }
+          ],
+          "num_passes": 3
+        },
+        "gemini3": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                500,
+                500
+              ],
+              "distance": 16.97056274847714,
+              "response": "(500, 500)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "shape_identification_gemini3_custom_20251217_142124"
             },
             {
               "predicted_coords": [
-                512,
-                475
+                500,
+                500
               ],
-              "distance": 37.0,
-              "response": "(512, 475)",
+              "distance": 16.97056274847714,
+              "response": "(500, 500)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "shape_identification_gemini3_custom_20251217_142155"
+            },
+            {
+              "predicted_coords": [
+                500,
+                500
+              ],
+              "distance": 16.97056274847714,
+              "response": "(500, 500)",
               "error": null,
               "pass_number": 3,
-              "run_id": "shape_identification_opus_custom_20251216_215656"
+              "run_id": "shape_identification_gemini3_custom_20251217_142226"
             }
           ],
           "num_passes": 3
@@ -1527,35 +1805,35 @@
             {
               "predicted_coords": [
                 512,
-                512
+                571
               ],
-              "distance": 0.0,
-              "response": "(512, 512)",
+              "distance": 59.0,
+              "response": "(512, 571)",
               "error": null,
               "pass_number": 1,
-              "run_id": "shape_identification_chatgpt_custom_20251216_215718"
-            },
-            {
-              "predicted_coords": [
-                513,
-                529
-              ],
-              "distance": 17.029386365926403,
-              "response": "(513, 529)",
-              "error": null,
-              "pass_number": 2,
-              "run_id": "shape_identification_chatgpt_custom_20251216_215728"
+              "run_id": "shape_identification_chatgpt_custom_20251217_142238"
             },
             {
               "predicted_coords": [
                 512,
-                561
+                589
               ],
-              "distance": 49.0,
-              "response": "(512, 561)",
+              "distance": 77.0,
+              "response": "(512, 589)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "shape_identification_chatgpt_custom_20251217_142249"
+            },
+            {
+              "predicted_coords": [
+                512,
+                535
+              ],
+              "distance": 23.0,
+              "response": "(512, 535)",
               "error": null,
               "pass_number": 3,
-              "run_id": "shape_identification_chatgpt_custom_20251216_215739"
+              "run_id": "shape_identification_chatgpt_custom_20251217_142300"
             }
           ],
           "num_passes": 3
@@ -1565,13 +1843,13 @@
             {
               "predicted_coords": [
                 512,
-                512
+                510
               ],
-              "distance": 0.0,
-              "response": "(512, 512)",
+              "distance": 2.0,
+              "response": "(512, 510)",
               "error": null,
               "pass_number": 1,
-              "run_id": "shape_identification_haiku_custom_20251216_215755"
+              "run_id": "shape_identification_haiku_custom_20251217_142316"
             },
             {
               "predicted_coords": [
@@ -1582,18 +1860,18 @@
               "response": "(512, 510)",
               "error": null,
               "pass_number": 2,
-              "run_id": "shape_identification_haiku_custom_20251216_215813"
+              "run_id": "shape_identification_haiku_custom_20251217_142330"
             },
             {
               "predicted_coords": [
                 512,
-                510
+                512
               ],
-              "distance": 2.0,
-              "response": "(512, 510)",
+              "distance": 0.0,
+              "response": "(512, 512)",
               "error": null,
               "pass_number": 3,
-              "run_id": "shape_identification_haiku_custom_20251216_215826"
+              "run_id": "shape_identification_haiku_custom_20251217_142346"
             }
           ],
           "num_passes": 3
@@ -1609,7 +1887,7 @@
               "response": "(512, 512)",
               "error": null,
               "pass_number": 1,
-              "run_id": "shape_identification_qwen3-vl_custom_20251216_215845"
+              "run_id": "shape_identification_qwen3-vl_custom_20251217_142402"
             },
             {
               "predicted_coords": [
@@ -1620,7 +1898,7 @@
               "response": "(512, 512)",
               "error": null,
               "pass_number": 2,
-              "run_id": "shape_identification_qwen3-vl_custom_20251216_215858"
+              "run_id": "shape_identification_qwen3-vl_custom_20251217_142422"
             },
             {
               "predicted_coords": [
@@ -1631,7 +1909,7 @@
               "response": "(512, 512)",
               "error": null,
               "pass_number": 3,
-              "run_id": "shape_identification_qwen3-vl_custom_20251216_215914"
+              "run_id": "shape_identification_qwen3-vl_custom_20251217_142437"
             }
           ],
           "num_passes": 3
@@ -1647,7 +1925,7 @@
               "response": "(512, 512)",
               "error": null,
               "pass_number": 1,
-              "run_id": "shape_identification_glm-4.6v_custom_20251216_220014"
+              "run_id": "shape_identification_glm-4.6v_custom_20251217_142534"
             },
             {
               "predicted_coords": [
@@ -1658,7 +1936,7 @@
               "response": "(512, 512)",
               "error": null,
               "pass_number": 2,
-              "run_id": "shape_identification_glm-4.6v_custom_20251216_220102"
+              "run_id": "shape_identification_glm-4.6v_custom_20251217_142646"
             },
             {
               "predicted_coords": [
@@ -1669,7 +1947,7 @@
               "response": "(512, 512)",
               "error": null,
               "pass_number": 3,
-              "run_id": "shape_identification_glm-4.6v_custom_20251216_220209"
+              "run_id": "shape_identification_glm-4.6v_custom_20251217_142734"
             }
           ],
           "num_passes": 3
@@ -1690,13 +1968,13 @@
             {
               "predicted_coords": [
                 512,
-                503
+                502
               ],
-              "distance": 9.0,
-              "response": "(512, 503)",
+              "distance": 10.0,
+              "response": "(512, 502)",
               "error": null,
               "pass_number": 1,
-              "run_id": "shape_identification_sonnet_custom_20251216_215405"
+              "run_id": "shape_identification_sonnet_custom_20251217_141758"
             },
             {
               "predicted_coords": [
@@ -1707,18 +1985,18 @@
               "response": "(512, 505)",
               "error": null,
               "pass_number": 2,
-              "run_id": "shape_identification_sonnet_custom_20251216_215451"
+              "run_id": "shape_identification_sonnet_custom_20251217_141840"
             },
             {
               "predicted_coords": [
                 512,
-                503
+                512
               ],
-              "distance": 9.0,
-              "response": "(512, 503)",
+              "distance": 0.0,
+              "response": "(512, 512)",
               "error": null,
               "pass_number": 3,
-              "run_id": "shape_identification_sonnet_custom_20251216_215537"
+              "run_id": "shape_identification_sonnet_custom_20251217_141927"
             }
           ],
           "num_passes": 3
@@ -1734,18 +2012,18 @@
               "response": "(512, 488)",
               "error": null,
               "pass_number": 1,
-              "run_id": "shape_identification_opus_custom_20251216_215607"
+              "run_id": "shape_identification_opus_custom_20251217_141953"
             },
             {
               "predicted_coords": [
                 512,
-                488
+                490
               ],
-              "distance": 24.0,
-              "response": "(512, 488)",
+              "distance": 22.0,
+              "response": "(512, 490)",
               "error": null,
               "pass_number": 2,
-              "run_id": "shape_identification_opus_custom_20251216_215631"
+              "run_id": "shape_identification_opus_custom_20251217_142025"
             },
             {
               "predicted_coords": [
@@ -1756,7 +2034,45 @@
               "response": "(512, 488)",
               "error": null,
               "pass_number": 3,
-              "run_id": "shape_identification_opus_custom_20251216_215656"
+              "run_id": "shape_identification_opus_custom_20251217_142049"
+            }
+          ],
+          "num_passes": 3
+        },
+        "gemini3": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                500,
+                490
+              ],
+              "distance": 25.059928172283335,
+              "response": "(500, 490)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "shape_identification_gemini3_custom_20251217_142124"
+            },
+            {
+              "predicted_coords": [
+                500,
+                490
+              ],
+              "distance": 25.059928172283335,
+              "response": "(500, 490)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "shape_identification_gemini3_custom_20251217_142155"
+            },
+            {
+              "predicted_coords": [
+                500,
+                490
+              ],
+              "distance": 25.059928172283335,
+              "response": "(500, 490)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "shape_identification_gemini3_custom_20251217_142226"
             }
           ],
           "num_passes": 3
@@ -1766,35 +2082,35 @@
             {
               "predicted_coords": [
                 512,
-                571
+                557
               ],
-              "distance": 59.0,
-              "response": "(512, 571)",
+              "distance": 45.0,
+              "response": "(512, 557)",
               "error": null,
               "pass_number": 1,
-              "run_id": "shape_identification_chatgpt_custom_20251216_215718"
+              "run_id": "shape_identification_chatgpt_custom_20251217_142238"
             },
             {
               "predicted_coords": [
-                512,
-                584
+                511,
+                547
               ],
-              "distance": 72.0,
-              "response": "(512, 584)",
+              "distance": 35.014282800023196,
+              "response": "(511, 547)",
               "error": null,
               "pass_number": 2,
-              "run_id": "shape_identification_chatgpt_custom_20251216_215728"
+              "run_id": "shape_identification_chatgpt_custom_20251217_142249"
             },
             {
               "predicted_coords": [
-                512,
-                563
+                507,
+                541
               ],
-              "distance": 51.0,
-              "response": "(512, 563)",
+              "distance": 29.427877939124322,
+              "response": "(507, 541)",
               "error": null,
               "pass_number": 3,
-              "run_id": "shape_identification_chatgpt_custom_20251216_215739"
+              "run_id": "shape_identification_chatgpt_custom_20251217_142300"
             }
           ],
           "num_passes": 3
@@ -1804,13 +2120,24 @@
             {
               "predicted_coords": [
                 512,
+                510
+              ],
+              "distance": 2.0,
+              "response": "(512, 510)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "shape_identification_haiku_custom_20251217_142316"
+            },
+            {
+              "predicted_coords": [
+                512,
                 520
               ],
               "distance": 8.0,
               "response": "(512, 520)",
               "error": null,
-              "pass_number": 1,
-              "run_id": "shape_identification_haiku_custom_20251216_215755"
+              "pass_number": 2,
+              "run_id": "shape_identification_haiku_custom_20251217_142330"
             },
             {
               "predicted_coords": [
@@ -1820,19 +2147,8 @@
               "distance": 3.0,
               "response": "(512, 515)",
               "error": null,
-              "pass_number": 2,
-              "run_id": "shape_identification_haiku_custom_20251216_215813"
-            },
-            {
-              "predicted_coords": [
-                512,
-                520
-              ],
-              "distance": 8.0,
-              "response": "(512, 520)",
-              "error": null,
               "pass_number": 3,
-              "run_id": "shape_identification_haiku_custom_20251216_215826"
+              "run_id": "shape_identification_haiku_custom_20251217_142346"
             }
           ],
           "num_passes": 3
@@ -1848,7 +2164,7 @@
               "response": "(512, 512)",
               "error": null,
               "pass_number": 1,
-              "run_id": "shape_identification_qwen3-vl_custom_20251216_215845"
+              "run_id": "shape_identification_qwen3-vl_custom_20251217_142402"
             },
             {
               "predicted_coords": [
@@ -1859,7 +2175,7 @@
               "response": "(512, 512)",
               "error": null,
               "pass_number": 2,
-              "run_id": "shape_identification_qwen3-vl_custom_20251216_215858"
+              "run_id": "shape_identification_qwen3-vl_custom_20251217_142422"
             },
             {
               "predicted_coords": [
@@ -1870,7 +2186,7 @@
               "response": "(512, 512)",
               "error": null,
               "pass_number": 3,
-              "run_id": "shape_identification_qwen3-vl_custom_20251216_215914"
+              "run_id": "shape_identification_qwen3-vl_custom_20251217_142437"
             }
           ],
           "num_passes": 3
@@ -1886,7 +2202,7 @@
               "response": "(512, 512)",
               "error": null,
               "pass_number": 1,
-              "run_id": "shape_identification_glm-4.6v_custom_20251216_220014"
+              "run_id": "shape_identification_glm-4.6v_custom_20251217_142534"
             },
             {
               "predicted_coords": [
@@ -1894,10 +2210,10 @@
                 512
               ],
               "distance": 0.0,
-              "response": "<|begin_of_box|>(512, 512)<|end_of_box|>",
+              "response": "(512, 512)",
               "error": null,
               "pass_number": 2,
-              "run_id": "shape_identification_glm-4.6v_custom_20251216_220102"
+              "run_id": "shape_identification_glm-4.6v_custom_20251217_142646"
             },
             {
               "predicted_coords": [
@@ -1908,7 +2224,7 @@
               "response": "(512, 512)",
               "error": null,
               "pass_number": 3,
-              "run_id": "shape_identification_glm-4.6v_custom_20251216_220209"
+              "run_id": "shape_identification_glm-4.6v_custom_20251217_142734"
             }
           ],
           "num_passes": 3
@@ -1929,35 +2245,35 @@
             {
               "predicted_coords": [
                 307,
+                512
+              ],
+              "distance": 0.0,
+              "response": "(307, 512)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "shape_identification_sonnet_custom_20251217_141758"
+            },
+            {
+              "predicted_coords": [
+                307,
                 511
               ],
               "distance": 1.0,
               "response": "(307, 511)",
               "error": null,
-              "pass_number": 1,
-              "run_id": "shape_identification_sonnet_custom_20251216_215405"
+              "pass_number": 2,
+              "run_id": "shape_identification_sonnet_custom_20251217_141840"
             },
             {
               "predicted_coords": [
-                308,
+                307,
                 512
               ],
-              "distance": 1.0,
-              "response": "(308, 512)",
-              "error": null,
-              "pass_number": 2,
-              "run_id": "shape_identification_sonnet_custom_20251216_215451"
-            },
-            {
-              "predicted_coords": [
-                308,
-                511
-              ],
-              "distance": 1.4142135623730951,
-              "response": "(308, 511)",
+              "distance": 0.0,
+              "response": "(307, 512)",
               "error": null,
               "pass_number": 3,
-              "run_id": "shape_identification_sonnet_custom_20251216_215537"
+              "run_id": "shape_identification_sonnet_custom_20251217_141927"
             }
           ],
           "num_passes": 3
@@ -1966,36 +2282,74 @@
           "predictions": [
             {
               "predicted_coords": [
-                298,
-                440
+                294,
+                432
               ],
-              "distance": 72.56031973468694,
-              "response": "(298, 440)",
+              "distance": 81.04936767180853,
+              "response": "(294, 432)",
               "error": null,
               "pass_number": 1,
-              "run_id": "shape_identification_opus_custom_20251216_215607"
+              "run_id": "shape_identification_opus_custom_20251217_141953"
             },
             {
               "predicted_coords": [
-                298,
-                428
+                295,
+                432
               ],
-              "distance": 84.48076704197234,
-              "response": "(298, 428)",
+              "distance": 80.89499366462674,
+              "response": "(295, 432)",
               "error": null,
               "pass_number": 2,
-              "run_id": "shape_identification_opus_custom_20251216_215631"
+              "run_id": "shape_identification_opus_custom_20251217_142025"
             },
             {
               "predicted_coords": [
-                298,
-                430
+                295,
+                425
               ],
-              "distance": 82.49242389456137,
-              "response": "(298, 430)",
+              "distance": 87.82368700982668,
+              "response": "(295, 425)",
               "error": null,
               "pass_number": 3,
-              "run_id": "shape_identification_opus_custom_20251216_215656"
+              "run_id": "shape_identification_opus_custom_20251217_142049"
+            }
+          ],
+          "num_passes": 3
+        },
+        "gemini3": {
+          "predictions": [
+            {
+              "predicted_coords": [
+                300,
+                500
+              ],
+              "distance": 13.892443989449804,
+              "response": "(300, 500)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "shape_identification_gemini3_custom_20251217_142124"
+            },
+            {
+              "predicted_coords": [
+                300,
+                500
+              ],
+              "distance": 13.892443989449804,
+              "response": "(300, 500)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "shape_identification_gemini3_custom_20251217_142155"
+            },
+            {
+              "predicted_coords": [
+                300,
+                500
+              ],
+              "distance": 13.892443989449804,
+              "response": "(300, 500)",
+              "error": null,
+              "pass_number": 3,
+              "run_id": "shape_identification_gemini3_custom_20251217_142226"
             }
           ],
           "num_passes": 3
@@ -2005,35 +2359,35 @@
             {
               "predicted_coords": [
                 290,
-                510
+                552
               ],
-              "distance": 17.11724276862369,
-              "response": "(290, 510)",
+              "distance": 43.46262762420146,
+              "response": "(290, 552)",
               "error": null,
               "pass_number": 1,
-              "run_id": "shape_identification_chatgpt_custom_20251216_215718"
+              "run_id": "shape_identification_chatgpt_custom_20251217_142238"
             },
             {
               "predicted_coords": [
-                286,
+                284,
                 512
               ],
-              "distance": 21.0,
-              "response": "(286, 512)",
+              "distance": 23.0,
+              "response": "(284, 512)",
               "error": null,
               "pass_number": 2,
-              "run_id": "shape_identification_chatgpt_custom_20251216_215728"
+              "run_id": "shape_identification_chatgpt_custom_20251217_142249"
             },
             {
               "predicted_coords": [
-                292,
+                281,
                 512
               ],
-              "distance": 15.0,
-              "response": "(292, 512)",
+              "distance": 26.0,
+              "response": "(281, 512)",
               "error": null,
               "pass_number": 3,
-              "run_id": "shape_identification_chatgpt_custom_20251216_215739"
+              "run_id": "shape_identification_chatgpt_custom_20251217_142300"
             }
           ],
           "num_passes": 3
@@ -2049,7 +2403,7 @@
               "response": "(512, 512)",
               "error": null,
               "pass_number": 1,
-              "run_id": "shape_identification_haiku_custom_20251216_215755"
+              "run_id": "shape_identification_haiku_custom_20251217_142316"
             },
             {
               "predicted_coords": [
@@ -2060,7 +2414,7 @@
               "response": "(512, 512)",
               "error": null,
               "pass_number": 2,
-              "run_id": "shape_identification_haiku_custom_20251216_215813"
+              "run_id": "shape_identification_haiku_custom_20251217_142330"
             },
             {
               "predicted_coords": [
@@ -2071,7 +2425,7 @@
               "response": "(512, 512)",
               "error": null,
               "pass_number": 3,
-              "run_id": "shape_identification_haiku_custom_20251216_215826"
+              "run_id": "shape_identification_haiku_custom_20251217_142346"
             }
           ],
           "num_passes": 3
@@ -2081,35 +2435,35 @@
             {
               "predicted_coords": [
                 512,
+                499
+              ],
+              "distance": 205.41178155110774,
+              "response": "(512, 499)",
+              "error": null,
+              "pass_number": 1,
+              "run_id": "shape_identification_qwen3-vl_custom_20251217_142402"
+            },
+            {
+              "predicted_coords": [
+                512,
                 512
               ],
               "distance": 205.0,
               "response": "(512, 512)",
               "error": null,
-              "pass_number": 1,
-              "run_id": "shape_identification_qwen3-vl_custom_20251216_215845"
-            },
-            {
-              "predicted_coords": [
-                288,
-                496
-              ],
-              "distance": 24.839484696748443,
-              "response": "(288, 496)",
-              "error": null,
               "pass_number": 2,
-              "run_id": "shape_identification_qwen3-vl_custom_20251216_215858"
+              "run_id": "shape_identification_qwen3-vl_custom_20251217_142422"
             },
             {
               "predicted_coords": [
-                296,
+                512,
                 499
               ],
-              "distance": 17.029386365926403,
-              "response": "(296, 499)",
+              "distance": 205.41178155110774,
+              "response": "(512, 499)",
               "error": null,
               "pass_number": 3,
-              "run_id": "shape_identification_qwen3-vl_custom_20251216_215914"
+              "run_id": "shape_identification_qwen3-vl_custom_20251217_142437"
             }
           ],
           "num_passes": 3
@@ -2125,7 +2479,18 @@
               "response": "(300, 500)",
               "error": null,
               "pass_number": 1,
-              "run_id": "shape_identification_glm-4.6v_custom_20251216_220014"
+              "run_id": "shape_identification_glm-4.6v_custom_20251217_142534"
+            },
+            {
+              "predicted_coords": [
+                307,
+                496
+              ],
+              "distance": 16.0,
+              "response": "(307, 496)",
+              "error": null,
+              "pass_number": 2,
+              "run_id": "shape_identification_glm-4.6v_custom_20251217_142646"
             },
             {
               "predicted_coords": [
@@ -2135,19 +2500,8 @@
               "distance": 51.0,
               "response": "(256, 512)",
               "error": null,
-              "pass_number": 2,
-              "run_id": "shape_identification_glm-4.6v_custom_20251216_220102"
-            },
-            {
-              "predicted_coords": [
-                300,
-                500
-              ],
-              "distance": 13.892443989449804,
-              "response": "(300, 500)",
-              "error": null,
               "pass_number": 3,
-              "run_id": "shape_identification_glm-4.6v_custom_20251216_220209"
+              "run_id": "shape_identification_glm-4.6v_custom_20251217_142734"
             }
           ],
           "num_passes": 3
