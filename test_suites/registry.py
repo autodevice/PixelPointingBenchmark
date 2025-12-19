@@ -65,6 +65,293 @@ DEFAULT_SYNTHETIC_TESTS = [
     },
 ]
 
+COLOR_IDENTIFICATION_TESTS = [
+    {
+        "name": "basic_red",
+        "prompt": "Point to the center of the red circle",
+        "shape": "circle",
+        "color": "red",
+        "position": "top_left",
+    },
+    {
+        "name": "basic_blue",
+        "prompt": "Point to the center of the blue circle",
+        "shape": "circle",
+        "color": "blue",
+        "position": "top_right",
+    },
+    {
+        "name": "basic_green",
+        "prompt": "Point to the center of the green circle",
+        "shape": "circle",
+        "color": "green",
+        "position": "bottom_left",
+    },
+    {
+        "name": "basic_yellow",
+        "prompt": "Point to the center of the yellow circle",
+        "shape": "circle",
+        "color": "yellow",
+        "position": "bottom_right",
+    },
+    {
+        "name": "subtle_red_orange",
+        "prompt": "Point to the center of the red-orange circle (not the pure orange one)",
+        "shape": "circle",
+        "color": "#FF4500",
+        "position": "left",
+        "multiple_shapes": True,
+        "shapes": [
+            {"shape": "circle", "color": "#FF4500", "position": "left"},
+            {"shape": "circle", "color": "orange", "position": "right"},
+        ],
+    },
+    {
+        "name": "subtle_blue_cyan",
+        "prompt": "Point to the center of the cyan circle (not the blue one)",
+        "shape": "circle",
+        "color": "cyan",
+        "position": "left",
+        "multiple_shapes": True,
+        "shapes": [
+            {"shape": "circle", "color": "cyan", "position": "left"},
+            {"shape": "circle", "color": "blue", "position": "right"},
+        ],
+    },
+    {
+        "name": "hexcode_1",
+        "prompt": "Point to the center of the circle with hex color #FF6B9D",
+        "shape": "circle",
+        "color": "#FF6B9D",
+        "position": "top_left",
+    },
+    {
+        "name": "hexcode_2",
+        "prompt": "Point to the center of the circle with hex color #4ECDC4",
+        "shape": "circle",
+        "color": "#4ECDC4",
+        "position": "top_right",
+    },
+    {
+        "name": "hexcode_3",
+        "prompt": "Point to the center of the circle with hex color #95E1D3",
+        "shape": "circle",
+        "color": "#95E1D3",
+        "position": "bottom_left",
+    },
+    {
+        "name": "hexcode_similar",
+        "prompt": "Point to the center of the circle with hex color #FF6B9D (not #FF6B9E)",
+        "shape": "circle",
+        "color": "#FF6B9D",
+        "position": "left",
+        "multiple_shapes": True,
+        "shapes": [
+            {"shape": "circle", "color": "#FF6B9D", "position": "left"},
+            {"shape": "circle", "color": "#FF6B9E", "position": "right"},
+        ],
+    },
+]
+
+SHAPE_IDENTIFICATION_TESTS = [
+    {
+        "name": "basic_circle",
+        "prompt": "Point to the center of the circle",
+        "shape": "circle",
+        "color": "blue",
+        "position": "center",
+    },
+    {
+        "name": "basic_square",
+        "prompt": "Point to the center of the square",
+        "shape": "square",
+        "color": "blue",
+        "position": "center",
+    },
+    {
+        "name": "basic_triangle",
+        "prompt": "Point to the center of the triangle",
+        "shape": "triangle",
+        "color": "blue",
+        "position": "center",
+    },
+    {
+        "name": "pentagon",
+        "prompt": "Point to the center of the pentagon",
+        "shape": "pentagon",
+        "color": "blue",
+        "position": "center",
+    },
+    {
+        "name": "hexagon",
+        "prompt": "Point to the center of the hexagon",
+        "shape": "hexagon",
+        "color": "blue",
+        "position": "center",
+    },
+    {
+        "name": "octagon",
+        "prompt": "Point to the center of the octagon",
+        "shape": "octagon",
+        "color": "blue",
+        "position": "center",
+    },
+    {
+        "name": "decagon_among_circles",
+        "prompt": "Point to the center of the decagon (the 10-sided polygon, not the circles)",
+        "shape": "decagon",
+        "color": "red",
+        "position": "center",
+        "multiple_shapes": True,
+        "shapes": [
+            {"shape": "circle", "color": "blue", "position": "top_left"},
+            {"shape": "circle", "color": "blue", "position": "top_right"},
+            {"shape": "decagon", "color": "red", "position": "center"},
+            {"shape": "circle", "color": "blue", "position": "bottom_left"},
+            {"shape": "circle", "color": "blue", "position": "bottom_right"},
+        ],
+    },
+    {
+        "name": "rounded_button",
+        "prompt": "Point to the center of the button with rounded corners",
+        "shape": "rounded_button",
+        "color": "green",
+        "position": "left",
+        "multiple_shapes": True,
+        "shapes": [
+            {"shape": "rounded_button", "color": "green", "position": "left"},
+            {"shape": "button", "color": "green", "position": "right"},
+        ],
+    },
+    {
+        "name": "hexagon_vs_octagon",
+        "prompt": "Point to the center of the hexagon (6 sides, not 8)",
+        "shape": "hexagon",
+        "color": "purple",
+        "position": "left",
+        "multiple_shapes": True,
+        "shapes": [
+            {"shape": "hexagon", "color": "purple", "position": "left"},
+            {"shape": "octagon", "color": "purple", "position": "right"},
+        ],
+    },
+]
+
+SIZE_COMPARISON_TESTS = [
+    {
+        "name": "larger_circle_obvious",
+        "prompt": "Point to the center of the larger circle",
+        "shape": "circle",
+        "color": "blue",
+        "position": "left",
+        "size": "large",
+        "multiple_shapes": True,
+        "shapes": [
+            {"shape": "circle", "color": "blue", "position": "left", "size": "large"},
+            {"shape": "circle", "color": "blue", "position": "right", "size": "small"},
+        ],
+    },
+    {
+        "name": "larger_circle_moderate",
+        "prompt": "Point to the center of the larger circle",
+        "shape": "circle",
+        "color": "blue",
+        "position": "left",
+        "size": "medium",
+        "multiple_shapes": True,
+        "shapes": [
+            {"shape": "circle", "color": "blue", "position": "left", "size": "medium"},
+            {"shape": "circle", "color": "blue", "position": "right", "size": "small"},
+        ],
+    },
+    {
+        "name": "larger_circle_subtle",
+        "prompt": "Point to the center of the larger circle",
+        "shape": "circle",
+        "color": "blue",
+        "position": "left",
+        "size": "medium",
+        "multiple_shapes": True,
+        "shapes": [
+            {"shape": "circle", "color": "blue", "position": "left", "size": "medium"},
+            {"shape": "circle", "color": "blue", "position": "right", "size": "medium", "size_override": 0.85},
+        ],
+    },
+    {
+        "name": "smaller_square_obvious",
+        "prompt": "Point to the center of the smaller square",
+        "shape": "square",
+        "color": "red",
+        "position": "right",
+        "size": "small",
+        "multiple_shapes": True,
+        "shapes": [
+            {"shape": "square", "color": "red", "position": "left", "size": "large"},
+            {"shape": "square", "color": "red", "position": "right", "size": "small"},
+        ],
+    },
+    {
+        "name": "smaller_square_moderate",
+        "prompt": "Point to the center of the smaller square",
+        "shape": "square",
+        "color": "red",
+        "position": "right",
+        "size": "small",
+        "multiple_shapes": True,
+        "shapes": [
+            {"shape": "square", "color": "red", "position": "left", "size": "medium"},
+            {"shape": "square", "color": "red", "position": "right", "size": "small"},
+        ],
+    },
+    {
+        "name": "smaller_square_subtle",
+        "prompt": "Point to the center of the smaller square",
+        "shape": "square",
+        "color": "red",
+        "position": "right",
+        "size": "small",
+        "multiple_shapes": True,
+        "shapes": [
+            {"shape": "square", "color": "red", "position": "left", "size": "medium"},
+            {"shape": "square", "color": "red", "position": "right", "size": "small"},
+        ],
+    },
+]
+
+RESOLUTION_SUITES = {
+    "resolution_test_256x256": (256, 256, "top_left"),
+    "resolution_test_512x512": (512, 512, "top_right"),
+    "resolution_test_1024x1024": (1024, 1024, "bottom_left"),
+    "resolution_test_2048x2048": (2048, 2048, "bottom_right"),
+    "resolution_test_4096x4096": (4096, 4096, "center"),
+}
+
+def _resolution_expected_center(width: int, height: int, position: str) -> List[int]:
+    if position == "center":
+        return [width // 2, height // 2]
+    if position == "top_right":
+        return [int(width * 0.75), int(height * 0.25)]
+    if position == "bottom_left":
+        return [int(width * 0.25), int(height * 0.75)]
+    if position == "top_left":
+        return [int(width * 0.25), int(height * 0.25)]
+    if position == "bottom_right":
+        return [int(width * 0.75), int(height * 0.75)]
+    return [width // 2, height // 2]
+
+def _resolution_suite_config(width: int, height: int, position: str) -> List[Dict[str, str]]:
+    return [
+        {
+            "name": "simple_rectangle",
+            "prompt": "Point to the center of the purple rectangle",
+            "shape": "square",
+            "color": "purple",
+            "position": position,
+            "size": "medium",
+            "expected_coords": _resolution_expected_center(width, height, position),
+        }
+    ]
+
 
 class TestSuiteRegistry:
     """Registry for managing test suites."""
@@ -81,6 +368,37 @@ class TestSuiteRegistry:
             configs=DEFAULT_SYNTHETIC_TESTS
         )
         self.register(basic_suite)
+        
+        color_suite = SyntheticTestSuite(
+            name="color_identification",
+            description="Color identification tests: basic colors → subtle differences → hexcode colors",
+            configs=COLOR_IDENTIFICATION_TESTS
+        )
+        self.register(color_suite)
+        
+        shape_suite = SyntheticTestSuite(
+            name="shape_identification",
+            description="Shape identification tests: basic shapes → subtle differences (decagon, rounded corners)",
+            configs=SHAPE_IDENTIFICATION_TESTS
+        )
+        self.register(shape_suite)
+        
+        for suite_name, (w, h, pos) in RESOLUTION_SUITES.items():
+            self.register(
+                SyntheticTestSuite(
+                    name=suite_name,
+                    description=f"Single rectangle pointing test at {w}x{h} (run with --width {w} --height {h})",
+                    configs=_resolution_suite_config(w, h, pos),
+                )
+            )
+        
+        
+        size_suite = SyntheticTestSuite(
+            name="size_comparison",
+            description="Size comparison tests: find larger/smaller shapes until indistinguishable",
+            configs=SIZE_COMPARISON_TESTS
+        )
+        self.register(size_suite)
     
     def register(self, suite: TestSuite):
         """Register a test suite."""

@@ -21,8 +21,12 @@ This benchmark evaluates how accurately different VLMs can identify and point to
   - Claude Sonnet 4
   - Claude Opus 4
   - Gemini 3 Pro
-  - GPT-5.1
+  - GPT-5.2
   - Claude Haiku 4
+  - Grok 4.1 (via OpenRouter)
+  - Qwen3-VL (via OpenRouter)
+  - GLM-4.6V (via OpenRouter)
+  - Gemini 2.5 Flash (via OpenRouter)
 - **Multiple Passes**: Run evaluations multiple times to calculate statistics and standard deviation
 - **Non-Overwriting Results**: Results are stored with timestamps, allowing multiple runs without overwriting
 - **Multiple Screen Sizes**: Test models across different screen dimensions and aspect ratios
@@ -56,7 +60,10 @@ pip install -r requirements.txt
    ANTHROPIC_API_KEY=your_anthropic_key
    OPENAI_API_KEY=your_openai_key
    GEMINI_API_KEY=your_gemini_key
+   OPENROUTER_API_KEY=your_openrouter_key
    ```
+   
+   Note: For OpenRouter models (grok-4.1, qwen3-vl, glm-4.6v, gemini-2.5-flash), you need to set `OPENROUTER_API_KEY`.
 
 ## Usage
 
@@ -68,6 +75,9 @@ The codebase has been refactored with a modular architecture. Use the new `evalu
 # List available test suites
 python evaluate.py --list-suites
 
+# Run a suite by itself (defaults to all available models, 3 passes)
+python evaluate.py --test-suite basic_shapes
+
 # Run a specific test suite with specific models
 python evaluate.py --test-suite basic_shapes --models sonnet opus gemini3
 
@@ -76,6 +86,30 @@ python evaluate.py --test-suite basic_shapes --models sonnet --num-passes 3
 
 # Custom screen size
 python evaluate.py --test-suite basic_shapes --width 1080 --height 2400
+```
+
+### Running Different Test Suites
+
+Suites available in this repo (see `python evaluate.py --list-suites`):
+
+- **basic_shapes**: simple shapes + a few harder variants (overlap, transparency, low contrast) at your chosen `--width/--height`
+- **color_identification**: basic colors → subtle differences → hex colors (square images recommended)
+- **shape_identification**: confusable shapes (e.g., hexagon vs octagon, decagon among circles)
+- **size_comparison**: “pick larger/smaller” comparisons (can trigger wrong-object clicks)
+- **resolution_test_256x256 / 512x512 / 1024x1024**: explicit per-resolution suites (recommended for resolution comparisons)
+
+Examples:
+
+```bash
+# Color/shape/size suites at 1024x1024
+python evaluate.py --test-suite color_identification --width 1024 --height 1024
+python evaluate.py --test-suite shape_identification --width 1024 --height 1024
+python evaluate.py --test-suite size_comparison --width 1024 --height 1024
+
+# Resolution sweep (run each suite at matching width/height)
+python evaluate.py --test-suite resolution_test_256x256 --width 256 --height 256
+python evaluate.py --test-suite resolution_test_512x512 --width 512 --height 512
+python evaluate.py --test-suite resolution_test_1024x1024 --width 1024 --height 1024
 ```
 
 ### Custom Options
@@ -132,9 +166,9 @@ This will:
 python -m http.server 8000
 ```
 
-Then open `http://localhost:8000/viewer_v2.html` in your browser (or `viewer.html` for the legacy viewer).
+Then open `http://localhost:8000/index.html` in your browser.
 
-**Using the Enhanced Viewer (viewer_v2.html):**
+**Using the Enhanced Viewer (index.html):**
 
 1. Select the results directory (default: `results`)
 2. Select a test suite from the dropdown
@@ -143,7 +177,6 @@ Then open `http://localhost:8000/viewer_v2.html` in your browser (or `viewer.htm
    - Show/hide specific models
    - Show/hide specific passes (for multi-pass runs)
 5. Browse through test images with visual overlays showing:
-   - **Black circle with white center**: Ground truth location
    - **Colored dots**: Each model's prediction (multiple passes shown with reduced opacity)
    - **Legend**: Click legend items to toggle model visibility
    - **Statistics**: Mean distance, standard deviation, and min/max across passes
@@ -231,12 +264,16 @@ The benchmark calculates several accuracy metrics:
 
 ## Model Colors in Viewer
 
-The enhanced viewer (viewer_v2.html) uses the following color scheme:
+The enhanced viewer (index.html) uses the following color scheme:
 - **Sonnet**: rgb(168, 2, 15) (Red)
 - **Opus**: rgb(255, 132, 0) (Orange)
 - **Gemini3**: rgb(0, 255, 76) (Green)
 - **ChatGPT**: rgb(17, 160, 207) (Blue)
 - **Haiku**: rgb(164, 11, 224) (Purple)
+- **Grok-4.1**: rgb(255, 20, 147) (Deep Pink)
+- **Qwen3-VL**: rgb(34, 139, 34) (Forest Green)
+- **GLM-4.6V**: rgb(25, 6, 133) (Orange)
+- **Gemini-2.5-Flash**: rgb(255, 0, 43) (Dodger Blue)
 - **Ground Truth**: Black circle with white center
 
 Colors are displayed as dots next to model names in the statistics section.

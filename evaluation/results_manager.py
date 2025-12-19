@@ -127,7 +127,11 @@ class ResultsManager:
     def consolidate_results(
         self, test_suite: str, screen_size: str, models: List[str]
     ) -> Dict[str, Any]:
-        """Consolidate all runs into a single results file for the viewer."""
+        """Consolidate all runs into a single results file for the viewer.
+        
+        For each model, uses the latest run (by timestamp) and includes all passes from that run.
+        This ensures we show the most recent results while preserving all passes for statistics.
+        """
         suite_dir = self.results_dir / test_suite / screen_size
         
         all_runs = self.load_runs(test_suite, screen_size)
@@ -141,8 +145,64 @@ class ResultsManager:
             "tests": [],
         }
         
+        latest_runs_by_model = {}
+        
+        for model, model_runs in all_runs.items():
+            if not model_runs:
+                continue
+            
+            run_groups = []
+            
+            for run in model_runs:
+                run_timestamp = run.get("timestamp")
+                pass_num = run.get("pass_number")
+                
+                if not run_timestamp:
+                    continue
+                
+                try:
+                    timestamp_dt = datetime.fromisoformat(run_timestamp.replace('Z', '+00:00'))
+                except (ValueError, AttributeError):
+                    continue
+                
+                added_to_group = False
+                for group in run_groups:
+                    group_timestamp = group[0].get("timestamp")
+                    try:
+                        group_timestamp_dt = datetime.fromisoformat(group_timestamp.replace('Z', '+00:00'))
+                        time_diff = abs((timestamp_dt - group_timestamp_dt).total_seconds())
+                        
+                        if time_diff < 3600:
+                            group.append(run)
+                            added_to_group = True
+                            break
+                    except (ValueError, AttributeError):
+                        continue
+                
+                if not added_to_group:
+                    run_groups.append([run])
+            
+            if not run_groups:
+                continue
+            
+            def get_latest_timestamp(group):
+                timestamps = []
+                for r in group:
+                    ts = r.get("timestamp")
+                    if ts:
+                        try:
+                            timestamp_dt = datetime.fromisoformat(ts.replace('Z', '+00:00'))
+                            timestamps.append(timestamp_dt)
+                        except (ValueError, AttributeError):
+                            continue
+                return max(timestamps) if timestamps else datetime.min
+            
+            latest_group = max(run_groups, key=get_latest_timestamp)
+            
+            latest_runs_by_model[model] = latest_group
+        
         test_names = set()
-        for model_runs in all_runs.values():
+        for model_runs in latest_runs_by_model.values():
             for run in model_runs:
                 if consolidated["screen_size"]["width"] is None and run.get("screen_size"):
                     consolidated["screen_size"]["width"] = run["screen_size"].get("width")
@@ -162,10 +222,10 @@ class ResultsManager:
             }
             
             for model in models:
-                if model not in all_runs:
+                if model not in latest_runs_by_model:
                     continue
                 
-                model_runs = all_runs[model]
+                model_runs = latest_runs_by_model[model]
                 model_predictions = []
                 
                 for run in model_runs:
@@ -180,6 +240,15 @@ class ResultsManager:
                                 model_predictions.append({
                                     "predicted_coords": result["predicted_coords"],
                                     "distance": result.get("distance"),
+                                    "response": result.get("response"),
+                                    "error": result.get("error"),
+                                    "pass_number": run.get("pass_number"),
+                                    "run_id": run.get("run_id"),
+                                })
+                            elif result.get("error"):
+                                model_predictions.append({
+                                    "predicted_coords": None,
+                                    "distance": None,
                                     "response": result.get("response"),
                                     "error": result.get("error"),
                                     "pass_number": run.get("pass_number"),

@@ -1,5 +1,6 @@
 import re
 import base64
+import os
 from io import BytesIO
 from typing import Optional, Tuple, Dict, Any
 import litellm
@@ -10,9 +11,12 @@ from PIL import Image
 class VLMEvaluator:
     """Evaluates VLMs using LiteLLM."""
 
-    def __init__(self, model: str):
+    def __init__(self, model: str, debug: bool = False):
         self.model = model
-        litellm.set_verbose = False
+        self.debug = debug
+        litellm.set_verbose = debug
+        if debug:
+            litellm._turn_on_debug()
 
     def query_model(
         self, image: np.ndarray, prompt: str
@@ -36,11 +40,18 @@ class VLMEvaluator:
                 "estimated_tokens": int(pixels / 750),
             }
 
+            prompt = (
+                f"{prompt}\n\n"
+                f"Image dimensions: {width} pixels wide × {height} pixels tall.\n"
+                f"Coordinate system: The top-left corner is (0, 0) and ({width}, {height}) is the bottom-right. \n"
+                f"Respond with only the coordinates in the format: (x, y)"
+            )
+
             messages = [
                 {
                     "role": "user",
                     "content": [
-                        {"type": "text", "text": f"{prompt}\n\nRespond with only the coordinates in the format: (x, y)"},
+                        {"type": "text", "text": prompt},
                         {
                             "type": "image_url",
                             "image_url": {
@@ -51,27 +62,102 @@ class VLMEvaluator:
                 }
             ]
 
+            base_url = None
+            completion_kwargs = {}
+            
+            if "openrouter" in self.model.lower():
+                # Get OpenRouter configuration (matching test_glm_comparison.py)
+                openrouter_api_key = os.getenv("OPENROUTER_API_KEY")
+                openrouter_base_url = os.getenv("OPENROUTER_API_BASE", "https://openrouter.ai/api/v1")
+                
+                if not openrouter_api_key:
+                    return None, Exception("OPENROUTER_API_KEY not set"), metadata
+                
+                # Explicitly set environment variables for OpenRouter (required by LiteLLM)
+                os.environ["OPENROUTER_API_KEY"] = openrouter_api_key
+                os.environ["OPENROUTER_API_BASE"] = openrouter_base_url
+                base_url = openrouter_base_url
+                # Don't set max_tokens for OpenRouter (let model decide, matching test file)
+                completion_kwargs = {}
+            elif "gemini" in self.model.lower():
+                gemini_api_key = os.getenv("GEMINI_API_KEY")
+                if gemini_api_key:
+                    os.environ["GEMINI_API_KEY"] = gemini_api_key
+                
+                # Use direct Gemini API endpoint (not Vertex AI)
+                # base_url = "https://generativelanguage.googleapis.com"
+                
+                # completion_kwargs = {
+                #     "max_tokens": 512,
+                #     "max_output_tokens": 512,
+                #     "extra_body": {
+                #         "generationConfig": {
+                #             "thinkingConfig": {"includeThoughts": False}
+                #         }
+                #     },
+                # }
+            else:
+                # Default for other models (Anthropic, OpenAI, etc.)
+                completion_kwargs = {"max_tokens": 100}
+            
             response = litellm.completion(
                 model=self.model,
                 messages=messages,
-                max_tokens=100,
+                base_url=base_url,
+                **completion_kwargs
             )
 
+            if not response or not response.choices:
+                return None, Exception("Empty response from model"), metadata
+            
             content = response.choices[0].message.content
+            
+            if content is None or content.strip() == "":
+                # Debug: Check response structure
+                debug_info = f"Response object type: {type(response)}"
+                if hasattr(response, 'model'):
+                    debug_info += f", model: {response.model}"
+                if hasattr(response, 'choices') and len(response.choices) > 0:
+                    choice = response.choices[0]
+                    debug_info += f", choice type: {type(choice)}"
+                    if hasattr(choice, 'message'):
+                        msg = choice.message
+                        debug_info += f", message type: {type(msg)}"
+                        if hasattr(msg, 'content'):
+                            debug_info += f", content type: {type(msg.content)}, content: {repr(msg.content)}"
+                
+                error_msg = f"Model returned empty response (model: {self.model}). {debug_info}"
+                if "openrouter" in self.model.lower():
+                    error_msg += " Check OpenRouter API key and model availability."
+                return None, Exception(error_msg), metadata
+            
             return content, None, metadata
 
         except Exception as e:
             error_msg = str(e)
             
+            if "openrouter" in self.model.lower():
+                if "API key" in error_msg or "authentication" in error_msg.lower() or "401" in error_msg or "403" in error_msg:
+                    return None, Exception(f"OpenRouter API Error: Invalid or missing API key. Please check your OPENROUTER_API_KEY environment variable."), metadata
+                elif "quota" in error_msg.lower() or "429" in error_msg:
+                    return None, Exception(f"OpenRouter API Error: Quota exceeded. Please check your API usage limits."), metadata
+                elif "not found" in error_msg.lower() or "404" in error_msg or "invalid model" in error_msg.lower():
+                    return None, Exception(f"OpenRouter API Error: Model not found or invalid. Model: {self.model}"), metadata
+                else:
+                    return None, Exception(f"OpenRouter API Error: {error_msg}"), metadata
+            
             if "gemini" in self.model.lower():
-                if "API key" in error_msg or "INVALID_ARGUMENT" in error_msg:
+                if "API key" in error_msg or "INVALID_ARGUMENT" in error_msg or "authentication" in error_msg.lower():
                     return None, Exception(f"Gemini API Error: Invalid or missing API key. Please check your GEMINI_API_KEY environment variable."), metadata
-                elif "QUOTA_EXCEEDED" in error_msg or "quota" in error_msg.lower():
+                elif "QUOTA_EXCEEDED" in error_msg or "quota" in error_msg.lower() or "429" in error_msg:
                     return None, Exception(f"Gemini API Error: Quota exceeded. Please check your API usage limits."), metadata
                 elif "SAFETY" in error_msg or "safety" in error_msg.lower():
                     return None, Exception(f"Gemini API Error: Content was blocked by safety filters."), metadata
+                elif "No module named 'google'" in error_msg or "vertex" in error_msg.lower():
+                    return None, Exception(f"Gemini API Error: LiteLLM is trying to use Vertex AI instead of direct API. This usually means the model ID format is incorrect. Model: {self.model}. Try using 'gemini/gemini-3-flash-preview' format."), metadata
                 else:
-                    return None, Exception(f"Gemini API Error: {error_msg}"), metadata
+                    debug_hint = " Enable LiteLLM debug mode by setting LITELLM_DEBUG=1 or using --debug flag for more details." if not self.debug else ""
+                    return None, Exception(f"Gemini API Error: {error_msg}{debug_hint}"), metadata
             
             return None, e, metadata
 

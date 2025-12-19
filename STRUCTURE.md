@@ -25,8 +25,8 @@ PixelPointingBenchmark/
 │
 ├── evaluate.py             # Main entry point
 ├── serve_viewer.py         # Web server for viewer
-├── viewer_v2.html          # Enhanced results viewer
-└── viewer.html             # Legacy viewer
+└── index.html              # Results viewer
+
 ```
 
 ## Module Dependencies
@@ -76,5 +76,5 @@ PixelPointingBenchmark/
 2. **Test Suites**: `test_suites` manages test configurations
 3. **Evaluation**: `evaluation.runner` orchestrates VLM queries
 4. **Results**: `evaluation.results_manager` stores and consolidates results
-5. **Visualization**: `viewer_v2.html` displays consolidated results
+5. **Visualization**: `index.html` displays consolidated results
 
