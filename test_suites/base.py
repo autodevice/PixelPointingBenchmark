@@ -57,7 +57,7 @@ class SyntheticTestSuite(TestSuite):
                 sys.path.insert(0, str(Path(__file__).parent.parent))
                 from test_generation.image_generator import ImageGenerator
             self.generator = ImageGenerator(width, height)
-        print("debug: config", config)
+        # print("debug: config", config)
         return self.generator.generate_image(config)
 
 

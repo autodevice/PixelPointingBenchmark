@@ -11,6 +11,7 @@ from test_suites.registry import registry
 
 
 MODELS = {
+    "gemini3-flash": "gemini/gemini-3-flash-preview",
     "sonnet": "anthropic/claude-sonnet-4-20250514",
     "opus": "anthropic/claude-opus-4-5-20251101",
     "gemini3": "gemini/gemini-3-pro-preview",
@@ -49,7 +50,7 @@ def run_evaluation(
     if save_images:
         for config in test_configs:
             image, expected_coords = test_suite.generate_test_image(config, screen_width, screen_height)
-            print("debug: expected_coords", expected_coords)
+            # print("debug: expected_coords", expected_coords)
             img_path = images_dir / f"{config['name']}.png"
             Image.fromarray(image).save(img_path)
             test_images[config['name']] = (image, expected_coords)

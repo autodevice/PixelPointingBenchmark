@@ -1,0 +1,63 @@
+{
+  "run_id": "resolution_test_512x512_qwen3-vl_custom_20251218_163448",
+  "test_suite": "resolution_test_512x512",
+  "model": "qwen3-vl",
+  "model_id": "openrouter/qwen/qwen3-vl-235b-a22b-instruct",
+  "screen_size": {
+    "name": "custom",
+    "width": 512,
+    "height": 512
+  },
+  "pass_number": 3,
+  "timestamp": "2025-12-18T16:34:48.954761",
+  "metrics": {
+    "total_tests": 1,
+    "successful_extractions": 1,
+    "extraction_rate": 100.0,
+    "mean_distance": 22.0,
+    "median_distance": 22.0,
+    "max_distance": 22.0,
+    "min_distance": 22.0,
+    "accuracy_within_5px": 0.0,
+    "accuracy_within_10px": 0.0,
+    "accuracy_within_5_percent": 100.0
+  },
+  "results": [
+    {
+      "test_name": "simple_rectangle",
+      "prompt": "Point to the center of the purple rectangle",
+      "expected_coords": [
+        384,
+        128
+      ],
+      "response": "(384, 150)",
+      "predicted_coords": [
+        384,
+        150
+      ],
+      "distance": 22.0,
+      "error": null,
+      "image_metadata": {
+        "size": [
+          512,
+          512
+        ],
+        "estimated_tokens": 349
+      }
+    }
+  ],
+  "test_configs": [
+    {
+      "name": "simple_rectangle",
+      "prompt": "Point to the center of the purple rectangle",
+      "shape": "square",
+      "color": "purple",
+      "position": "top_right",
+      "size": "medium",
+      "expected_coords": [
+        384,
+        128
+      ]
+    }
+  ]
+}

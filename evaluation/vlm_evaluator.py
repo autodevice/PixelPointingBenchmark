@@ -11,9 +11,12 @@ from PIL import Image
 class VLMEvaluator:
     """Evaluates VLMs using LiteLLM."""
 
-    def __init__(self, model: str):
+    def __init__(self, model: str, debug: bool = False):
         self.model = model
-        litellm.set_verbose = False
+        self.debug = debug
+        litellm.set_verbose = debug
+        if debug:
+            litellm._turn_on_debug()
 
     def query_model(
         self, image: np.ndarray, prompt: str
@@ -80,17 +83,19 @@ class VLMEvaluator:
                 gemini_api_key = os.getenv("GEMINI_API_KEY")
                 if gemini_api_key:
                     os.environ["GEMINI_API_KEY"] = gemini_api_key
-
-                completion_kwargs = {
-                    "temperature": 0,
-                    "max_tokens": 512,
-                    "max_output_tokens": 512,
-                    "extra_body": {
-                        "generationConfig": {
-                            "thinkingConfig": {"includeThoughts": False}
-                        }
-                    },
-                }
+                
+                # Use direct Gemini API endpoint (not Vertex AI)
+                # base_url = "https://generativelanguage.googleapis.com"
+                
+                # completion_kwargs = {
+                #     "max_tokens": 512,
+                #     "max_output_tokens": 512,
+                #     "extra_body": {
+                #         "generationConfig": {
+                #             "thinkingConfig": {"includeThoughts": False}
+                #         }
+                #     },
+                # }
             else:
                 # Default for other models (Anthropic, OpenAI, etc.)
                 completion_kwargs = {"max_tokens": 100}
@@ -142,14 +147,17 @@ class VLMEvaluator:
                     return None, Exception(f"OpenRouter API Error: {error_msg}"), metadata
             
             if "gemini" in self.model.lower():
-                if "API key" in error_msg or "INVALID_ARGUMENT" in error_msg:
+                if "API key" in error_msg or "INVALID_ARGUMENT" in error_msg or "authentication" in error_msg.lower():
                     return None, Exception(f"Gemini API Error: Invalid or missing API key. Please check your GEMINI_API_KEY environment variable."), metadata
-                elif "QUOTA_EXCEEDED" in error_msg or "quota" in error_msg.lower():
+                elif "QUOTA_EXCEEDED" in error_msg or "quota" in error_msg.lower() or "429" in error_msg:
                     return None, Exception(f"Gemini API Error: Quota exceeded. Please check your API usage limits."), metadata
                 elif "SAFETY" in error_msg or "safety" in error_msg.lower():
                     return None, Exception(f"Gemini API Error: Content was blocked by safety filters."), metadata
+                elif "No module named 'google'" in error_msg or "vertex" in error_msg.lower():
+                    return None, Exception(f"Gemini API Error: LiteLLM is trying to use Vertex AI instead of direct API. This usually means the model ID format is incorrect. Model: {self.model}. Try using 'gemini/gemini-3-flash-preview' format."), metadata
                 else:
-                    return None, Exception(f"Gemini API Error: {error_msg}"), metadata
+                    debug_hint = " Enable LiteLLM debug mode by setting LITELLM_DEBUG=1 or using --debug flag for more details." if not self.debug else ""
+                    return None, Exception(f"Gemini API Error: {error_msg}{debug_hint}"), metadata
             
             return None, e, metadata
 

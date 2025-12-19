@@ -79,7 +79,7 @@ class ImageGenerator:
         bg_color_name = config.get("background", "white")
         
         expected_coords = config.get("expected_coords")
-        print("debug: expected_coords", expected_coords)
+        # print("debug: expected_coords", expected_coords)
         if expected_coords:
             if isinstance(expected_coords, list) and len(expected_coords) == 2:
                 center_x, center_y = expected_coords[0], expected_coords[1]
