@@ -1,0 +1,138 @@
+{
+  "gemini3-flash": [
+    {
+      "run_id": "color_identification_gemini3-flash_custom_20251218_165701",
+      "pass_number": 1,
+      "timestamp": "2025-12-18T16:57:01.826450"
+    },
+    {
+      "run_id": "color_identification_gemini3-flash_custom_20251218_165730",
+      "pass_number": 2,
+      "timestamp": "2025-12-18T16:57:30.222345"
+    },
+    {
+      "run_id": "color_identification_gemini3-flash_custom_20251218_165801",
+      "pass_number": 3,
+      "timestamp": "2025-12-18T16:58:01.852018"
+    }
+  ],
+  "sonnet": [
+    {
+      "run_id": "color_identification_sonnet_custom_20251218_165824",
+      "pass_number": 1,
+      "timestamp": "2025-12-18T16:58:24.594186"
+    },
+    {
+      "run_id": "color_identification_sonnet_custom_20251218_170115",
+      "pass_number": 2,
+      "timestamp": "2025-12-18T17:01:15.581875"
+    },
+    {
+      "run_id": "color_identification_sonnet_custom_20251218_170143",
+      "pass_number": 3,
+      "timestamp": "2025-12-18T17:01:43.246644"
+    }
+  ],
+  "opus": [
+    {
+      "run_id": "color_identification_opus_custom_20251218_170212",
+      "pass_number": 1,
+      "timestamp": "2025-12-18T17:02:12.733382"
+    },
+    {
+      "run_id": "color_identification_opus_custom_20251218_170243",
+      "pass_number": 2,
+      "timestamp": "2025-12-18T17:02:43.525623"
+    },
+    {
+      "run_id": "color_identification_opus_custom_20251218_170316",
+      "pass_number": 3,
+      "timestamp": "2025-12-18T17:03:16.841900"
+    }
+  ],
+  "gemini3": [
+    {
+      "run_id": "color_identification_gemini3_custom_20251218_170349",
+      "pass_number": 1,
+      "timestamp": "2025-12-18T17:03:49.083363"
+    },
+    {
+      "run_id": "color_identification_gemini3_custom_20251218_170421",
+      "pass_number": 2,
+      "timestamp": "2025-12-18T17:04:21.256014"
+    },
+    {
+      "run_id": "color_identification_gemini3_custom_20251218_170454",
+      "pass_number": 3,
+      "timestamp": "2025-12-18T17:04:54.676930"
+    }
+  ],
+  "chatgpt": [
+    {
+      "run_id": "color_identification_chatgpt_custom_20251218_170508",
+      "pass_number": 1,
+      "timestamp": "2025-12-18T17:05:08.950120"
+    },
+    {
+      "run_id": "color_identification_chatgpt_custom_20251218_170521",
+      "pass_number": 2,
+      "timestamp": "2025-12-18T17:05:21.944175"
+    },
+    {
+      "run_id": "color_identification_chatgpt_custom_20251218_170534",
+      "pass_number": 3,
+      "timestamp": "2025-12-18T17:05:34.024977"
+    }
+  ],
+  "haiku": [
+    {
+      "run_id": "color_identification_haiku_custom_20251218_170547",
+      "pass_number": 1,
+      "timestamp": "2025-12-18T17:05:47.854303"
+    },
+    {
+      "run_id": "color_identification_haiku_custom_20251218_170602",
+      "pass_number": 2,
+      "timestamp": "2025-12-18T17:06:02.856815"
+    },
+    {
+      "run_id": "color_identification_haiku_custom_20251218_170620",
+      "pass_number": 3,
+      "timestamp": "2025-12-18T17:06:20.447711"
+    }
+  ],
+  "qwen3-vl": [
+    {
+      "run_id": "color_identification_qwen3-vl_custom_20251218_170717",
+      "pass_number": 1,
+      "timestamp": "2025-12-18T17:07:17.792595"
+    },
+    {
+      "run_id": "color_identification_qwen3-vl_custom_20251218_170745",
+      "pass_number": 2,
+      "timestamp": "2025-12-18T17:07:45.339077"
+    },
+    {
+      "run_id": "color_identification_qwen3-vl_custom_20251218_171004",
+      "pass_number": 3,
+      "timestamp": "2025-12-18T17:10:04.182808"
+    }
+  ],
+  "glm-4.6v": [
+    {
+      "run_id": "color_identification_glm-4.6v_custom_20251218_171210",
+      "pass_number": 1,
+      "timestamp": "2025-12-18T17:12:10.055779"
+    },
+    {
+      "run_id": "color_identification_glm-4.6v_custom_20251218_171425",
+      "pass_number": 2,
+      "timestamp": "2025-12-18T17:14:25.839740"
+    },
+    {
+      "run_id": "color_identification_glm-4.6v_custom_20251218_171600",
+      "pass_number": 3,
+      "timestamp": "2025-12-18T17:16:00.361438"
+    }
+  ]
+}

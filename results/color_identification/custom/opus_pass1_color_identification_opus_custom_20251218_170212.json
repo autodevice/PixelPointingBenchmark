@@ -1,0 +1,355 @@
+{
+  "run_id": "color_identification_opus_custom_20251218_170212",
+  "test_suite": "color_identification",
+  "model": "opus",
+  "model_id": "anthropic/claude-opus-4-5-20251101",
+  "screen_size": {
+    "name": "custom",
+    "width": 1024,
+    "height": 1024
+  },
+  "pass_number": 1,
+  "timestamp": "2025-12-18T17:02:12.732965",
+  "metrics": {
+    "total_tests": 10,
+    "successful_extractions": 9,
+    "extraction_rate": 90.0,
+    "mean_distance": 57.78116798797365,
+    "median_distance": 63.0,
+    "max_distance": 114.43775600735974,
+    "min_distance": 14.142135623730951,
+    "accuracy_within_5px": 0.0,
+    "accuracy_within_10px": 0.0,
+    "accuracy_within_5_percent": 66.66666666666666
+  },
+  "results": [
+    {
+      "test_name": "basic_red",
+      "prompt": "Point to the center of the red circle",
+      "expected_coords": [
+        256,
+        256
+      ],
+      "response": "(227, 197)",
+      "predicted_coords": [
+        227,
+        197
+      ],
+      "distance": 65.7419196555744,
+      "error": null,
+      "image_metadata": {
+        "size": [
+          1024,
+          1024
+        ],
+        "estimated_tokens": 1398
+      }
+    },
+    {
+      "test_name": "basic_blue",
+      "prompt": "Point to the center of the blue circle",
+      "expected_coords": [
+        768,
+        256
+      ],
+      "response": "(770, 230)",
+      "predicted_coords": [
+        770,
+        230
+      ],
+      "distance": 26.076809620810597,
+      "error": null,
+      "image_metadata": {
+        "size": [
+          1024,
+          1024
+        ],
+        "estimated_tokens": 1398
+      }
+    },
+    {
+      "test_name": "basic_green",
+      "prompt": "Point to the center of the green circle",
+      "expected_coords": [
+        256,
+        768
+      ],
+      "response": "(beckz, 670)",
+      "predicted_coords": null,
+      "distance": null,
+      "error": "Could not extract coordinates",
+      "image_metadata": {
+        "size": [
+          1024,
+          1024
+        ],
+        "estimated_tokens": 1398
+      }
+    },
+    {
+      "test_name": "basic_yellow",
+      "prompt": "Point to the center of the yellow circle",
+      "expected_coords": [
+        768,
+        768
+      ],
+      "response": "(760, 680)",
+      "predicted_coords": [
+        760,
+        680
+      ],
+      "distance": 88.36288813749809,
+      "error": null,
+      "image_metadata": {
+        "size": [
+          1024,
+          1024
+        ],
+        "estimated_tokens": 1398
+      }
+    },
+    {
+      "test_name": "subtle_red_orange",
+      "prompt": "Point to the center of the red-orange circle (not the pure orange one)",
+      "expected_coords": [
+        307,
+        512
+      ],
+      "response": "(314, 472)",
+      "predicted_coords": [
+        314,
+        472
+      ],
+      "distance": 40.607881008493905,
+      "error": null,
+      "image_metadata": {
+        "size": [
+          1024,
+          1024
+        ],
+        "estimated_tokens": 1398
+      }
+    },
+    {
+      "test_name": "subtle_blue_cyan",
+      "prompt": "Point to the center of the cyan circle (not the blue one)",
+      "expected_coords": [
+        307,
+        512
+      ],
+      "response": "(323, 432)",
+      "predicted_coords": [
+        323,
+        432
+      ],
+      "distance": 81.58431221748455,
+      "error": null,
+      "image_metadata": {
+        "size": [
+          1024,
+          1024
+        ],
+        "estimated_tokens": 1398
+      }
+    },
+    {
+      "test_name": "hexcode_1",
+      "prompt": "Point to the center of the circle with hex color #FF6B9D",
+      "expected_coords": [
+        256,
+        256
+      ],
+      "response": "(246, 246)",
+      "predicted_coords": [
+        246,
+        246
+      ],
+      "distance": 14.142135623730951,
+      "error": null,
+      "image_metadata": {
+        "size": [
+          1024,
+          1024
+        ],
+        "estimated_tokens": 1398
+      }
+    },
+    {
+      "test_name": "hexcode_2",
+      "prompt": "Point to the center of the circle with hex color #4ECDC4",
+      "expected_coords": [
+        768,
+        256
+      ],
+      "response": "(770, 230)",
+      "predicted_coords": [
+        770,
+        230
+      ],
+      "distance": 26.076809620810597,
+      "error": null,
+      "image_metadata": {
+        "size": [
+          1024,
+          1024
+        ],
+        "estimated_tokens": 1398
+      }
+    },
+    {
+      "test_name": "hexcode_3",
+      "prompt": "Point to the center of the circle with hex color #95E1D3",
+      "expected_coords": [
+        256,
+        768
+      ],
+      "response": "(246, 654)",
+      "predicted_coords": [
+        246,
+        654
+      ],
+      "distance": 114.43775600735974,
+      "error": null,
+      "image_metadata": {
+        "size": [
+          1024,
+          1024
+        ],
+        "estimated_tokens": 1398
+      }
+    },
+    {
+      "test_name": "hexcode_similar",
+      "prompt": "Point to the center of the circle with hex color #FF6B9D (not #FF6B9E)",
+      "expected_coords": [
+        307,
+        512
+      ],
+      "response": "(307, 449)",
+      "predicted_coords": [
+        307,
+        449
+      ],
+      "distance": 63.0,
+      "error": null,
+      "image_metadata": {
+        "size": [
+          1024,
+          1024
+        ],
+        "estimated_tokens": 1398
+      }
+    }
+  ],
+  "test_configs": [
+    {
+      "name": "basic_red",
+      "prompt": "Point to the center of the red circle",
+      "shape": "circle",
+      "color": "red",
+      "position": "top_left"
+    },
+    {
+      "name": "basic_blue",
+      "prompt": "Point to the center of the blue circle",
+      "shape": "circle",
+      "color": "blue",
+      "position": "top_right"
+    },
+    {
+      "name": "basic_green",
+      "prompt": "Point to the center of the green circle",
+      "shape": "circle",
+      "color": "green",
+      "position": "bottom_left"
+    },
+    {
+      "name": "basic_yellow",
+      "prompt": "Point to the center of the yellow circle",
+      "shape": "circle",
+      "color": "yellow",
+      "position": "bottom_right"
+    },
+    {
+      "name": "subtle_red_orange",
+      "prompt": "Point to the center of the red-orange circle (not the pure orange one)",
+      "shape": "circle",
+      "color": "#FF4500",
+      "position": "left",
+      "multiple_shapes": true,
+      "shapes": [
+        {
+          "shape": "circle",
+          "color": "#FF4500",
+          "position": "left"
+        },
+        {
+          "shape": "circle",
+          "color": "orange",
+          "position": "right"
+        }
+      ]
+    },
+    {
+      "name": "subtle_blue_cyan",
+      "prompt": "Point to the center of the cyan circle (not the blue one)",
+      "shape": "circle",
+      "color": "cyan",
+      "position": "left",
+      "multiple_shapes": true,
+      "shapes": [
+        {
+          "shape": "circle",
+          "color": "cyan",
+          "position": "left"
+        },
+        {
+          "shape": "circle",
+          "color": "blue",
+          "position": "right"
+        }
+      ]
+    },
+    {
+      "name": "hexcode_1",
+      "prompt": "Point to the center of the circle with hex color #FF6B9D",
+      "shape": "circle",
+      "color": "#FF6B9D",
+      "position": "top_left"
+    },
+    {
+      "name": "hexcode_2",
+      "prompt": "Point to the center of the circle with hex color #4ECDC4",
+      "shape": "circle",
+      "color": "#4ECDC4",
+      "position": "top_right"
+    },
+    {
+      "name": "hexcode_3",
+      "prompt": "Point to the center of the circle with hex color #95E1D3",
+      "shape": "circle",
+      "color": "#95E1D3",
+      "position": "bottom_left"
+    },
+    {
+      "name": "hexcode_similar",
+      "prompt": "Point to the center of the circle with hex color #FF6B9D (not #FF6B9E)",
+      "shape": "circle",
+      "color": "#FF6B9D",
+      "position": "left",
+      "multiple_shapes": true,
+      "shapes": [
+        {
+          "shape": "circle",
+          "color": "#FF6B9D",
+          "position": "left"
+        },
+        {
+          "shape": "circle",
+          "color": "#FF6B9E",
+          "position": "right"
+        }
+      ]
+    }
+  ]
+}

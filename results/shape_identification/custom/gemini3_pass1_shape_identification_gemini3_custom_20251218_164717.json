@@ -1,0 +1,344 @@
+{
+  "run_id": "shape_identification_gemini3_custom_20251218_164717",
+  "test_suite": "shape_identification",
+  "model": "gemini3",
+  "model_id": "gemini/gemini-3-pro-preview",
+  "screen_size": {
+    "name": "custom",
+    "width": 1024,
+    "height": 1024
+  },
+  "pass_number": 1,
+  "timestamp": "2025-12-18T16:47:17.267068",
+  "metrics": {
+    "total_tests": 9,
+    "successful_extractions": 9,
+    "extraction_rate": 100.0,
+    "mean_distance": 17.22502320518273,
+    "median_distance": 16.97056274847714,
+    "max_distance": 23.323807579381203,
+    "min_distance": 13.892443989449804,
+    "accuracy_within_5px": 0.0,
+    "accuracy_within_10px": 0.0,
+    "accuracy_within_5_percent": 100.0
+  },
+  "results": [
+    {
+      "test_name": "basic_circle",
+      "prompt": "Point to the center of the circle",
+      "expected_coords": [
+        512,
+        512
+      ],
+      "response": "(500, 500)",
+      "predicted_coords": [
+        500,
+        500
+      ],
+      "distance": 16.97056274847714,
+      "error": null,
+      "image_metadata": {
+        "size": [
+          1024,
+          1024
+        ],
+        "estimated_tokens": 1398
+      }
+    },
+    {
+      "test_name": "basic_square",
+      "prompt": "Point to the center of the square",
+      "expected_coords": [
+        512,
+        512
+      ],
+      "response": "(500, 500)",
+      "predicted_coords": [
+        500,
+        500
+      ],
+      "distance": 16.97056274847714,
+      "error": null,
+      "image_metadata": {
+        "size": [
+          1024,
+          1024
+        ],
+        "estimated_tokens": 1398
+      }
+    },
+    {
+      "test_name": "basic_triangle",
+      "prompt": "Point to the center of the triangle",
+      "expected_coords": [
+        512,
+        512
+      ],
+      "response": "(500, 532)",
+      "predicted_coords": [
+        500,
+        532
+      ],
+      "distance": 23.323807579381203,
+      "error": null,
+      "image_metadata": {
+        "size": [
+          1024,
+          1024
+        ],
+        "estimated_tokens": 1398
+      }
+    },
+    {
+      "test_name": "pentagon",
+      "prompt": "Point to the center of the pentagon",
+      "expected_coords": [
+        512,
+        512
+      ],
+      "response": "(500, 499)",
+      "predicted_coords": [
+        500,
+        499
+      ],
+      "distance": 17.69180601295413,
+      "error": null,
+      "image_metadata": {
+        "size": [
+          1024,
+          1024
+        ],
+        "estimated_tokens": 1398
+      }
+    },
+    {
+      "test_name": "hexagon",
+      "prompt": "Point to the center of the hexagon",
+      "expected_coords": [
+        512,
+        512
+      ],
+      "response": "(500, 500)",
+      "predicted_coords": [
+        500,
+        500
+      ],
+      "distance": 16.97056274847714,
+      "error": null,
+      "image_metadata": {
+        "size": [
+          1024,
+          1024
+        ],
+        "estimated_tokens": 1398
+      }
+    },
+    {
+      "test_name": "octagon",
+      "prompt": "Point to the center of the octagon",
+      "expected_coords": [
+        512,
+        512
+      ],
+      "response": "(500, 500)",
+      "predicted_coords": [
+        500,
+        500
+      ],
+      "distance": 16.97056274847714,
+      "error": null,
+      "image_metadata": {
+        "size": [
+          1024,
+          1024
+        ],
+        "estimated_tokens": 1398
+      }
+    },
+    {
+      "test_name": "decagon_among_circles",
+      "prompt": "Point to the center of the decagon (the 10-sided polygon, not the circles)",
+      "expected_coords": [
+        512,
+        512
+      ],
+      "response": "(500, 500)",
+      "predicted_coords": [
+        500,
+        500
+      ],
+      "distance": 16.97056274847714,
+      "error": null,
+      "image_metadata": {
+        "size": [
+          1024,
+          1024
+        ],
+        "estimated_tokens": 1398
+      }
+    },
+    {
+      "test_name": "rounded_button",
+      "prompt": "Point to the center of the button with rounded corners",
+      "expected_coords": [
+        307,
+        512
+      ],
+      "response": "(300, 500)",
+      "predicted_coords": [
+        300,
+        500
+      ],
+      "distance": 13.892443989449804,
+      "error": null,
+      "image_metadata": {
+        "size": [
+          1024,
+          1024
+        ],
+        "estimated_tokens": 1398
+      }
+    },
+    {
+      "test_name": "hexagon_vs_octagon",
+      "prompt": "Point to the center of the hexagon (6 sides, not 8)",
+      "expected_coords": [
+        307,
+        512
+      ],
+      "response": "(299, 499)",
+      "predicted_coords": [
+        299,
+        499
+      ],
+      "distance": 15.264337522473747,
+      "error": null,
+      "image_metadata": {
+        "size": [
+          1024,
+          1024
+        ],
+        "estimated_tokens": 1398
+      }
+    }
+  ],
+  "test_configs": [
+    {
+      "name": "basic_circle",
+      "prompt": "Point to the center of the circle",
+      "shape": "circle",
+      "color": "blue",
+      "position": "center"
+    },
+    {
+      "name": "basic_square",
+      "prompt": "Point to the center of the square",
+      "shape": "square",
+      "color": "blue",
+      "position": "center"
+    },
+    {
+      "name": "basic_triangle",
+      "prompt": "Point to the center of the triangle",
+      "shape": "triangle",
+      "color": "blue",
+      "position": "center"
+    },
+    {
+      "name": "pentagon",
+      "prompt": "Point to the center of the pentagon",
+      "shape": "pentagon",
+      "color": "blue",
+      "position": "center"
+    },
+    {
+      "name": "hexagon",
+      "prompt": "Point to the center of the hexagon",
+      "shape": "hexagon",
+      "color": "blue",
+      "position": "center"
+    },
+    {
+      "name": "octagon",
+      "prompt": "Point to the center of the octagon",
+      "shape": "octagon",
+      "color": "blue",
+      "position": "center"
+    },
+    {
+      "name": "decagon_among_circles",
+      "prompt": "Point to the center of the decagon (the 10-sided polygon, not the circles)",
+      "shape": "decagon",
+      "color": "red",
+      "position": "center",
+      "multiple_shapes": true,
+      "shapes": [
+        {
+          "shape": "circle",
+          "color": "blue",
+          "position": "top_left"
+        },
+        {
+          "shape": "circle",
+          "color": "blue",
+          "position": "top_right"
+        },
+        {
+          "shape": "decagon",
+          "color": "red",
+          "position": "center"
+        },
+        {
+          "shape": "circle",
+          "color": "blue",
+          "position": "bottom_left"
+        },
+        {
+          "shape": "circle",
+          "color": "blue",
+          "position": "bottom_right"
+        }
+      ]
+    },
+    {
+      "name": "rounded_button",
+      "prompt": "Point to the center of the button with rounded corners",
+      "shape": "rounded_button",
+      "color": "green",
+      "position": "left",
+      "multiple_shapes": true,
+      "shapes": [
+        {
+          "shape": "rounded_button",
+          "color": "green",
+          "position": "left"
+        },
+        {
+          "shape": "button",
+          "color": "green",
+          "position": "right"
+        }
+      ]
+    },
+    {
+      "name": "hexagon_vs_octagon",
+      "prompt": "Point to the center of the hexagon (6 sides, not 8)",
+      "shape": "hexagon",
+      "color": "purple",
+      "position": "left",
+      "multiple_shapes": true,
+      "shapes": [
+        {
+          "shape": "hexagon",
+          "color": "purple",
+          "position": "left"
+        },
+        {
+          "shape": "octagon",
+          "color": "purple",
+          "position": "right"
+        }
+      ]
+    }
+  ]
+}

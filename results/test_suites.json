@@ -1,5 +1,11 @@
 {
   "test_suites": [
-    "basic_shapes"
+    "basic_shapes",
+    "color_identification",
+    "resolution_test_1024x1024",
+    "resolution_test_256x256",
+    "resolution_test_512x512",
+    "shape_identification",
+    "size_comparison"
   ]
 }

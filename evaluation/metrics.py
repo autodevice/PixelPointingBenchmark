@@ -35,6 +35,7 @@ def calculate_accuracy_metrics(
             "median_distance": None,
             "max_distance": None,
             "min_distance": None,
+            "accuracy_within_5px": 0.0,
             "accuracy_within_10px": 0.0,
             "accuracy_within_5_percent": 0.0,
         }
@@ -47,6 +48,7 @@ def calculate_accuracy_metrics(
     screen_diagonal = math.sqrt(image_size[0] ** 2 + image_size[1] ** 2)
     threshold_5_percent = screen_diagonal * 0.05
 
+    accuracy_5px = sum(1 for d in distances if d <= 5) / len(distances) * 100
     accuracy_10px = sum(1 for d in distances if d <= 10) / len(distances) * 100
     accuracy_5_percent = (
         sum(1 for d in distances if d <= threshold_5_percent) / len(distances) * 100
@@ -60,6 +62,7 @@ def calculate_accuracy_metrics(
         "median_distance": median_distance,
         "max_distance": max_distance,
         "min_distance": min_distance,
+        "accuracy_within_5px": accuracy_5px,
         "accuracy_within_10px": accuracy_10px,
         "accuracy_within_5_percent": accuracy_5_percent,
     }
@@ -107,6 +110,7 @@ def calculate_statistics_across_passes(
     screen_diagonal = math.sqrt(image_size[0] ** 2 + image_size[1] ** 2)
     threshold_5_percent = screen_diagonal * 0.05
     
+    stats["overall_accuracy_within_5px"] = sum(1 for d in all_distances if d <= 5) / len(all_distances) * 100
     stats["overall_accuracy_within_10px"] = sum(1 for d in all_distances if d <= 10) / len(all_distances) * 100
     stats["overall_accuracy_within_5_percent"] = sum(1 for d in all_distances if d <= threshold_5_percent) / len(all_distances) * 100
     

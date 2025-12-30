@@ -1,0 +1,63 @@
+{
+  "run_id": "resolution_test_1024x1024_gemini3-flash_custom_20251218_161136",
+  "test_suite": "resolution_test_1024x1024",
+  "model": "gemini3-flash",
+  "model_id": "gemini/gemini-3-flash-preview",
+  "screen_size": {
+    "name": "custom",
+    "width": 1024,
+    "height": 1024
+  },
+  "pass_number": 2,
+  "timestamp": "2025-12-18T16:11:36.970228",
+  "metrics": {
+    "total_tests": 1,
+    "successful_extractions": 1,
+    "extraction_rate": 100.0,
+    "mean_distance": 17.72004514666935,
+    "median_distance": 17.72004514666935,
+    "max_distance": 17.72004514666935,
+    "min_distance": 17.72004514666935,
+    "accuracy_within_5px": 0.0,
+    "accuracy_within_10px": 0.0,
+    "accuracy_within_5_percent": 100.0
+  },
+  "results": [
+    {
+      "test_name": "simple_rectangle",
+      "prompt": "Point to the center of the purple rectangle",
+      "expected_coords": [
+        256,
+        768
+      ],
+      "response": "(251, 751)",
+      "predicted_coords": [
+        251,
+        751
+      ],
+      "distance": 17.72004514666935,
+      "error": null,
+      "image_metadata": {
+        "size": [
+          1024,
+          1024
+        ],
+        "estimated_tokens": 1398
+      }
+    }
+  ],
+  "test_configs": [
+    {
+      "name": "simple_rectangle",
+      "prompt": "Point to the center of the purple rectangle",
+      "shape": "square",
+      "color": "purple",
+      "position": "bottom_left",
+      "size": "medium",
+      "expected_coords": [
+        256,
+        768
+      ]
+    }
+  ]
+}

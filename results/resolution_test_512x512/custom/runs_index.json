@@ -1,0 +1,138 @@
+{
+  "gemini3-flash": [
+    {
+      "run_id": "resolution_test_512x512_gemini3-flash_custom_20251218_163400",
+      "pass_number": 1,
+      "timestamp": "2025-12-18T16:34:00.507638"
+    },
+    {
+      "run_id": "resolution_test_512x512_gemini3-flash_custom_20251218_163405",
+      "pass_number": 2,
+      "timestamp": "2025-12-18T16:34:05.304798"
+    },
+    {
+      "run_id": "resolution_test_512x512_gemini3-flash_custom_20251218_163409",
+      "pass_number": 3,
+      "timestamp": "2025-12-18T16:34:09.198509"
+    }
+  ],
+  "sonnet": [
+    {
+      "run_id": "resolution_test_512x512_sonnet_custom_20251218_163411",
+      "pass_number": 1,
+      "timestamp": "2025-12-18T16:34:11.855354"
+    },
+    {
+      "run_id": "resolution_test_512x512_sonnet_custom_20251218_163414",
+      "pass_number": 2,
+      "timestamp": "2025-12-18T16:34:14.317747"
+    },
+    {
+      "run_id": "resolution_test_512x512_sonnet_custom_20251218_163416",
+      "pass_number": 3,
+      "timestamp": "2025-12-18T16:34:16.866466"
+    }
+  ],
+  "opus": [
+    {
+      "run_id": "resolution_test_512x512_opus_custom_20251218_163419",
+      "pass_number": 1,
+      "timestamp": "2025-12-18T16:34:19.025885"
+    },
+    {
+      "run_id": "resolution_test_512x512_opus_custom_20251218_163421",
+      "pass_number": 2,
+      "timestamp": "2025-12-18T16:34:21.627110"
+    },
+    {
+      "run_id": "resolution_test_512x512_opus_custom_20251218_163425",
+      "pass_number": 3,
+      "timestamp": "2025-12-18T16:34:25.561209"
+    }
+  ],
+  "gemini3": [
+    {
+      "run_id": "resolution_test_512x512_gemini3_custom_20251218_163429",
+      "pass_number": 1,
+      "timestamp": "2025-12-18T16:34:29.268760"
+    },
+    {
+      "run_id": "resolution_test_512x512_gemini3_custom_20251218_163432",
+      "pass_number": 2,
+      "timestamp": "2025-12-18T16:34:32.245544"
+    },
+    {
+      "run_id": "resolution_test_512x512_gemini3_custom_20251218_163435",
+      "pass_number": 3,
+      "timestamp": "2025-12-18T16:34:35.411549"
+    }
+  ],
+  "chatgpt": [
+    {
+      "run_id": "resolution_test_512x512_chatgpt_custom_20251218_163436",
+      "pass_number": 1,
+      "timestamp": "2025-12-18T16:34:36.899475"
+    },
+    {
+      "run_id": "resolution_test_512x512_chatgpt_custom_20251218_163438",
+      "pass_number": 2,
+      "timestamp": "2025-12-18T16:34:38.213216"
+    },
+    {
+      "run_id": "resolution_test_512x512_chatgpt_custom_20251218_163439",
+      "pass_number": 3,
+      "timestamp": "2025-12-18T16:34:39.508062"
+    }
+  ],
+  "haiku": [
+    {
+      "run_id": "resolution_test_512x512_haiku_custom_20251218_163441",
+      "pass_number": 1,
+      "timestamp": "2025-12-18T16:34:41.212488"
+    },
+    {
+      "run_id": "resolution_test_512x512_haiku_custom_20251218_163442",
+      "pass_number": 2,
+      "timestamp": "2025-12-18T16:34:42.711070"
+    },
+    {
+      "run_id": "resolution_test_512x512_haiku_custom_20251218_163444",
+      "pass_number": 3,
+      "timestamp": "2025-12-18T16:34:44.218614"
+    }
+  ],
+  "qwen3-vl": [
+    {
+      "run_id": "resolution_test_512x512_qwen3-vl_custom_20251218_163446",
+      "pass_number": 1,
+      "timestamp": "2025-12-18T16:34:46.558536"
+    },
+    {
+      "run_id": "resolution_test_512x512_qwen3-vl_custom_20251218_163448",
+      "pass_number": 2,
+      "timestamp": "2025-12-18T16:34:48.068817"
+    },
+    {
+      "run_id": "resolution_test_512x512_qwen3-vl_custom_20251218_163448",
+      "pass_number": 3,
+      "timestamp": "2025-12-18T16:34:48.955439"
+    }
+  ],
+  "glm-4.6v": [
+    {
+      "run_id": "resolution_test_512x512_glm-4.6v_custom_20251218_163455",
+      "pass_number": 1,
+      "timestamp": "2025-12-18T16:34:55.913148"
+    },
+    {
+      "run_id": "resolution_test_512x512_glm-4.6v_custom_20251218_163507",
+      "pass_number": 2,
+      "timestamp": "2025-12-18T16:35:07.685206"
+    },
+    {
+      "run_id": "resolution_test_512x512_glm-4.6v_custom_20251218_163513",
+      "pass_number": 3,
+      "timestamp": "2025-12-18T16:35:13.474988"
+    }
+  ]
+}
