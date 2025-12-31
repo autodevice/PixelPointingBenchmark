@@ -500,14 +500,9 @@
 
         <div class="controls">
             <div class="controls-group">
-                <label for="resultsDir">Results:</label>
-                <input type="text" id="resultsDir" value="results" placeholder="Results directory">
-            </div>
-            <div class="controls-group">
                 <label for="testSuite">Test Suite:</label>
-                <select id="testSuite"></select>
+                <select id="testSuite" onchange="loadResults()"></select>
             </div>
-            <button onclick="loadResults()">Load Results</button>
         </div>
 
         <div class="filters" id="filters">
@@ -532,41 +527,24 @@
 
         <div class="summary-section" id="summarySection" style="display: none; padding: 20px 30px; background: #f8f9fa; border-bottom: 1px solid #e0e0e0;">
             <h3 style="margin-bottom: 15px; color: #333;">Overall Performance Summary</h3>
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
-                <div>
-                    <h4 style="margin-bottom: 10px; color: #555;">Accuracy Table</h4>
-                    <table id="accuracyTable" style="width: 100%; border-collapse: collapse; background: white; border-radius: 6px; overflow: hidden;">
-                        <thead>
-                            <tr style="background: #667eea; color: white;">
-                                <th style="padding: 10px; text-align: left;">Model</th>
-                                <th style="padding: 10px; text-align: right;">Within 5px</th>
-                                <th style="padding: 10px; text-align: right;">Within 10px</th>
-                            </tr>
-                        </thead>
-                        <tbody id="accuracyTableBody">
-                        </tbody>
-                    </table>
-                </div>
-                <div>
-                    <h4 style="margin-bottom: 10px; color: #555;">Accuracy per Dollar</h4>
-                    <table id="accuracyPerDollarTable" style="width: 100%; border-collapse: collapse; background: white; border-radius: 6px; overflow: hidden;">
-                        <thead>
-                            <tr style="background: #667eea; color: white;">
-                                <th style="padding: 10px; text-align: left;">Model</th>
-                                <th style="padding: 10px; text-align: right;">Within 10px</th>
-                                <th style="padding: 10px; text-align: right;">$/1M input</th>
-                                <th style="padding: 10px; text-align: right;">Acc% per $</th>
-                            </tr>
-                        </thead>
-                        <tbody id="accuracyPerDollarTableBody">
-                        </tbody>
-                    </table>
-                </div>
+            <div>
+                <h4 style="margin-bottom: 10px; color: #555;">Accuracy Table</h4>
+                <table id="accuracyTable" style="width: 100%; border-collapse: collapse; background: white; border-radius: 6px; overflow: hidden;">
+                    <thead>
+                        <tr style="background: #667eea; color: white;">
+                            <th style="padding: 10px; text-align: left;">Model</th>
+                            <th style="padding: 10px; text-align: right;">Within 5px</th>
+                            <th style="padding: 10px; text-align: right;">Within 10px</th>
+                        </tr>
+                    </thead>
+                    <tbody id="accuracyTableBody">
+                    </tbody>
+                </table>
             </div>
         </div>
 
-        <div class="content" id="content">
-            <div class="loading">Select a results directory and test suite to begin</div>
+            <div class="content" id="content">
+            <div class="loading">Select a test suite to begin</div>
         </div>
 
         <div class="comparison-table-container" id="comparisonTableContainer">
@@ -618,16 +596,10 @@
         }
 
         function loadResults() {
-            const dir = document.getElementById('resultsDir').value.trim();
+            const dir = 'results';
             const testSuite = document.getElementById('testSuite').value;
             
-            if (!dir) {
-                alert('Please enter a results directory');
-                return;
-            }
-            
             if (!testSuite) {
-                alert('Please select a test suite');
                 return;
             }
 
@@ -635,23 +607,34 @@
             content.innerHTML = '<div class="loading">Loading results</div>';
 
             if (testSuite === '__resolution_test__') {
-                const sweepSuites = (availableTestSuites || []).filter(s => s.startsWith('resolution_test_'));
-                if (sweepSuites.length === 0) {
-                    content.innerHTML = '<div class="no-results">No resolution_test_* suites found in this results directory.</div>';
-                    return;
-                }
+                fetch(`${dir}/test_suites.json`)
+                    .then(response => {
+                        if (!response.ok) throw new Error('test_suites.json not found');
+                        return response.json();
+                    })
+                    .then(testSuitesData => {
+                        const allSuites = testSuitesData.test_suites || [];
+                        const sweepSuites = allSuites.filter(s => s.startsWith('resolution_test_'));
+                        
+                        if (sweepSuites.length === 0) {
+                            content.innerHTML = '<div class="no-results">No resolution_test_* suites found in this results directory.</div>';
+                            return;
+                        }
 
-                Promise.all(
-                    sweepSuites.map(suiteName =>
-                        fetch(`${dir}/${suiteName}/custom/consolidated_results.json`)
-                            .then(r => {
-                                if (!r.ok) throw new Error(`Failed to load results for ${suiteName}`);
-                                return r.json();
-                            })
-                            .then(d => ({ suiteName, data: d }))
-                    )
-                )
+                        return Promise.all(
+                            sweepSuites.map(suiteName =>
+                                fetch(`${dir}/${suiteName}/custom/consolidated_results.json`)
+                                    .then(r => {
+                                        if (!r.ok) throw new Error(`Failed to load results for ${suiteName}`);
+                                        return r.json();
+                                    })
+                                    .then(d => ({ suiteName, data: d }))
+                            )
+                        );
+                    })
                     .then(items => {
+                        if (!items) return;
+                        
                         const merged = {
                             test_suite: '__resolution_test__',
                             screen_size: { name: 'mixed', width: null, height: null },
@@ -793,8 +776,7 @@
                 visibleModels.delete(model);
             }
             if (currentData) {
-                const dir = document.getElementById('resultsDir').value.trim();
-                displayResults(currentData, dir, currentTestSuite);
+                displayResults(currentData, 'results', currentTestSuite);
                 updateComparisonTable(currentData);
             }
         }
@@ -807,8 +789,7 @@
                 visiblePasses.delete(passNum);
             }
             if (currentData) {
-                const dir = document.getElementById('resultsDir').value.trim();
-                displayResults(currentData, dir, currentTestSuite);
+                displayResults(currentData, 'results', currentTestSuite);
                 updateComparisonTable(currentData);
             }
         }
@@ -1042,7 +1023,6 @@
         function updateSummaryTables(data) {
             const summarySection = document.getElementById('summarySection');
             const accuracyTableBody = document.getElementById('accuracyTableBody');
-            const accuracyPerDollarTableBody = document.getElementById('accuracyPerDollarTableBody');
             
             if (!data || !data.tests || data.tests.length === 0) {
                 summarySection.style.display = 'none';
@@ -1051,7 +1031,6 @@
             
             summarySection.style.display = 'block';
             accuracyTableBody.innerHTML = '';
-            accuracyPerDollarTableBody.innerHTML = '';
             
             const modelStats = {};
             const visibleModelsList = Array.from(visibleModels);
@@ -1161,59 +1140,6 @@
                 row.appendChild(acc10pxCell);
                 
                 accuracyTableBody.appendChild(row);
-            });
-            
-            const sortedByValue = Object.keys(modelAccuracies).sort((a, b) => {
-                const priceA = MODEL_PRICING[a.toLowerCase()] || 999;
-                const priceB = MODEL_PRICING[b.toLowerCase()] || 999;
-                const valueA = modelAccuracies[a].accuracy10px / priceA;
-                const valueB = modelAccuracies[b].accuracy10px / priceB;
-                return valueB - valueA;
-            });
-            
-            sortedByValue.forEach(modelName => {
-                const acc = modelAccuracies[modelName];
-                const price = MODEL_PRICING[modelName.toLowerCase()] || 999;
-                const accuracyPerDollar = acc.accuracy10px / price;
-                
-                const row = document.createElement('tr');
-                row.style.borderBottom = '1px solid #e0e0e0';
-                
-                const modelCell = document.createElement('td');
-                modelCell.style.padding = '10px';
-                modelCell.innerHTML = `<span class="model-dot" style="background-color: ${getModelColor(modelName)}; display: inline-block; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px;"></span>${modelName}`;
-                row.appendChild(modelCell);
-                
-                const acc10Cell = document.createElement('td');
-                acc10Cell.style.padding = '10px';
-                acc10Cell.style.textAlign = 'right';
-                acc10Cell.textContent = `${acc.accuracy10px.toFixed(1)}%`;
-                row.appendChild(acc10Cell);
-
-                const priceCell = document.createElement('td');
-                priceCell.style.padding = '10px';
-                priceCell.style.textAlign = 'right';
-                priceCell.textContent = price === 999 ? 'N/A' : `$${price.toFixed(2)}`;
-                if (price === 999) priceCell.style.color = '#999';
-                row.appendChild(priceCell);
-
-                const valueCell = document.createElement('td');
-                valueCell.style.padding = '10px';
-                valueCell.style.textAlign = 'right';
-                valueCell.textContent = price === 999 ? 'N/A' : `${accuracyPerDollar.toFixed(2)}`;
-                if (price !== 999) {
-                    if (accuracyPerDollar >= 200) {
-                        valueCell.style.color = '#28a745';
-                        valueCell.style.fontWeight = '600';
-                    } else if (accuracyPerDollar >= 100) {
-                        valueCell.style.color = '#ffc107';
-                    }
-                } else {
-                    valueCell.style.color = '#999';
-                }
-                row.appendChild(valueCell);
-                
-                accuracyPerDollarTableBody.appendChild(row);
             });
         }
 
@@ -1415,12 +1341,7 @@
         }
 
         function loadTestSuites() {
-            const dir = document.getElementById('resultsDir').value.trim();
-            if (!dir) {
-                const select = document.getElementById('testSuite');
-                select.innerHTML = '<option value="">Enter results directory first</option>';
-                return;
-            }
+            const dir = 'results';
             
             fetch(`${dir}/test_suites.json`)
                 .then(response => {
@@ -1433,17 +1354,18 @@
                     const select = document.getElementById('testSuite');
                     select.innerHTML = '<option value="">Select test suite...</option>';
                     if (data.test_suites && data.test_suites.length > 0) {
-                        availableTestSuites = data.test_suites.slice();
+                        const allResolutionSuites = data.test_suites.filter(s => s.startsWith('resolution_test_'));
+                        const filteredSuites = data.test_suites.filter(s => !s.startsWith('resolution_test_'));
+                        availableTestSuites = filteredSuites.slice();
 
-                        const sweepSuites = availableTestSuites.filter(s => s.startsWith('resolution_test_'));
-                        if (sweepSuites.length >= 1) {
+                        if (allResolutionSuites.length >= 1) {
                             const opt = document.createElement('option');
                             opt.value = '__resolution_test__';
                             opt.textContent = `resolution_test`;
                             select.appendChild(opt);
                         }
 
-                        data.test_suites.forEach(suite => {
+                        filteredSuites.forEach(suite => {
                             const option = document.createElement('option');
                             option.value = suite;
                             option.textContent = suite;
@@ -1463,11 +1385,21 @@
                                 .map(a => a.textContent.trim().replace('/', ''))
                                 .filter(name => name && name !== '..' && name !== '.');
                             
+                            const allResolutionSuites = links.filter(s => s.startsWith('resolution_test_'));
+                            const filteredLinks = links.filter(s => !s.startsWith('resolution_test_'));
+                            
                             const select = document.getElementById('testSuite');
                             select.innerHTML = '<option value="">Select test suite...</option>';
                             
-                            if (links.length > 0) {
-                                links.forEach(suite => {
+                            if (allResolutionSuites.length >= 1) {
+                                const opt = document.createElement('option');
+                                opt.value = '__resolution_test__';
+                                opt.textContent = `resolution_test`;
+                                select.appendChild(opt);
+                            }
+                            
+                            if (filteredLinks.length > 0) {
+                                filteredLinks.forEach(suite => {
                                     const option = document.createElement('option');
                                     option.value = suite;
                                     option.textContent = suite;
@@ -1485,7 +1417,6 @@
         }
 
         window.onload = function() {
-            document.getElementById('resultsDir').addEventListener('change', loadTestSuites);
             loadTestSuites();
         };
     </script>
