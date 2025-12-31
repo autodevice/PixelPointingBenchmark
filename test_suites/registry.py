@@ -313,7 +313,7 @@ SIZE_COMPARISON_TESTS = [
         "multiple_shapes": True,
         "shapes": [
             {"shape": "square", "color": "red", "position": "left", "size": "medium"},
-            {"shape": "square", "color": "red", "position": "right", "size": "small"},
+            {"shape": "square", "color": "red", "position": "right", "size": "medium", "size_override": 0.88},
         ],
     },
 ]
