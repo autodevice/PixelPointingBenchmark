@@ -331,6 +331,10 @@ class ImageGenerator:
             else:
                 s_size = min(self.width, self.height) // 5
             
+            size_override = shape_config.get("size_override")
+            if size_override is not None:
+                s_size = int(s_size * size_override)
+            
             if shape_pos == "left" or shape_pos == "top_left":
                 s_x, s_y = int(self.width * 0.3), self.height // 2
             elif shape_pos == "right" or shape_pos == "top_right":
